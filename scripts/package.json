@@ -1,0 +1,22 @@
+{
+  "name": "collabup-data-generator",
+  "version": "1.0.0",
+  "description": "Script to generate and upload mock data to Firebase Firestore",
+  "main": "generateAndUploadData.js",
+  "scripts": {
+    "generate": "node generateAndUploadData.js",
+    "install-deps": "npm install"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^8.4.1",
+    "firebase-admin": "^12.0.0"
+  },
+  "keywords": [
+    "firebase",
+    "firestore",
+    "mock-data",
+    "collabup"
+  ],
+  "author": "CollabUp Team",
+  "license": "MIT"
+} 

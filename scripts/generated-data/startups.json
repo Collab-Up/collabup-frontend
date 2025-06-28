@@ -1,0 +1,347 @@
+[
+  {
+    "id": "startup_001",
+    "name": "Gutkowski, Hilll and Okuneva",
+    "domain": "Environment",
+    "founder": "Elvira Bruen DVM",
+    "email": "Lynn_Heidenreich43@gmail.com",
+    "location": "Delhi",
+    "description": "Pioneering Environment platform that empowers users with advanced capabilities.",
+    "teamSize": 12,
+    "website": "https://cautious-pint.org/",
+    "foundedYear": 2019,
+    "funding": "Series A",
+    "logo": "https://loremflickr.com/640/480?lock=232534254288896",
+    "mission": "Self-enabling impactful focus group",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 283000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 283000000
+    }
+  },
+  {
+    "id": "startup_002",
+    "name": "Russel Group",
+    "domain": "Environment",
+    "founder": "Roland Hermann",
+    "email": "Keenan.Monahan10@yahoo.com",
+    "location": "Ahmedabad",
+    "description": "Leading Environment startup that leverages technology to solve real-world problems.",
+    "teamSize": 40,
+    "website": "https://elementary-musculature.info/",
+    "foundedYear": 2021,
+    "funding": "Series A",
+    "logo": "https://picsum.photos/seed/ObeeXl/640/480",
+    "mission": "Upgradable content-based workforce",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 283000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 283000000
+    }
+  },
+  {
+    "id": "startup_003",
+    "name": "Dickinson, Lesch and Grady",
+    "domain": "Healthcare",
+    "founder": "Wayne Gutmann",
+    "email": "Mara96@hotmail.com",
+    "location": "Jaipur",
+    "description": "Revolutionary Healthcare platform that transforms how people interact with technology.",
+    "teamSize": 13,
+    "website": "https://helpless-load.com",
+    "foundedYear": 2021,
+    "funding": "Bootstrapped",
+    "logo": "https://picsum.photos/seed/4X2n6pVY/640/480",
+    "mission": "Expanded 6th generation hardware",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 284000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 284000000
+    }
+  },
+  {
+    "id": "startup_004",
+    "name": "Nicolas, Kihn and Miller",
+    "domain": "Environment",
+    "founder": "Norma Rempel",
+    "email": "Lia_Krajcik@hotmail.com",
+    "location": "Hyderabad",
+    "description": "Pioneering Environment platform that empowers users with advanced capabilities.",
+    "teamSize": 26,
+    "website": "https://superb-vitality.com",
+    "foundedYear": 2021,
+    "funding": "Series B",
+    "logo": "https://loremflickr.com/640/480?lock=5553193759014912",
+    "mission": "Fully-configurable web-enabled migration",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 284000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 284000000
+    }
+  },
+  {
+    "id": "startup_005",
+    "name": "Murphy, Senger and Russel",
+    "domain": "AI/ML",
+    "founder": "Robert Heller",
+    "email": "Carissa69@gmail.com",
+    "location": "Ahmedabad",
+    "description": "Pioneering AI/ML platform that empowers users with advanced capabilities.",
+    "teamSize": 20,
+    "website": "https://soft-airbus.org",
+    "foundedYear": 2020,
+    "funding": "Series A",
+    "logo": "https://picsum.photos/seed/h2SgOJfZ/640/480",
+    "mission": "Synergized executive product",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 284000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 284000000
+    }
+  },
+  {
+    "id": "startup_006",
+    "name": "Lueilwitz - Mayer",
+    "domain": "AI/ML",
+    "founder": "Benny Zemlak",
+    "email": "Arnaldo_Grant95@hotmail.com",
+    "location": "Mumbai",
+    "description": "Revolutionary AI/ML platform that transforms how people interact with technology.",
+    "teamSize": 29,
+    "website": "https://plain-passage.net",
+    "foundedYear": 2023,
+    "funding": "Bootstrapped",
+    "logo": "https://loremflickr.com/640/480?lock=6890064699195392",
+    "mission": "Mandatory content-based groupware",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 284000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 284000000
+    }
+  },
+  {
+    "id": "startup_007",
+    "name": "Kertzmann - Rippin",
+    "domain": "Fintech",
+    "founder": "Marion Kohler",
+    "email": "Tristian.Bruen-Brown@hotmail.com",
+    "location": "Jaipur",
+    "description": "Innovative Fintech solution designed to address modern challenges in the industry.",
+    "teamSize": 16,
+    "website": "https://soulful-pardon.com",
+    "foundedYear": 2024,
+    "funding": "Series B",
+    "logo": "https://picsum.photos/seed/htH0G9h/640/480",
+    "mission": "Multi-channelled fresh-thinking standardization",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 284000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 284000000
+    }
+  },
+  {
+    "id": "startup_008",
+    "name": "Fay, Champlin and Lindgren",
+    "domain": "Logistics",
+    "founder": "Javier Beier DVM",
+    "email": "Taylor.Welch18@gmail.com",
+    "location": "Chennai",
+    "description": "Revolutionary Logistics platform that transforms how people interact with technology.",
+    "teamSize": 30,
+    "website": "https://nervous-cyclone.info",
+    "foundedYear": 2021,
+    "funding": "Bootstrapped",
+    "logo": "https://loremflickr.com/640/480?lock=1808947289784320",
+    "mission": "Exclusive homogeneous challenge",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 284000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 284000000
+    }
+  },
+  {
+    "id": "startup_009",
+    "name": "Welch - Larson",
+    "domain": "Logistics",
+    "founder": "Felix Kerluke",
+    "email": "Evan92@gmail.com",
+    "location": "Jaipur",
+    "description": "Leading Logistics startup that leverages technology to solve real-world problems.",
+    "teamSize": 33,
+    "website": "https://hurtful-catalyst.net",
+    "foundedYear": 2023,
+    "funding": "Series B",
+    "logo": "https://loremflickr.com/640/480?lock=1883103427559424",
+    "mission": "User-centric impactful hub",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 284000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 284000000
+    }
+  },
+  {
+    "id": "startup_010",
+    "name": "Haley, Wisoky and Feeney",
+    "domain": "Environment",
+    "founder": "Edmond VonRueden",
+    "email": "Jeffery_Hahn@gmail.com",
+    "location": "Chennai",
+    "description": "Revolutionary Environment platform that transforms how people interact with technology.",
+    "teamSize": 35,
+    "website": "https://back-footstool.info",
+    "foundedYear": 2020,
+    "funding": "Seed",
+    "logo": "https://picsum.photos/seed/h8lGhF/640/480",
+    "mission": "Horizontal zero tolerance algorithm",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 284000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 284000000
+    }
+  },
+  {
+    "id": "startup_011",
+    "name": "Hermann LLC",
+    "domain": "E-commerce",
+    "founder": "Ella Lowe",
+    "email": "Urban.Altenwerth98@yahoo.com",
+    "location": "Mumbai",
+    "description": "Pioneering E-commerce platform that empowers users with advanced capabilities.",
+    "teamSize": 39,
+    "website": "https://interesting-lift.info",
+    "foundedYear": 2019,
+    "funding": "Series A",
+    "logo": "https://picsum.photos/seed/LBcFky3UU/640/480",
+    "mission": "Advanced systematic website",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 284000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 284000000
+    }
+  },
+  {
+    "id": "startup_012",
+    "name": "Ruecker Inc",
+    "domain": "Edtech",
+    "founder": "Elena Jacobson",
+    "email": "Jovan92@gmail.com",
+    "location": "Bangalore",
+    "description": "Revolutionary Edtech platform that transforms how people interact with technology.",
+    "teamSize": 13,
+    "website": "https://questionable-brain.com/",
+    "foundedYear": 2019,
+    "funding": "Series B",
+    "logo": "https://loremflickr.com/640/480?lock=1297834657710080",
+    "mission": "Sharable contextually-based throughput",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 284000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 284000000
+    }
+  },
+  {
+    "id": "startup_013",
+    "name": "Langworth, Greenholt and Bashirian",
+    "domain": "AI/ML",
+    "founder": "Sara VonRueden",
+    "email": "Elenor24@yahoo.com",
+    "location": "Pune",
+    "description": "Pioneering AI/ML platform that empowers users with advanced capabilities.",
+    "teamSize": 5,
+    "website": "https://queasy-motorboat.org/",
+    "foundedYear": 2023,
+    "funding": "Series B",
+    "logo": "https://loremflickr.com/640/480?lock=5466502960513024",
+    "mission": "Right-sized methodical solution",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 284000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 284000000
+    }
+  },
+  {
+    "id": "startup_014",
+    "name": "Rogahn - Lind",
+    "domain": "Healthcare",
+    "founder": "Wayne Barton",
+    "email": "Theodora65@gmail.com",
+    "location": "Delhi",
+    "description": "Innovative Healthcare solution designed to address modern challenges in the industry.",
+    "teamSize": 34,
+    "website": "https://hilarious-reward.biz/",
+    "foundedYear": 2020,
+    "funding": "Bootstrapped",
+    "logo": "https://loremflickr.com/640/480?lock=3010836377370624",
+    "mission": "Diverse bi-directional productivity",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 284000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 284000000
+    }
+  },
+  {
+    "id": "startup_015",
+    "name": "Kuhic, Langworth and Parisian",
+    "domain": "Environment",
+    "founder": "Krystal Langworth",
+    "email": "Mckenzie.Leannon@gmail.com",
+    "location": "Pune",
+    "description": "Revolutionary Environment platform that transforms how people interact with technology.",
+    "teamSize": 20,
+    "website": "https://studious-lanai.name",
+    "foundedYear": 2020,
+    "funding": "Series A",
+    "logo": "https://picsum.photos/seed/g6WqFcfT4k/640/480",
+    "mission": "Advanced context-sensitive paradigm",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 284000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 284000000
+    }
+  }
+]

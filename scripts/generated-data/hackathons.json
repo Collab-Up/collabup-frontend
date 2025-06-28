@@ -1,0 +1,264 @@
+[
+  {
+    "id": "hackathon_001",
+    "name": "Kertzmann Group Hackathon",
+    "date": "2026-03-15T22:04:55.185Z",
+    "domains": [
+      "Blockchain",
+      "AI/ML"
+    ],
+    "teamSize": 5,
+    "location": "Hyderabad",
+    "description": "Showcase your Edtech skills in this premier hackathon event.",
+    "prizePool": 354759,
+    "registrationDeadline": "2026-06-04T06:16:42.026Z",
+    "isOnline": false,
+    "sponsors": [
+      "Amazon",
+      "Google"
+    ],
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    }
+  },
+  {
+    "id": "hackathon_002",
+    "name": "Lockman, Reynolds and Bailey Hackathon",
+    "date": "2025-09-29T00:52:52.230Z",
+    "domains": [
+      "IoT"
+    ],
+    "teamSize": 4,
+    "location": "Kolkata",
+    "description": "Collaborate with top developers to solve Fintech challenges.",
+    "prizePool": 178614,
+    "registrationDeadline": "2026-03-02T15:50:44.590Z",
+    "isOnline": true,
+    "sponsors": [
+      "Google"
+    ],
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    }
+  },
+  {
+    "id": "hackathon_003",
+    "name": "Rogahn Inc Hackathon",
+    "date": "2025-09-06T18:16:30.391Z",
+    "domains": [
+      "Edtech"
+    ],
+    "teamSize": 5,
+    "location": "Kolkata",
+    "description": "Join us for an exciting Environment hackathon where innovation meets technology.",
+    "prizePool": 842991,
+    "registrationDeadline": "2025-10-03T08:37:55.449Z",
+    "isOnline": false,
+    "sponsors": [
+      "Amazon"
+    ],
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    }
+  },
+  {
+    "id": "hackathon_004",
+    "name": "Spencer and Sons Hackathon",
+    "date": "2026-05-20T01:34:06.139Z",
+    "domains": [
+      "Blockchain"
+    ],
+    "teamSize": 5,
+    "location": "Ahmedabad",
+    "description": "Collaborate with top developers to solve IoT challenges.",
+    "prizePool": 476699,
+    "registrationDeadline": "2025-10-22T12:25:53.357Z",
+    "isOnline": false,
+    "sponsors": [
+      "Apple",
+      "Microsoft"
+    ],
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    }
+  },
+  {
+    "id": "hackathon_005",
+    "name": "Paucek - Wilderman Hackathon",
+    "date": "2025-10-02T08:07:27.111Z",
+    "domains": [
+      "Fintech"
+    ],
+    "teamSize": 5,
+    "location": "Pune",
+    "description": "Build the future of E-commerce in this intensive 48-hour coding challenge.",
+    "prizePool": 70880,
+    "registrationDeadline": "2025-11-06T10:21:54.190Z",
+    "isOnline": true,
+    "sponsors": [
+      "Amazon"
+    ],
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    }
+  },
+  {
+    "id": "hackathon_006",
+    "name": "Adams LLC Hackathon",
+    "date": "2025-07-13T08:23:11.567Z",
+    "domains": [
+      "IoT",
+      "AI/ML",
+      "Environment"
+    ],
+    "teamSize": 4,
+    "location": "Hyderabad",
+    "description": "Build the future of Blockchain in this intensive 48-hour coding challenge.",
+    "prizePool": 476038,
+    "registrationDeadline": "2025-07-03T14:07:40.885Z",
+    "isOnline": false,
+    "sponsors": [
+      "Google"
+    ],
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    }
+  },
+  {
+    "id": "hackathon_007",
+    "name": "Schneider - Cruickshank Hackathon",
+    "date": "2026-02-16T01:23:14.331Z",
+    "domains": [
+      "E-commerce",
+      "IoT",
+      "Cybersecurity"
+    ],
+    "teamSize": 4,
+    "location": "Jaipur",
+    "description": "Join us for an exciting Fintech hackathon where innovation meets technology.",
+    "prizePool": 532105,
+    "registrationDeadline": "2026-06-10T12:45:45.926Z",
+    "isOnline": false,
+    "sponsors": [
+      "Apple"
+    ],
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    }
+  },
+  {
+    "id": "hackathon_008",
+    "name": "Carroll, Mraz and Corwin Hackathon",
+    "date": "2026-03-15T15:36:01.871Z",
+    "domains": [
+      "E-commerce"
+    ],
+    "teamSize": 3,
+    "location": "Delhi",
+    "description": "Create groundbreaking IoT solutions and compete for amazing prizes.",
+    "prizePool": 534079,
+    "registrationDeadline": "2025-11-23T02:12:45.831Z",
+    "isOnline": true,
+    "sponsors": [
+      "Apple",
+      "Microsoft"
+    ],
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    }
+  },
+  {
+    "id": "hackathon_009",
+    "name": "Larkin and Sons Hackathon",
+    "date": "2026-04-11T06:32:55.848Z",
+    "domains": [
+      "Robotics",
+      "Healthcare",
+      "Cybersecurity"
+    ],
+    "teamSize": 3,
+    "location": "Ahmedabad",
+    "description": "Collaborate with top developers to solve Robotics challenges.",
+    "prizePool": 942730,
+    "registrationDeadline": "2026-03-16T16:35:06.426Z",
+    "isOnline": false,
+    "sponsors": [
+      "Google",
+      "Apple"
+    ],
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    }
+  },
+  {
+    "id": "hackathon_010",
+    "name": "Mueller - Pacocha Hackathon",
+    "date": "2026-05-22T16:21:12.305Z",
+    "domains": [
+      "Blockchain",
+      "Edtech"
+    ],
+    "teamSize": 4,
+    "location": "Delhi",
+    "description": "Build the future of Edtech in this intensive 48-hour coding challenge.",
+    "prizePool": 399343,
+    "registrationDeadline": "2025-09-03T08:28:30.534Z",
+    "isOnline": true,
+    "sponsors": [
+      "Google"
+    ],
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    }
+  }
+]

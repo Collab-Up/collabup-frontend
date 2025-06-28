@@ -1,0 +1,1047 @@
+[
+  {
+    "id": "project_001",
+    "title": "Cloud-Based E-commerce Solution",
+    "type": "Research",
+    "domain": "E-commerce",
+    "skillsRequired": [
+      "Flutter",
+      "Data Science",
+      "PyTorch"
+    ],
+    "status": "Open",
+    "description": "Advanced E-commerce application built with Flutter, Data Science, PyTorch. Ideal for students looking to gain expertise in {domain} technologies.",
+    "duration": "2 Months",
+    "teamSize": 3,
+    "difficulty": "Advanced",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "facultyId": "faculty_017",
+    "publication": false
+  },
+  {
+    "id": "project_002",
+    "title": "Cloud-Based Cybersecurity Solution",
+    "type": "Research",
+    "domain": "Cybersecurity",
+    "skillsRequired": [
+      "React",
+      "Data Science"
+    ],
+    "status": "In Progress",
+    "description": "Robust Cybersecurity system utilizing React, Data Science. Great opportunity to work on meaningful {domain} projects.",
+    "duration": "3 Months",
+    "teamSize": 4,
+    "difficulty": "Advanced",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "facultyId": "faculty_011",
+    "publication": false
+  },
+  {
+    "id": "project_003",
+    "title": "Innovative Mobile Development Platform",
+    "type": "Research",
+    "domain": "Mobile Development",
+    "skillsRequired": [
+      "IoT",
+      "iOS",
+      "Android",
+      "Python"
+    ],
+    "status": "In Progress",
+    "description": "A comprehensive Mobile Development project that leverages IoT, iOS, Android, Python to solve real-world problems. Perfect for students interested in {domain}.",
+    "duration": "6 Months",
+    "teamSize": 5,
+    "difficulty": "Intermediate",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "facultyId": "faculty_013",
+    "publication": false
+  },
+  {
+    "id": "project_004",
+    "title": "Next-Gen Mobile Development System",
+    "type": "Student",
+    "domain": "Mobile Development",
+    "skillsRequired": [
+      "IoT",
+      "UI/UX",
+      "Machine Learning"
+    ],
+    "status": "In Progress",
+    "description": "Modern Mobile Development platform developed using IoT, UI/UX, Machine Learning. Provides practical experience in {domain} implementation.",
+    "duration": "1 Month",
+    "teamSize": 2,
+    "difficulty": "Advanced",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "creatorId": "student_014"
+  },
+  {
+    "id": "project_005",
+    "title": "Innovative E-commerce Platform",
+    "type": "Startup",
+    "domain": "E-commerce",
+    "skillsRequired": [
+      "Machine Learning",
+      "Robotics"
+    ],
+    "status": "Open",
+    "description": "A comprehensive E-commerce project that leverages Machine Learning, Robotics to solve real-world problems. Perfect for students interested in {domain}.",
+    "duration": "1 Month",
+    "teamSize": 8,
+    "difficulty": "Beginner",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "startupId": "startup_006",
+    "compensation": "Stipend"
+  },
+  {
+    "id": "project_006",
+    "title": "Innovative IoT Platform",
+    "type": "Student",
+    "domain": "IoT",
+    "skillsRequired": [
+      "Data Science",
+      "C++",
+      "Docker",
+      "React"
+    ],
+    "status": "In Progress",
+    "description": "A comprehensive IoT project that leverages Data Science, C++, Docker, React to solve real-world problems. Perfect for students interested in {domain}.",
+    "duration": "6 Months",
+    "teamSize": 7,
+    "difficulty": "Intermediate",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "creatorId": "student_024"
+  },
+  {
+    "id": "project_007",
+    "title": "Advanced IoT System",
+    "type": "Student",
+    "domain": "IoT",
+    "skillsRequired": [
+      "Robotics",
+      "Flutter"
+    ],
+    "status": "In Progress",
+    "description": "Innovative IoT solution using cutting-edge Robotics, Flutter. This project offers hands-on experience in {domain} development.",
+    "duration": "3 Months",
+    "teamSize": 4,
+    "difficulty": "Intermediate",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "creatorId": "student_034"
+  },
+  {
+    "id": "project_008",
+    "title": "AI-Powered E-commerce Tool",
+    "type": "Startup",
+    "domain": "E-commerce",
+    "skillsRequired": [
+      "IoT",
+      "UI/UX",
+      "iOS",
+      "Python"
+    ],
+    "status": "On Hold",
+    "description": "Robust E-commerce system utilizing IoT, UI/UX, iOS, Python. Great opportunity to work on meaningful {domain} projects.",
+    "duration": "1 Month",
+    "teamSize": 2,
+    "difficulty": "Beginner",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "startupId": "startup_004",
+    "compensation": "Unpaid"
+  },
+  {
+    "id": "project_009",
+    "title": "Cloud-Based AI/ML Solution",
+    "type": "Research",
+    "domain": "AI/ML",
+    "skillsRequired": [
+      "Java",
+      "Android",
+      "DevOps",
+      "Flutter"
+    ],
+    "status": "In Progress",
+    "description": "Robust AI/ML system utilizing Java, Android, DevOps, Flutter. Great opportunity to work on meaningful {domain} projects.",
+    "duration": "2 Months",
+    "teamSize": 8,
+    "difficulty": "Beginner",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "facultyId": "faculty_020",
+    "publication": true
+  },
+  {
+    "id": "project_010",
+    "title": "Smart Data Science Platform",
+    "type": "Student",
+    "domain": "Data Science",
+    "skillsRequired": [
+      "UI/UX",
+      "Machine Learning"
+    ],
+    "status": "In Progress",
+    "description": "A comprehensive Data Science project that leverages UI/UX, Machine Learning to solve real-world problems. Perfect for students interested in {domain}.",
+    "duration": "2 Months",
+    "teamSize": 8,
+    "difficulty": "Intermediate",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "creatorId": "student_012"
+  },
+  {
+    "id": "project_011",
+    "title": "Innovative Fintech Platform",
+    "type": "Student",
+    "domain": "Fintech",
+    "skillsRequired": [
+      "Flutter",
+      "iOS",
+      "Machine Learning",
+      "Java"
+    ],
+    "status": "In Progress",
+    "description": "Robust Fintech system utilizing Flutter, iOS, Machine Learning, Java. Great opportunity to work on meaningful {domain} projects.",
+    "duration": "6 Months",
+    "teamSize": 4,
+    "difficulty": "Beginner",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "creatorId": "student_028"
+  },
+  {
+    "id": "project_012",
+    "title": "Advanced Environment System",
+    "type": "Student",
+    "domain": "Environment",
+    "skillsRequired": [
+      "MongoDB",
+      "AWS",
+      "UI/UX"
+    ],
+    "status": "In Progress",
+    "description": "A comprehensive Environment project that leverages MongoDB, AWS, UI/UX to solve real-world problems. Perfect for students interested in {domain}.",
+    "duration": "2 Months",
+    "teamSize": 4,
+    "difficulty": "Beginner",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "creatorId": "student_004"
+  },
+  {
+    "id": "project_013",
+    "title": "AI-Powered AI/ML Tool",
+    "type": "Startup",
+    "domain": "AI/ML",
+    "skillsRequired": [
+      "Data Science",
+      "MongoDB",
+      "Flutter",
+      "PyTorch",
+      "iOS"
+    ],
+    "status": "Open",
+    "description": "A comprehensive AI/ML project that leverages Data Science, MongoDB, Flutter, PyTorch, iOS to solve real-world problems. Perfect for students interested in {domain}.",
+    "duration": "6 Months",
+    "teamSize": 8,
+    "difficulty": "Beginner",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "startupId": "startup_012",
+    "compensation": "Stipend"
+  },
+  {
+    "id": "project_014",
+    "title": "Advanced Data Science System",
+    "type": "Research",
+    "domain": "Data Science",
+    "skillsRequired": [
+      "IoT",
+      "AWS",
+      "Docker"
+    ],
+    "status": "On Hold",
+    "description": "Advanced Data Science application built with IoT, AWS, Docker. Ideal for students looking to gain expertise in {domain} technologies.",
+    "duration": "6 Months",
+    "teamSize": 8,
+    "difficulty": "Intermediate",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "facultyId": "faculty_020",
+    "publication": false
+  },
+  {
+    "id": "project_015",
+    "title": "AI-Powered Cybersecurity Tool",
+    "type": "Student",
+    "domain": "Cybersecurity",
+    "skillsRequired": [
+      "Machine Learning",
+      "Data Science",
+      "React",
+      "Blockchain"
+    ],
+    "status": "In Progress",
+    "description": "Advanced Cybersecurity application built with Machine Learning, Data Science, React, Blockchain. Ideal for students looking to gain expertise in {domain} technologies.",
+    "duration": "3 Months",
+    "teamSize": 7,
+    "difficulty": "Beginner",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "creatorId": "student_050"
+  },
+  {
+    "id": "project_016",
+    "title": "Modern Fintech Application",
+    "type": "Student",
+    "domain": "Fintech",
+    "skillsRequired": [
+      "DevOps",
+      "MongoDB",
+      "Robotics",
+      "Data Science",
+      "TensorFlow"
+    ],
+    "status": "Open",
+    "description": "Modern Fintech platform developed using DevOps, MongoDB, Robotics, Data Science, TensorFlow. Provides practical experience in {domain} implementation.",
+    "duration": "2 Months",
+    "teamSize": 6,
+    "difficulty": "Intermediate",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "creatorId": "student_050"
+  },
+  {
+    "id": "project_017",
+    "title": "Next-Gen IoT System",
+    "type": "Startup",
+    "domain": "IoT",
+    "skillsRequired": [
+      "Blockchain",
+      "Flutter",
+      "Data Science",
+      "Python",
+      "Node.js"
+    ],
+    "status": "Open",
+    "description": "Robust IoT system utilizing Blockchain, Flutter, Data Science, Python, Node.js. Great opportunity to work on meaningful {domain} projects.",
+    "duration": "6 Months",
+    "teamSize": 7,
+    "difficulty": "Intermediate",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "startupId": "startup_003",
+    "compensation": "Equity"
+  },
+  {
+    "id": "project_018",
+    "title": "Innovative Edtech Platform",
+    "type": "Student",
+    "domain": "Edtech",
+    "skillsRequired": [
+      "Node.js",
+      "Java",
+      "Robotics",
+      "Flutter"
+    ],
+    "status": "On Hold",
+    "description": "Modern Edtech platform developed using Node.js, Java, Robotics, Flutter. Provides practical experience in {domain} implementation.",
+    "duration": "2 Months",
+    "teamSize": 4,
+    "difficulty": "Advanced",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "creatorId": "student_003"
+  },
+  {
+    "id": "project_019",
+    "title": "Next-Gen Edtech System",
+    "type": "Student",
+    "domain": "Edtech",
+    "skillsRequired": [
+      "Blockchain",
+      "Flutter"
+    ],
+    "status": "Open",
+    "description": "Modern Edtech platform developed using Blockchain, Flutter. Provides practical experience in {domain} implementation.",
+    "duration": "2 Months",
+    "teamSize": 5,
+    "difficulty": "Beginner",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "creatorId": "student_006"
+  },
+  {
+    "id": "project_020",
+    "title": "Innovative Edtech Platform",
+    "type": "Research",
+    "domain": "Edtech",
+    "skillsRequired": [
+      "Flutter",
+      "Docker",
+      "MongoDB",
+      "IoT"
+    ],
+    "status": "Open",
+    "description": "Modern Edtech platform developed using Flutter, Docker, MongoDB, IoT. Provides practical experience in {domain} implementation.",
+    "duration": "3 Months",
+    "teamSize": 2,
+    "difficulty": "Intermediate",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "facultyId": "faculty_003",
+    "publication": false
+  },
+  {
+    "id": "project_021",
+    "title": "Advanced Robotics System",
+    "type": "Student",
+    "domain": "Robotics",
+    "skillsRequired": [
+      "TensorFlow",
+      "AWS",
+      "iOS",
+      "Python",
+      "Blockchain"
+    ],
+    "status": "On Hold",
+    "description": "Modern Robotics platform developed using TensorFlow, AWS, iOS, Python, Blockchain. Provides practical experience in {domain} implementation.",
+    "duration": "6 Months",
+    "teamSize": 2,
+    "difficulty": "Intermediate",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "creatorId": "student_045"
+  },
+  {
+    "id": "project_022",
+    "title": "Smart Environment Platform",
+    "type": "Research",
+    "domain": "Environment",
+    "skillsRequired": [
+      "AWS",
+      "Robotics",
+      "React",
+      "Machine Learning",
+      "Flutter"
+    ],
+    "status": "In Progress",
+    "description": "A comprehensive Environment project that leverages AWS, Robotics, React, Machine Learning, Flutter to solve real-world problems. Perfect for students interested in {domain}.",
+    "duration": "3 Months",
+    "teamSize": 6,
+    "difficulty": "Intermediate",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "facultyId": "faculty_011",
+    "publication": true
+  },
+  {
+    "id": "project_023",
+    "title": "Smart Mobile Development Platform",
+    "type": "Research",
+    "domain": "Mobile Development",
+    "skillsRequired": [
+      "MongoDB",
+      "React"
+    ],
+    "status": "Completed",
+    "description": "Innovative Mobile Development solution using cutting-edge MongoDB, React. This project offers hands-on experience in {domain} development.",
+    "duration": "3 Months",
+    "teamSize": 6,
+    "difficulty": "Beginner",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "facultyId": "faculty_005",
+    "publication": false
+  },
+  {
+    "id": "project_024",
+    "title": "Intelligent Healthcare Solution",
+    "type": "Research",
+    "domain": "Healthcare",
+    "skillsRequired": [
+      "DevOps",
+      "Python",
+      "Robotics",
+      "TensorFlow"
+    ],
+    "status": "Completed",
+    "description": "Advanced Healthcare application built with DevOps, Python, Robotics, TensorFlow. Ideal for students looking to gain expertise in {domain} technologies.",
+    "duration": "6 Months",
+    "teamSize": 2,
+    "difficulty": "Advanced",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "facultyId": "faculty_015",
+    "publication": false
+  },
+  {
+    "id": "project_025",
+    "title": "Advanced Robotics System",
+    "type": "Research",
+    "domain": "Robotics",
+    "skillsRequired": [
+      "Docker",
+      "Data Science"
+    ],
+    "status": "Completed",
+    "description": "Robust Robotics system utilizing Docker, Data Science. Great opportunity to work on meaningful {domain} projects.",
+    "duration": "6 Months",
+    "teamSize": 7,
+    "difficulty": "Advanced",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "facultyId": "faculty_009",
+    "publication": true
+  },
+  {
+    "id": "project_026",
+    "title": "Next-Gen Data Science System",
+    "type": "Startup",
+    "domain": "Data Science",
+    "skillsRequired": [
+      "Flutter",
+      "AWS",
+      "MongoDB"
+    ],
+    "status": "On Hold",
+    "description": "A comprehensive Data Science project that leverages Flutter, AWS, MongoDB to solve real-world problems. Perfect for students interested in {domain}.",
+    "duration": "3 Months",
+    "teamSize": 2,
+    "difficulty": "Beginner",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "startupId": "startup_007",
+    "compensation": "Stipend"
+  },
+  {
+    "id": "project_027",
+    "title": "Smart Healthcare Platform",
+    "type": "Student",
+    "domain": "Healthcare",
+    "skillsRequired": [
+      "Android",
+      "Python",
+      "Data Science",
+      "Node.js"
+    ],
+    "status": "Completed",
+    "description": "Advanced Healthcare application built with Android, Python, Data Science, Node.js. Ideal for students looking to gain expertise in {domain} technologies.",
+    "duration": "3 Months",
+    "teamSize": 6,
+    "difficulty": "Beginner",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "creatorId": "student_013"
+  },
+  {
+    "id": "project_028",
+    "title": "Next-Gen Fintech System",
+    "type": "Student",
+    "domain": "Fintech",
+    "skillsRequired": [
+      "Robotics",
+      "Blockchain",
+      "Machine Learning"
+    ],
+    "status": "In Progress",
+    "description": "Modern Fintech platform developed using Robotics, Blockchain, Machine Learning. Provides practical experience in {domain} implementation.",
+    "duration": "3 Months",
+    "teamSize": 5,
+    "difficulty": "Beginner",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "creatorId": "student_031"
+  },
+  {
+    "id": "project_029",
+    "title": "Smart Environment Platform",
+    "type": "Research",
+    "domain": "Environment",
+    "skillsRequired": [
+      "UI/UX",
+      "React"
+    ],
+    "status": "Open",
+    "description": "Advanced Environment application built with UI/UX, React. Ideal for students looking to gain expertise in {domain} technologies.",
+    "duration": "3 Months",
+    "teamSize": 4,
+    "difficulty": "Intermediate",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "facultyId": "faculty_010",
+    "publication": false
+  },
+  {
+    "id": "project_030",
+    "title": "Smart Edtech Platform",
+    "type": "Student",
+    "domain": "Edtech",
+    "skillsRequired": [
+      "IoT",
+      "PyTorch",
+      "Machine Learning",
+      "React",
+      "Blockchain"
+    ],
+    "status": "On Hold",
+    "description": "Innovative Edtech solution using cutting-edge IoT, PyTorch, Machine Learning, React, Blockchain. This project offers hands-on experience in {domain} development.",
+    "duration": "6 Months",
+    "teamSize": 3,
+    "difficulty": "Beginner",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "creatorId": "student_018"
+  },
+  {
+    "id": "project_031",
+    "title": "Smart Mobile Development Platform",
+    "type": "Startup",
+    "domain": "Mobile Development",
+    "skillsRequired": [
+      "IoT",
+      "UI/UX",
+      "React",
+      "Java"
+    ],
+    "status": "Open",
+    "description": "Advanced Mobile Development application built with IoT, UI/UX, React, Java. Ideal for students looking to gain expertise in {domain} technologies.",
+    "duration": "3 Months",
+    "teamSize": 6,
+    "difficulty": "Beginner",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "startupId": "startup_004",
+    "compensation": "Unpaid"
+  },
+  {
+    "id": "project_032",
+    "title": "Advanced Blockchain System",
+    "type": "Startup",
+    "domain": "Blockchain",
+    "skillsRequired": [
+      "Data Science",
+      "Android",
+      "Robotics",
+      "Python"
+    ],
+    "status": "Open",
+    "description": "A comprehensive Blockchain project that leverages Data Science, Android, Robotics, Python to solve real-world problems. Perfect for students interested in {domain}.",
+    "duration": "2 Months",
+    "teamSize": 3,
+    "difficulty": "Beginner",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "startupId": "startup_010",
+    "compensation": "Stipend"
+  },
+  {
+    "id": "project_033",
+    "title": "Intelligent Fintech Solution",
+    "type": "Student",
+    "domain": "Fintech",
+    "skillsRequired": [
+      "Node.js",
+      "C++"
+    ],
+    "status": "Open",
+    "description": "Modern Fintech platform developed using Node.js, C++. Provides practical experience in {domain} implementation.",
+    "duration": "1 Month",
+    "teamSize": 8,
+    "difficulty": "Intermediate",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "creatorId": "student_024"
+  },
+  {
+    "id": "project_034",
+    "title": "Smart AI/ML Platform",
+    "type": "Student",
+    "domain": "AI/ML",
+    "skillsRequired": [
+      "Flutter",
+      "React",
+      "AWS"
+    ],
+    "status": "On Hold",
+    "description": "A comprehensive AI/ML project that leverages Flutter, React, AWS to solve real-world problems. Perfect for students interested in {domain}.",
+    "duration": "2 Months",
+    "teamSize": 3,
+    "difficulty": "Advanced",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "creatorId": "student_044"
+  },
+  {
+    "id": "project_035",
+    "title": "Advanced IoT System",
+    "type": "Startup",
+    "domain": "IoT",
+    "skillsRequired": [
+      "PyTorch",
+      "Robotics"
+    ],
+    "status": "In Progress",
+    "description": "Robust IoT system utilizing PyTorch, Robotics. Great opportunity to work on meaningful {domain} projects.",
+    "duration": "6 Months",
+    "teamSize": 4,
+    "difficulty": "Intermediate",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "startupId": "startup_014",
+    "compensation": "Stipend"
+  },
+  {
+    "id": "project_036",
+    "title": "Next-Gen IoT System",
+    "type": "Student",
+    "domain": "IoT",
+    "skillsRequired": [
+      "Android",
+      "DevOps",
+      "AWS",
+      "Java",
+      "Robotics"
+    ],
+    "status": "Open",
+    "description": "A comprehensive IoT project that leverages Android, DevOps, AWS, Java, Robotics to solve real-world problems. Perfect for students interested in {domain}.",
+    "duration": "1 Month",
+    "teamSize": 8,
+    "difficulty": "Advanced",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "creatorId": "student_004"
+  },
+  {
+    "id": "project_037",
+    "title": "Next-Gen E-commerce System",
+    "type": "Research",
+    "domain": "E-commerce",
+    "skillsRequired": [
+      "Blockchain",
+      "Java",
+      "Machine Learning",
+      "Node.js"
+    ],
+    "status": "Open",
+    "description": "Robust E-commerce system utilizing Blockchain, Java, Machine Learning, Node.js. Great opportunity to work on meaningful {domain} projects.",
+    "duration": "6 Months",
+    "teamSize": 8,
+    "difficulty": "Beginner",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "facultyId": "faculty_018",
+    "publication": false
+  },
+  {
+    "id": "project_038",
+    "title": "Innovative IoT Platform",
+    "type": "Startup",
+    "domain": "IoT",
+    "skillsRequired": [
+      "Python",
+      "MongoDB",
+      "C++",
+      "TensorFlow",
+      "React"
+    ],
+    "status": "Completed",
+    "description": "Robust IoT system utilizing Python, MongoDB, C++, TensorFlow, React. Great opportunity to work on meaningful {domain} projects.",
+    "duration": "2 Months",
+    "teamSize": 7,
+    "difficulty": "Beginner",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "startupId": "startup_004",
+    "compensation": "Stipend"
+  },
+  {
+    "id": "project_039",
+    "title": "Cloud-Based Mobile Development Solution",
+    "type": "Research",
+    "domain": "Mobile Development",
+    "skillsRequired": [
+      "Android",
+      "UI/UX",
+      "iOS",
+      "Machine Learning",
+      "Docker"
+    ],
+    "status": "In Progress",
+    "description": "Modern Mobile Development platform developed using Android, UI/UX, iOS, Machine Learning, Docker. Provides practical experience in {domain} implementation.",
+    "duration": "3 Months",
+    "teamSize": 3,
+    "difficulty": "Intermediate",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "facultyId": "faculty_018",
+    "publication": false
+  },
+  {
+    "id": "project_040",
+    "title": "Innovative Healthcare Platform",
+    "type": "Startup",
+    "domain": "Healthcare",
+    "skillsRequired": [
+      "TensorFlow",
+      "UI/UX",
+      "Docker",
+      "PyTorch"
+    ],
+    "status": "Open",
+    "description": "Robust Healthcare system utilizing TensorFlow, UI/UX, Docker, PyTorch. Great opportunity to work on meaningful {domain} projects.",
+    "duration": "2 Months",
+    "teamSize": 3,
+    "difficulty": "Beginner",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "startupId": "startup_015",
+    "compensation": "Stipend"
+  }
+]

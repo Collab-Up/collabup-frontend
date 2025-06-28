@@ -1,0 +1,680 @@
+[
+  {
+    "id": "faculty_001",
+    "name": "Vicki Lehner",
+    "email": "Victor87@yahoo.com",
+    "institute": "IIT Kanpur",
+    "department": "Electrical Engineering",
+    "researchAreas": [
+      "Biomedical Engineering",
+      "Renewable Energy"
+    ],
+    "bio": "Renowned Associate Professor at IIT Kanpur with expertise in Biomedical Engineering, Renewable Energy. Author of 55 publications.",
+    "designation": "Associate Professor",
+    "experience": 12,
+    "publications": 55,
+    "profilePic": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/823.jpg",
+    "website": "https://rapid-pint.info/",
+    "createdAt": "2025-06-28T13:35:52.285Z",
+    "updatedAt": "2025-06-28T13:35:52.285Z"
+  },
+  {
+    "id": "faculty_002",
+    "name": "Woodrow Kertzmann",
+    "email": "Austyn34@yahoo.com",
+    "institute": "IIT Bombay",
+    "department": "Electrical Engineering",
+    "researchAreas": [
+      "Quantum Computing",
+      "Blockchain",
+      "Nanotechnology"
+    ],
+    "bio": "Experienced Professor specializing in Quantum Computing, Blockchain, Nanotechnology. Currently working at IIT Bombay with 15 years of academic experience.",
+    "designation": "Professor",
+    "experience": 15,
+    "publications": 17,
+    "profilePic": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/227.jpg",
+    "website": "https://careless-clock.com",
+    "createdAt": "2025-06-28T13:35:52.285Z",
+    "updatedAt": "2025-06-28T13:35:52.285Z"
+  },
+  {
+    "id": "faculty_003",
+    "name": "Chester Flatley-Padberg",
+    "email": "Brionna_McGlynn51@gmail.com",
+    "institute": "IIT Bombay",
+    "department": "Chemical Engineering",
+    "researchAreas": [
+      "Data Science",
+      "Biomedical Engineering",
+      "Quantum Computing"
+    ],
+    "bio": "Distinguished Head of Department with 22 years at IIT Bombay. Research focus on Data Science, Biomedical Engineering, Quantum Computing.",
+    "designation": "Head of Department",
+    "experience": 22,
+    "publications": 93,
+    "profilePic": "https://avatars.githubusercontent.com/u/14484529",
+    "website": "https://meaty-oxygen.org",
+    "createdAt": "2025-06-28T13:35:52.285Z",
+    "updatedAt": "2025-06-28T13:35:52.285Z"
+  },
+  {
+    "id": "faculty_004",
+    "name": "Leon Zemlak",
+    "email": "Carmine_OConnell47@yahoo.com",
+    "institute": "IIT Madras",
+    "department": "Electrical Engineering",
+    "researchAreas": [
+      "Robotics",
+      "Artificial Intelligence"
+    ],
+    "bio": "Experienced Professor specializing in Robotics, Artificial Intelligence. Currently working at IIT Madras with 14 years of academic experience.",
+    "designation": "Professor",
+    "experience": 14,
+    "publications": 88,
+    "profilePic": "https://avatars.githubusercontent.com/u/32511978",
+    "website": "https://idolized-blowhole.org/",
+    "createdAt": "2025-06-28T13:35:52.285Z",
+    "updatedAt": "2025-06-28T13:35:52.285Z"
+  },
+  {
+    "id": "faculty_005",
+    "name": "Pat Shanahan",
+    "email": "Aron.Mueller@hotmail.com",
+    "institute": "IIT Hyderabad",
+    "department": "Computer Science",
+    "researchAreas": [
+      "IoT"
+    ],
+    "bio": "Leading Head of Department in IoT at IIT Hyderabad. 21 years of research and teaching experience.",
+    "designation": "Head of Department",
+    "experience": 21,
+    "publications": 56,
+    "profilePic": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1243.jpg",
+    "website": "https://solid-good-bye.name/",
+    "createdAt": "2025-06-28T13:35:52.285Z",
+    "updatedAt": "2025-06-28T13:35:52.285Z"
+  },
+  {
+    "id": "faculty_006",
+    "name": "Carol Stiedemann",
+    "email": "Glenda.Waelchi@hotmail.com",
+    "institute": "IIT Roorkee",
+    "department": "Computer Science",
+    "researchAreas": [
+      "Machine Learning"
+    ],
+    "bio": "Distinguished Professor with 24 years at IIT Roorkee. Research focus on Machine Learning.",
+    "designation": "Professor",
+    "experience": 24,
+    "publications": 28,
+    "profilePic": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/528.jpg",
+    "website": "https://hollow-joke.info",
+    "createdAt": "2025-06-28T13:35:52.285Z",
+    "updatedAt": "2025-06-28T13:35:52.285Z"
+  },
+  {
+    "id": "faculty_007",
+    "name": "Steve Cronin",
+    "email": "Schuyler_Abbott@gmail.com",
+    "institute": "IIT Hyderabad",
+    "department": "Biotechnology",
+    "researchAreas": [
+      "Blockchain",
+      "IoT"
+    ],
+    "bio": "Renowned Assistant Professor at IIT Hyderabad with expertise in Blockchain, IoT. Author of 97 publications.",
+    "designation": "Assistant Professor",
+    "experience": 17,
+    "publications": 97,
+    "profilePic": "https://avatars.githubusercontent.com/u/43196035",
+    "website": "https://idealistic-last.net",
+    "createdAt": "2025-06-28T13:35:52.285Z",
+    "updatedAt": "2025-06-28T13:35:52.285Z"
+  },
+  {
+    "id": "faculty_008",
+    "name": "Ms. Ora Reichert",
+    "email": "Lura87@hotmail.com",
+    "institute": "IIT Hyderabad",
+    "department": "Physics",
+    "researchAreas": [
+      "Biomedical Engineering",
+      "Robotics",
+      "Machine Learning"
+    ],
+    "bio": "Leading Head of Department in Biomedical Engineering, Robotics, Machine Learning at IIT Hyderabad. 5 years of research and teaching experience.",
+    "designation": "Head of Department",
+    "experience": 5,
+    "publications": 40,
+    "profilePic": "https://avatars.githubusercontent.com/u/8423636",
+    "website": "https://soulful-reinscription.biz/",
+    "createdAt": "2025-06-28T13:35:52.285Z",
+    "updatedAt": "2025-06-28T13:35:52.285Z"
+  },
+  {
+    "id": "faculty_009",
+    "name": "Tiffany Jakubowski DVM",
+    "email": "Dejon78@hotmail.com",
+    "institute": "IIT Hyderabad",
+    "department": "Electrical Engineering",
+    "researchAreas": [
+      "Cybersecurity",
+      "Machine Learning",
+      "Artificial Intelligence"
+    ],
+    "bio": "Distinguished Associate Professor with 5 years at IIT Hyderabad. Research focus on Cybersecurity, Machine Learning, Artificial Intelligence.",
+    "designation": "Associate Professor",
+    "experience": 5,
+    "publications": 96,
+    "profilePic": "https://avatars.githubusercontent.com/u/43472560",
+    "website": "https://dismal-can.info/",
+    "createdAt": "2025-06-28T13:35:52.285Z",
+    "updatedAt": "2025-06-28T13:35:52.285Z"
+  },
+  {
+    "id": "faculty_010",
+    "name": "Dr. Rudolph Wunsch",
+    "email": "Austen17@hotmail.com",
+    "institute": "IIT Madras",
+    "department": "Mathematics",
+    "researchAreas": [
+      "Computer Vision",
+      "Blockchain",
+      "Data Science"
+    ],
+    "bio": "Assistant Professor at IIT Madras with 23 years of experience in Computer Vision, Blockchain, Data Science. Published 18 research papers.",
+    "designation": "Assistant Professor",
+    "experience": 23,
+    "publications": 18,
+    "profilePic": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1037.jpg",
+    "website": "https://parched-cowbell.name/",
+    "createdAt": "2025-06-28T13:35:52.285Z",
+    "updatedAt": "2025-06-28T13:35:52.285Z"
+  },
+  {
+    "id": "faculty_011",
+    "name": "Mr. Edgar Harvey",
+    "email": "Darron_Lueilwitz@gmail.com",
+    "institute": "IIT Madras",
+    "department": "Mechanical Engineering",
+    "researchAreas": [
+      "Artificial Intelligence",
+      "Machine Learning"
+    ],
+    "bio": "Experienced Associate Professor specializing in Artificial Intelligence, Machine Learning. Currently working at IIT Madras with 24 years of academic experience.",
+    "designation": "Associate Professor",
+    "experience": 24,
+    "publications": 47,
+    "profilePic": "https://avatars.githubusercontent.com/u/68205333",
+    "website": "https://wiggly-banquette.com/",
+    "createdAt": "2025-06-28T13:35:52.285Z",
+    "updatedAt": "2025-06-28T13:35:52.285Z"
+  },
+  {
+    "id": "faculty_012",
+    "name": "Janice Ratke",
+    "email": "Oceane56@gmail.com",
+    "institute": "IIT Kanpur",
+    "department": "Biotechnology",
+    "researchAreas": [
+      "Machine Learning"
+    ],
+    "bio": "Leading Assistant Professor in Machine Learning at IIT Kanpur. 25 years of research and teaching experience.",
+    "designation": "Assistant Professor",
+    "experience": 25,
+    "publications": 51,
+    "profilePic": "https://avatars.githubusercontent.com/u/93828443",
+    "website": "https://male-t-shirt.name/",
+    "createdAt": "2025-06-28T13:35:52.285Z",
+    "updatedAt": "2025-06-28T13:35:52.285Z"
+  },
+  {
+    "id": "faculty_013",
+    "name": "Miss Judy Durgan",
+    "email": "Brannon.Gleason8@hotmail.com",
+    "institute": "IIT Roorkee",
+    "department": "Computer Science",
+    "researchAreas": [
+      "Robotics"
+    ],
+    "bio": "Associate Professor at IIT Roorkee with 22 years of experience in Robotics. Published 85 research papers.",
+    "designation": "Associate Professor",
+    "experience": 22,
+    "publications": 85,
+    "profilePic": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1230.jpg",
+    "website": "https://equal-prompt.name",
+    "createdAt": "2025-06-28T13:35:52.285Z",
+    "updatedAt": "2025-06-28T13:35:52.285Z"
+  },
+  {
+    "id": "faculty_014",
+    "name": "Edwin Quigley",
+    "email": "Ezekiel_Mitchell@gmail.com",
+    "institute": "IIT Kharagpur",
+    "department": "Chemical Engineering",
+    "researchAreas": [
+      "Renewable Energy"
+    ],
+    "bio": "Leading Professor in Renewable Energy at IIT Kharagpur. 11 years of research and teaching experience.",
+    "designation": "Professor",
+    "experience": 11,
+    "publications": 34,
+    "profilePic": "https://avatars.githubusercontent.com/u/88479757",
+    "website": "https://emotional-chapter.name",
+    "createdAt": "2025-06-28T13:35:52.285Z",
+    "updatedAt": "2025-06-28T13:35:52.285Z"
+  },
+  {
+    "id": "faculty_015",
+    "name": "Dr. Sharon Schimmel",
+    "email": "Britney56@gmail.com",
+    "institute": "IIT Bombay",
+    "department": "Mechanical Engineering",
+    "researchAreas": [
+      "Quantum Computing",
+      "Machine Learning",
+      "Blockchain"
+    ],
+    "bio": "Renowned Assistant Professor at IIT Bombay with expertise in Quantum Computing, Machine Learning, Blockchain. Author of 38 publications.",
+    "designation": "Assistant Professor",
+    "experience": 12,
+    "publications": 38,
+    "profilePic": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/101.jpg",
+    "website": "https://frightened-affinity.info",
+    "createdAt": "2025-06-28T13:35:52.285Z",
+    "updatedAt": "2025-06-28T13:35:52.285Z"
+  },
+  {
+    "id": "faculty_016",
+    "name": "Cory Morissette",
+    "email": "Daniela61@yahoo.com",
+    "institute": "IIT Roorkee",
+    "department": "Computer Science",
+    "researchAreas": [
+      "Nanotechnology"
+    ],
+    "bio": "Leading Assistant Professor in Nanotechnology at IIT Roorkee. 12 years of research and teaching experience.",
+    "designation": "Assistant Professor",
+    "experience": 12,
+    "publications": 63,
+    "profilePic": "https://avatars.githubusercontent.com/u/86720207",
+    "website": "https://robust-booster.org",
+    "createdAt": "2025-06-28T13:35:52.285Z",
+    "updatedAt": "2025-06-28T13:35:52.285Z"
+  },
+  {
+    "id": "faculty_017",
+    "name": "Darrel Abbott",
+    "email": "Carolanne.Fritsch@yahoo.com",
+    "institute": "IIT Roorkee",
+    "department": "Computer Science",
+    "researchAreas": [
+      "Data Science",
+      "Robotics",
+      "Artificial Intelligence"
+    ],
+    "bio": "Renowned Associate Professor at IIT Roorkee with expertise in Data Science, Robotics, Artificial Intelligence. Author of 11 publications.",
+    "designation": "Associate Professor",
+    "experience": 24,
+    "publications": 11,
+    "profilePic": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1117.jpg",
+    "website": "https://genuine-earrings.name/",
+    "createdAt": "2025-06-28T13:35:52.285Z",
+    "updatedAt": "2025-06-28T13:35:52.285Z"
+  },
+  {
+    "id": "faculty_018",
+    "name": "Jaime Hansen I",
+    "email": "Benton.Doyle@gmail.com",
+    "institute": "IIT Bombay",
+    "department": "Mathematics",
+    "researchAreas": [
+      "Computer Vision"
+    ],
+    "bio": "Experienced Head of Department specializing in Computer Vision. Currently working at IIT Bombay with 7 years of academic experience.",
+    "designation": "Head of Department",
+    "experience": 7,
+    "publications": 28,
+    "profilePic": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/529.jpg",
+    "website": "https://snappy-wildebeest.info/",
+    "createdAt": "2025-06-28T13:35:52.285Z",
+    "updatedAt": "2025-06-28T13:35:52.285Z"
+  },
+  {
+    "id": "faculty_019",
+    "name": "Michele Beatty",
+    "email": "Katlynn_Bartoletti57@yahoo.com",
+    "institute": "IIT Hyderabad",
+    "department": "Mechanical Engineering",
+    "researchAreas": [
+      "Machine Learning",
+      "Blockchain"
+    ],
+    "bio": "Experienced Head of Department specializing in Machine Learning, Blockchain. Currently working at IIT Hyderabad with 19 years of academic experience.",
+    "designation": "Head of Department",
+    "experience": 19,
+    "publications": 73,
+    "profilePic": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1218.jpg",
+    "website": "https://adored-weight.com/",
+    "createdAt": "2025-06-28T13:35:52.285Z",
+    "updatedAt": "2025-06-28T13:35:52.285Z"
+  },
+  {
+    "id": "faculty_020",
+    "name": "Samantha Hyatt",
+    "email": "Electa_Sipes@hotmail.com",
+    "institute": "IIT Delhi",
+    "department": "Physics",
+    "researchAreas": [
+      "Computer Vision"
+    ],
+    "bio": "Leading Head of Department in Computer Vision at IIT Delhi. 24 years of research and teaching experience.",
+    "designation": "Head of Department",
+    "experience": 24,
+    "publications": 83,
+    "profilePic": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/774.jpg",
+    "website": "https://loyal-rediscovery.com/",
+    "createdAt": "2025-06-28T13:35:52.285Z",
+    "updatedAt": "2025-06-28T13:35:52.285Z"
+  },
+  {
+    "id": "faculty_extra_001",
+    "name": "Simon Sanford",
+    "email": "Nia_Ratke@yahoo.com",
+    "institute": "IIT Bombay",
+    "department": "Mechanical Engineering",
+    "researchAreas": [
+      "Computer Vision",
+      "Blockchain",
+      "Natural Language Processing",
+      "Nanotechnology"
+    ],
+    "bio": "Leading Associate Professor in Computer Vision, Blockchain, Natural Language Processing, Nanotechnology at IIT Bombay. 12 years of research and teaching experience.",
+    "designation": "Associate Professor",
+    "experience": 12,
+    "publications": 81,
+    "profilePic": "https://avatars.githubusercontent.com/u/73348593",
+    "website": "https://acidic-screw-up.name",
+    "createdAt": "2025-06-28T17:44:10.006Z",
+    "updatedAt": "2025-06-28T17:44:10.006Z"
+  },
+  {
+    "id": "faculty_extra_002",
+    "name": "Patrick Heller",
+    "email": "Gust_Orn98@yahoo.com",
+    "institute": "IIT Kharagpur",
+    "department": "Mechanical Engineering",
+    "researchAreas": [
+      "Biomedical Engineering",
+      "Computer Networks"
+    ],
+    "bio": "Dean at IIT Kharagpur with 23 years of experience in Biomedical Engineering, Computer Networks. Published 92 research papers.",
+    "designation": "Dean",
+    "experience": 23,
+    "publications": 92,
+    "profilePic": "https://avatars.githubusercontent.com/u/34979599",
+    "website": "https://front-reset.name",
+    "createdAt": "2025-06-28T17:44:10.006Z",
+    "updatedAt": "2025-06-28T17:44:10.006Z"
+  },
+  {
+    "id": "faculty_extra_003",
+    "name": "Eric Hintz",
+    "email": "Dale_Boyer63@gmail.com",
+    "institute": "IIT Madras",
+    "department": "Physics",
+    "researchAreas": [
+      "Natural Language Processing",
+      "Data Science"
+    ],
+    "bio": "Distinguished Head of Department with 18 years at IIT Madras. Research focus on Natural Language Processing, Data Science.",
+    "designation": "Head of Department",
+    "experience": 18,
+    "publications": 125,
+    "profilePic": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/380.jpg",
+    "website": "https://insecure-starter.org/",
+    "createdAt": "2025-06-28T17:44:10.006Z",
+    "updatedAt": "2025-06-28T17:44:10.006Z"
+  },
+  {
+    "id": "faculty_extra_004",
+    "name": "Lowell Mayer Sr.",
+    "email": "Mohamed_Schroeder17@yahoo.com",
+    "institute": "IISc Bangalore",
+    "department": "Chemistry",
+    "researchAreas": [
+      "Natural Language Processing",
+      "Blockchain",
+      "Renewable Energy",
+      "IoT"
+    ],
+    "bio": "Leading Dean in Natural Language Processing, Blockchain, Renewable Energy, IoT at IISc Bangalore. 11 years of research and teaching experience.",
+    "designation": "Dean",
+    "experience": 11,
+    "publications": 122,
+    "profilePic": "https://avatars.githubusercontent.com/u/14871141",
+    "website": "https://expensive-poker.net",
+    "createdAt": "2025-06-28T17:44:10.006Z",
+    "updatedAt": "2025-06-28T17:44:10.006Z"
+  },
+  {
+    "id": "faculty_extra_005",
+    "name": "Mr. Simon Johnston",
+    "email": "Amelie.MacGyver@hotmail.com",
+    "institute": "IIT Kharagpur",
+    "department": "Computer Science",
+    "researchAreas": [
+      "Blockchain",
+      "Artificial Intelligence",
+      "VLSI Design",
+      "Biomedical Engineering"
+    ],
+    "bio": "Leading Assistant Professor in Blockchain, Artificial Intelligence, VLSI Design, Biomedical Engineering at IIT Kharagpur. 28 years of research and teaching experience.",
+    "designation": "Assistant Professor",
+    "experience": 28,
+    "publications": 72,
+    "profilePic": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/648.jpg",
+    "website": "https://entire-kiss.biz",
+    "createdAt": "2025-06-28T17:44:10.006Z",
+    "updatedAt": "2025-06-28T17:44:10.006Z"
+  },
+  {
+    "id": "faculty_extra_006",
+    "name": "Ruby Wuckert",
+    "email": "Telly_Schneider@yahoo.com",
+    "institute": "IIT Roorkee",
+    "department": "Physics",
+    "researchAreas": [
+      "Computer Vision",
+      "Data Science",
+      "Natural Language Processing",
+      "IoT"
+    ],
+    "bio": "Renowned Head of Department at IIT Roorkee with expertise in Computer Vision, Data Science, Natural Language Processing, IoT. Author of 134 publications.",
+    "designation": "Head of Department",
+    "experience": 8,
+    "publications": 134,
+    "profilePic": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1233.jpg",
+    "website": "https://negligible-mall.com",
+    "createdAt": "2025-06-28T17:44:10.006Z",
+    "updatedAt": "2025-06-28T17:44:10.006Z"
+  },
+  {
+    "id": "faculty_extra_007",
+    "name": "Dr. Sonia Botsford",
+    "email": "Rosella_Koepp@hotmail.com",
+    "institute": "IIT Kharagpur",
+    "department": "Biotechnology",
+    "researchAreas": [
+      "IoT",
+      "VLSI Design",
+      "Renewable Energy"
+    ],
+    "bio": "Leading Associate Professor in IoT, VLSI Design, Renewable Energy at IIT Kharagpur. 18 years of research and teaching experience.",
+    "designation": "Associate Professor",
+    "experience": 18,
+    "publications": 111,
+    "profilePic": "https://avatars.githubusercontent.com/u/20667100",
+    "website": "https://healthy-chronograph.info",
+    "createdAt": "2025-06-28T17:44:10.006Z",
+    "updatedAt": "2025-06-28T17:44:10.006Z"
+  },
+  {
+    "id": "faculty_extra_008",
+    "name": "Raymond Lesch DVM",
+    "email": "Eldora.Gibson@yahoo.com",
+    "institute": "IISc Bangalore",
+    "department": "Computer Science",
+    "researchAreas": [
+      "Natural Language Processing",
+      "Cybersecurity",
+      "IoT"
+    ],
+    "bio": "Distinguished Associate Professor with 8 years at IISc Bangalore. Research focus on Natural Language Processing, Cybersecurity, IoT.",
+    "designation": "Associate Professor",
+    "experience": 8,
+    "publications": 121,
+    "profilePic": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/745.jpg",
+    "website": "https://unwritten-amazement.net/",
+    "createdAt": "2025-06-28T17:44:10.006Z",
+    "updatedAt": "2025-06-28T17:44:10.006Z"
+  },
+  {
+    "id": "faculty_extra_009",
+    "name": "Traci Keebler",
+    "email": "Joy_Hegmann83@yahoo.com",
+    "institute": "IIT Kanpur",
+    "department": "Architecture",
+    "researchAreas": [
+      "IoT",
+      "Natural Language Processing",
+      "Artificial Intelligence"
+    ],
+    "bio": "Assistant Professor at IIT Kanpur with 28 years of experience in IoT, Natural Language Processing, Artificial Intelligence. Published 40 research papers.",
+    "designation": "Assistant Professor",
+    "experience": 28,
+    "publications": 40,
+    "profilePic": "https://avatars.githubusercontent.com/u/9599215",
+    "website": "https://webbed-pea.biz",
+    "createdAt": "2025-06-28T17:44:10.006Z",
+    "updatedAt": "2025-06-28T17:44:10.006Z"
+  },
+  {
+    "id": "faculty_extra_010",
+    "name": "Steve Schowalter",
+    "email": "Emely.Muller@yahoo.com",
+    "institute": "IIIT Hyderabad",
+    "department": "Mechanical Engineering",
+    "researchAreas": [
+      "Nanotechnology",
+      "Renewable Energy",
+      "Biomedical Engineering"
+    ],
+    "bio": "Renowned Head of Department at IIIT Hyderabad with expertise in Nanotechnology, Renewable Energy, Biomedical Engineering. Author of 45 publications.",
+    "designation": "Head of Department",
+    "experience": 19,
+    "publications": 45,
+    "profilePic": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1211.jpg",
+    "website": "https://memorable-tray.org",
+    "createdAt": "2025-06-28T17:44:10.007Z",
+    "updatedAt": "2025-06-28T17:44:10.007Z"
+  },
+  {
+    "id": "faculty_extra_011",
+    "name": "Myra Moore",
+    "email": "Jaylon_Berge20@gmail.com",
+    "institute": "IIT Delhi",
+    "department": "Mathematics",
+    "researchAreas": [
+      "Computer Networks",
+      "Biomedical Engineering"
+    ],
+    "bio": "Leading Head of Department in Computer Networks, Biomedical Engineering at IIT Delhi. 29 years of research and teaching experience.",
+    "designation": "Head of Department",
+    "experience": 29,
+    "publications": 81,
+    "profilePic": "https://avatars.githubusercontent.com/u/96085639",
+    "website": "https://extroverted-ban.com/",
+    "createdAt": "2025-06-28T17:44:10.007Z",
+    "updatedAt": "2025-06-28T17:44:10.007Z"
+  },
+  {
+    "id": "faculty_extra_012",
+    "name": "Sophia Ryan",
+    "email": "Cayla.Klein90@gmail.com",
+    "institute": "IIT Kanpur",
+    "department": "Chemistry",
+    "researchAreas": [
+      "Blockchain",
+      "Artificial Intelligence"
+    ],
+    "bio": "Head of Department at IIT Kanpur with 5 years of experience in Blockchain, Artificial Intelligence. Published 128 research papers.",
+    "designation": "Head of Department",
+    "experience": 5,
+    "publications": 128,
+    "profilePic": "https://avatars.githubusercontent.com/u/40382624",
+    "website": "https://experienced-consequence.org",
+    "createdAt": "2025-06-28T17:44:10.007Z",
+    "updatedAt": "2025-06-28T17:44:10.007Z"
+  },
+  {
+    "id": "faculty_extra_013",
+    "name": "Lee Wisoky",
+    "email": "Eleanore_Nicolas@gmail.com",
+    "institute": "IISc Bangalore",
+    "department": "Chemical Engineering",
+    "researchAreas": [
+      "Blockchain",
+      "Biomedical Engineering"
+    ],
+    "bio": "Leading Associate Professor in Blockchain, Biomedical Engineering at IISc Bangalore. 26 years of research and teaching experience.",
+    "designation": "Associate Professor",
+    "experience": 26,
+    "publications": 130,
+    "profilePic": "https://avatars.githubusercontent.com/u/32381597",
+    "website": "https://acclaimed-object.name",
+    "createdAt": "2025-06-28T17:44:10.007Z",
+    "updatedAt": "2025-06-28T17:44:10.007Z"
+  },
+  {
+    "id": "faculty_extra_014",
+    "name": "Julio Johns",
+    "email": "Wilfrid.Sauer@hotmail.com",
+    "institute": "IIT Madras",
+    "department": "Computer Science",
+    "researchAreas": [
+      "Cybersecurity",
+      "Natural Language Processing",
+      "Artificial Intelligence"
+    ],
+    "bio": "Distinguished Head of Department with 16 years at IIT Madras. Research focus on Cybersecurity, Natural Language Processing, Artificial Intelligence.",
+    "designation": "Head of Department",
+    "experience": 16,
+    "publications": 135,
+    "profilePic": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/928.jpg",
+    "website": "https://wiggly-buffet.com/",
+    "createdAt": "2025-06-28T17:44:10.007Z",
+    "updatedAt": "2025-06-28T17:44:10.007Z"
+  },
+  {
+    "id": "faculty_extra_015",
+    "name": "Jesse Hermiston",
+    "email": "Vita_Nienow36@yahoo.com",
+    "institute": "BITS Pilani",
+    "department": "Electrical Engineering",
+    "researchAreas": [
+      "Renewable Energy",
+      "Blockchain",
+      "Biomedical Engineering"
+    ],
+    "bio": "Distinguished Dean with 14 years at BITS Pilani. Research focus on Renewable Energy, Blockchain, Biomedical Engineering.",
+    "designation": "Dean",
+    "experience": 14,
+    "publications": 143,
+    "profilePic": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1124.jpg",
+    "website": "https://assured-vegetarianism.biz/",
+    "createdAt": "2025-06-28T17:44:10.007Z",
+    "updatedAt": "2025-06-28T17:44:10.007Z"
+  }
+]

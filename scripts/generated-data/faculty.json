@@ -1,0 +1,501 @@
+[
+  {
+    "id": "faculty_001",
+    "name": "Vicki Lehner",
+    "email": "Victor87@yahoo.com",
+    "institute": "IIT Kanpur",
+    "department": "Electrical Engineering",
+    "researchAreas": [
+      "Biomedical Engineering",
+      "Renewable Energy"
+    ],
+    "bio": "Renowned Associate Professor at IIT Kanpur with expertise in Biomedical Engineering, Renewable Energy. Author of 55 publications.",
+    "designation": "Associate Professor",
+    "experience": 12,
+    "publications": 55,
+    "profilePic": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/823.jpg",
+    "website": "https://rapid-pint.info/",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 285000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 285000000
+    }
+  },
+  {
+    "id": "faculty_002",
+    "name": "Woodrow Kertzmann",
+    "email": "Austyn34@yahoo.com",
+    "institute": "IIT Bombay",
+    "department": "Electrical Engineering",
+    "researchAreas": [
+      "Quantum Computing",
+      "Blockchain",
+      "Nanotechnology"
+    ],
+    "bio": "Experienced Professor specializing in Quantum Computing, Blockchain, Nanotechnology. Currently working at IIT Bombay with 15 years of academic experience.",
+    "designation": "Professor",
+    "experience": 15,
+    "publications": 17,
+    "profilePic": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/227.jpg",
+    "website": "https://careless-clock.com",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 285000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 285000000
+    }
+  },
+  {
+    "id": "faculty_003",
+    "name": "Chester Flatley-Padberg",
+    "email": "Brionna_McGlynn51@gmail.com",
+    "institute": "IIT Bombay",
+    "department": "Chemical Engineering",
+    "researchAreas": [
+      "Data Science",
+      "Biomedical Engineering",
+      "Quantum Computing"
+    ],
+    "bio": "Distinguished Head of Department with 22 years at IIT Bombay. Research focus on Data Science, Biomedical Engineering, Quantum Computing.",
+    "designation": "Head of Department",
+    "experience": 22,
+    "publications": 93,
+    "profilePic": "https://avatars.githubusercontent.com/u/14484529",
+    "website": "https://meaty-oxygen.org",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 285000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 285000000
+    }
+  },
+  {
+    "id": "faculty_004",
+    "name": "Leon Zemlak",
+    "email": "Carmine_OConnell47@yahoo.com",
+    "institute": "IIT Madras",
+    "department": "Electrical Engineering",
+    "researchAreas": [
+      "Robotics",
+      "Artificial Intelligence"
+    ],
+    "bio": "Experienced Professor specializing in Robotics, Artificial Intelligence. Currently working at IIT Madras with 14 years of academic experience.",
+    "designation": "Professor",
+    "experience": 14,
+    "publications": 88,
+    "profilePic": "https://avatars.githubusercontent.com/u/32511978",
+    "website": "https://idolized-blowhole.org/",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 285000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 285000000
+    }
+  },
+  {
+    "id": "faculty_005",
+    "name": "Pat Shanahan",
+    "email": "Aron.Mueller@hotmail.com",
+    "institute": "IIT Hyderabad",
+    "department": "Computer Science",
+    "researchAreas": [
+      "IoT"
+    ],
+    "bio": "Leading Head of Department in IoT at IIT Hyderabad. 21 years of research and teaching experience.",
+    "designation": "Head of Department",
+    "experience": 21,
+    "publications": 56,
+    "profilePic": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1243.jpg",
+    "website": "https://solid-good-bye.name/",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 285000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 285000000
+    }
+  },
+  {
+    "id": "faculty_006",
+    "name": "Carol Stiedemann",
+    "email": "Glenda.Waelchi@hotmail.com",
+    "institute": "IIT Roorkee",
+    "department": "Computer Science",
+    "researchAreas": [
+      "Machine Learning"
+    ],
+    "bio": "Distinguished Professor with 24 years at IIT Roorkee. Research focus on Machine Learning.",
+    "designation": "Professor",
+    "experience": 24,
+    "publications": 28,
+    "profilePic": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/528.jpg",
+    "website": "https://hollow-joke.info",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 285000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 285000000
+    }
+  },
+  {
+    "id": "faculty_007",
+    "name": "Steve Cronin",
+    "email": "Schuyler_Abbott@gmail.com",
+    "institute": "IIT Hyderabad",
+    "department": "Biotechnology",
+    "researchAreas": [
+      "Blockchain",
+      "IoT"
+    ],
+    "bio": "Renowned Assistant Professor at IIT Hyderabad with expertise in Blockchain, IoT. Author of 97 publications.",
+    "designation": "Assistant Professor",
+    "experience": 17,
+    "publications": 97,
+    "profilePic": "https://avatars.githubusercontent.com/u/43196035",
+    "website": "https://idealistic-last.net",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 285000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 285000000
+    }
+  },
+  {
+    "id": "faculty_008",
+    "name": "Ms. Ora Reichert",
+    "email": "Lura87@hotmail.com",
+    "institute": "IIT Hyderabad",
+    "department": "Physics",
+    "researchAreas": [
+      "Biomedical Engineering",
+      "Robotics",
+      "Machine Learning"
+    ],
+    "bio": "Leading Head of Department in Biomedical Engineering, Robotics, Machine Learning at IIT Hyderabad. 5 years of research and teaching experience.",
+    "designation": "Head of Department",
+    "experience": 5,
+    "publications": 40,
+    "profilePic": "https://avatars.githubusercontent.com/u/8423636",
+    "website": "https://soulful-reinscription.biz/",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 285000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 285000000
+    }
+  },
+  {
+    "id": "faculty_009",
+    "name": "Tiffany Jakubowski DVM",
+    "email": "Dejon78@hotmail.com",
+    "institute": "IIT Hyderabad",
+    "department": "Electrical Engineering",
+    "researchAreas": [
+      "Cybersecurity",
+      "Machine Learning",
+      "Artificial Intelligence"
+    ],
+    "bio": "Distinguished Associate Professor with 5 years at IIT Hyderabad. Research focus on Cybersecurity, Machine Learning, Artificial Intelligence.",
+    "designation": "Associate Professor",
+    "experience": 5,
+    "publications": 96,
+    "profilePic": "https://avatars.githubusercontent.com/u/43472560",
+    "website": "https://dismal-can.info/",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 285000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 285000000
+    }
+  },
+  {
+    "id": "faculty_010",
+    "name": "Dr. Rudolph Wunsch",
+    "email": "Austen17@hotmail.com",
+    "institute": "IIT Madras",
+    "department": "Mathematics",
+    "researchAreas": [
+      "Computer Vision",
+      "Blockchain",
+      "Data Science"
+    ],
+    "bio": "Assistant Professor at IIT Madras with 23 years of experience in Computer Vision, Blockchain, Data Science. Published 18 research papers.",
+    "designation": "Assistant Professor",
+    "experience": 23,
+    "publications": 18,
+    "profilePic": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1037.jpg",
+    "website": "https://parched-cowbell.name/",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 285000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 285000000
+    }
+  },
+  {
+    "id": "faculty_011",
+    "name": "Mr. Edgar Harvey",
+    "email": "Darron_Lueilwitz@gmail.com",
+    "institute": "IIT Madras",
+    "department": "Mechanical Engineering",
+    "researchAreas": [
+      "Artificial Intelligence",
+      "Machine Learning"
+    ],
+    "bio": "Experienced Associate Professor specializing in Artificial Intelligence, Machine Learning. Currently working at IIT Madras with 24 years of academic experience.",
+    "designation": "Associate Professor",
+    "experience": 24,
+    "publications": 47,
+    "profilePic": "https://avatars.githubusercontent.com/u/68205333",
+    "website": "https://wiggly-banquette.com/",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 285000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 285000000
+    }
+  },
+  {
+    "id": "faculty_012",
+    "name": "Janice Ratke",
+    "email": "Oceane56@gmail.com",
+    "institute": "IIT Kanpur",
+    "department": "Biotechnology",
+    "researchAreas": [
+      "Machine Learning"
+    ],
+    "bio": "Leading Assistant Professor in Machine Learning at IIT Kanpur. 25 years of research and teaching experience.",
+    "designation": "Assistant Professor",
+    "experience": 25,
+    "publications": 51,
+    "profilePic": "https://avatars.githubusercontent.com/u/93828443",
+    "website": "https://male-t-shirt.name/",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 285000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 285000000
+    }
+  },
+  {
+    "id": "faculty_013",
+    "name": "Miss Judy Durgan",
+    "email": "Brannon.Gleason8@hotmail.com",
+    "institute": "IIT Roorkee",
+    "department": "Computer Science",
+    "researchAreas": [
+      "Robotics"
+    ],
+    "bio": "Associate Professor at IIT Roorkee with 22 years of experience in Robotics. Published 85 research papers.",
+    "designation": "Associate Professor",
+    "experience": 22,
+    "publications": 85,
+    "profilePic": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1230.jpg",
+    "website": "https://equal-prompt.name",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 285000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 285000000
+    }
+  },
+  {
+    "id": "faculty_014",
+    "name": "Edwin Quigley",
+    "email": "Ezekiel_Mitchell@gmail.com",
+    "institute": "IIT Kharagpur",
+    "department": "Chemical Engineering",
+    "researchAreas": [
+      "Renewable Energy"
+    ],
+    "bio": "Leading Professor in Renewable Energy at IIT Kharagpur. 11 years of research and teaching experience.",
+    "designation": "Professor",
+    "experience": 11,
+    "publications": 34,
+    "profilePic": "https://avatars.githubusercontent.com/u/88479757",
+    "website": "https://emotional-chapter.name",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 285000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 285000000
+    }
+  },
+  {
+    "id": "faculty_015",
+    "name": "Dr. Sharon Schimmel",
+    "email": "Britney56@gmail.com",
+    "institute": "IIT Bombay",
+    "department": "Mechanical Engineering",
+    "researchAreas": [
+      "Quantum Computing",
+      "Machine Learning",
+      "Blockchain"
+    ],
+    "bio": "Renowned Assistant Professor at IIT Bombay with expertise in Quantum Computing, Machine Learning, Blockchain. Author of 38 publications.",
+    "designation": "Assistant Professor",
+    "experience": 12,
+    "publications": 38,
+    "profilePic": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/101.jpg",
+    "website": "https://frightened-affinity.info",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 285000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 285000000
+    }
+  },
+  {
+    "id": "faculty_016",
+    "name": "Cory Morissette",
+    "email": "Daniela61@yahoo.com",
+    "institute": "IIT Roorkee",
+    "department": "Computer Science",
+    "researchAreas": [
+      "Nanotechnology"
+    ],
+    "bio": "Leading Assistant Professor in Nanotechnology at IIT Roorkee. 12 years of research and teaching experience.",
+    "designation": "Assistant Professor",
+    "experience": 12,
+    "publications": 63,
+    "profilePic": "https://avatars.githubusercontent.com/u/86720207",
+    "website": "https://robust-booster.org",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 285000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 285000000
+    }
+  },
+  {
+    "id": "faculty_017",
+    "name": "Darrel Abbott",
+    "email": "Carolanne.Fritsch@yahoo.com",
+    "institute": "IIT Roorkee",
+    "department": "Computer Science",
+    "researchAreas": [
+      "Data Science",
+      "Robotics",
+      "Artificial Intelligence"
+    ],
+    "bio": "Renowned Associate Professor at IIT Roorkee with expertise in Data Science, Robotics, Artificial Intelligence. Author of 11 publications.",
+    "designation": "Associate Professor",
+    "experience": 24,
+    "publications": 11,
+    "profilePic": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1117.jpg",
+    "website": "https://genuine-earrings.name/",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 285000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 285000000
+    }
+  },
+  {
+    "id": "faculty_018",
+    "name": "Jaime Hansen I",
+    "email": "Benton.Doyle@gmail.com",
+    "institute": "IIT Bombay",
+    "department": "Mathematics",
+    "researchAreas": [
+      "Computer Vision"
+    ],
+    "bio": "Experienced Head of Department specializing in Computer Vision. Currently working at IIT Bombay with 7 years of academic experience.",
+    "designation": "Head of Department",
+    "experience": 7,
+    "publications": 28,
+    "profilePic": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/529.jpg",
+    "website": "https://snappy-wildebeest.info/",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 285000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 285000000
+    }
+  },
+  {
+    "id": "faculty_019",
+    "name": "Michele Beatty",
+    "email": "Katlynn_Bartoletti57@yahoo.com",
+    "institute": "IIT Hyderabad",
+    "department": "Mechanical Engineering",
+    "researchAreas": [
+      "Machine Learning",
+      "Blockchain"
+    ],
+    "bio": "Experienced Head of Department specializing in Machine Learning, Blockchain. Currently working at IIT Hyderabad with 19 years of academic experience.",
+    "designation": "Head of Department",
+    "experience": 19,
+    "publications": 73,
+    "profilePic": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1218.jpg",
+    "website": "https://adored-weight.com/",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 285000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 285000000
+    }
+  },
+  {
+    "id": "faculty_020",
+    "name": "Samantha Hyatt",
+    "email": "Electa_Sipes@hotmail.com",
+    "institute": "IIT Delhi",
+    "department": "Physics",
+    "researchAreas": [
+      "Computer Vision"
+    ],
+    "bio": "Leading Head of Department in Computer Vision at IIT Delhi. 24 years of research and teaching experience.",
+    "designation": "Head of Department",
+    "experience": 24,
+    "publications": 83,
+    "profilePic": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/774.jpg",
+    "website": "https://loyal-rediscovery.com/",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 285000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 285000000
+    }
+  }
+]

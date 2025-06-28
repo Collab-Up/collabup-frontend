@@ -1,0 +1,1632 @@
+[
+  {
+    "id": "student_001",
+    "name": "Gladys Gulgowski",
+    "email": "Karolann.Hessel@yahoo.com",
+    "college": "IIT Guwahati",
+    "branch": "Electrical Engineering",
+    "year": 3,
+    "skills": [
+      "React",
+      "Flutter",
+      "Data Science",
+      "Machine Learning"
+    ],
+    "interests": [
+      "Robotics"
+    ],
+    "bio": "Enthusiastic student pursuing Electrical Engineering at IIT Guwahati. Proficient in React, Flutter, Data Science, Machine Learning and actively involved in Robotics.",
+    "location": "Ahmedabad",
+    "profilePic": "https://avatars.githubusercontent.com/u/58777820",
+    "cgpa": 6.97,
+    "github": "https://exhausted-adulthood.net/",
+    "linkedin": "https://rotating-individual.com",
+    "phone": "933-361-8066 x818",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 280000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 280000000
+    }
+  },
+  {
+    "id": "student_002",
+    "name": "Norman Bernier",
+    "email": "Nicklaus68@hotmail.com",
+    "college": "IIT Bombay",
+    "branch": "Computer Science",
+    "year": 4,
+    "skills": [
+      "Flutter",
+      "Android",
+      "React",
+      "UI/UX",
+      "DevOps"
+    ],
+    "interests": [
+      "Cybersecurity",
+      "Open Source"
+    ],
+    "bio": "Motivated 4 year student with strong foundation in Flutter, Android, React, UI/UX, DevOps. Looking for opportunities in Cybersecurity, Open Source.",
+    "location": "Pune",
+    "profilePic": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/982.jpg",
+    "cgpa": 7.27,
+    "github": "https://disgusting-choosing.name/",
+    "linkedin": "https://clean-morning.net",
+    "phone": "1-961-852-4496",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 280000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 280000000
+    }
+  },
+  {
+    "id": "student_003",
+    "name": "Clint Metz",
+    "email": "Marc43@hotmail.com",
+    "college": "IIT Delhi",
+    "branch": "Biotechnology",
+    "year": 1,
+    "skills": [
+      "Robotics",
+      "Android",
+      "Java",
+      "Data Science",
+      "Machine Learning"
+    ],
+    "interests": [
+      "Web Development",
+      "Open Source"
+    ],
+    "bio": "Dedicated 1 year Biotechnology student from IIT Delhi. Skilled in Robotics, Android, Java, Data Science, Machine Learning and passionate about Web Development, Open Source.",
+    "location": "Jaipur",
+    "profilePic": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/612.jpg",
+    "cgpa": 6.62,
+    "github": "https://violet-recess.name/",
+    "linkedin": "https://other-woodchuck.com",
+    "phone": "(982) 215-6551 x250",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 280000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 280000000
+    }
+  },
+  {
+    "id": "student_004",
+    "name": "Everett Bernhard",
+    "email": "Loraine_Goldner@yahoo.com",
+    "college": "IIT Delhi",
+    "branch": "Civil Engineering",
+    "year": 3,
+    "skills": [
+      "Machine Learning",
+      "UI/UX",
+      "DevOps",
+      "Android"
+    ],
+    "interests": [
+      "Cybersecurity"
+    ],
+    "bio": "Tech-savvy Civil Engineering student from IIT Delhi. Experienced in Machine Learning, UI/UX, DevOps, Android and passionate about Cybersecurity.",
+    "location": "Pune",
+    "profilePic": "https://avatars.githubusercontent.com/u/18072686",
+    "cgpa": 6.25,
+    "github": "https://useless-apple.net/",
+    "linkedin": "https://powerful-snowsuit.name",
+    "phone": "1-498-313-6798 x59694",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 281000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 281000000
+    }
+  },
+  {
+    "id": "student_005",
+    "name": "Jamie Gorczany",
+    "email": "Emelia_Watsica@gmail.com",
+    "college": "IIT Madras",
+    "branch": "Mechanical Engineering",
+    "year": 4,
+    "skills": [
+      "Data Science",
+      "React",
+      "Blockchain",
+      "UI/UX",
+      "Python"
+    ],
+    "interests": [
+      "Cloud Computing",
+      "AI/ML"
+    ],
+    "bio": "Dedicated 4 year Mechanical Engineering student from IIT Madras. Skilled in Data Science, React, Blockchain, UI/UX, Python and passionate about Cloud Computing, AI/ML.",
+    "location": "Chennai",
+    "profilePic": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/209.jpg",
+    "cgpa": 9.26,
+    "github": "https://dual-airship.name",
+    "linkedin": "https://wee-commitment.name",
+    "phone": "866.379.3502",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 281000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 281000000
+    }
+  },
+  {
+    "id": "student_006",
+    "name": "Whitney Deckow",
+    "email": "Josiane.Feil@yahoo.com",
+    "college": "IIT Roorkee",
+    "branch": "Chemical Engineering",
+    "year": 2,
+    "skills": [
+      "Java",
+      "Robotics"
+    ],
+    "interests": [
+      "Hackathons",
+      "Web Development"
+    ],
+    "bio": "Passionate 2 year student at IIT Roorkee with expertise in Java, Robotics. Interested in Hackathons, Web Development and always eager to learn new technologies.",
+    "location": "Kolkata",
+    "profilePic": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/525.jpg",
+    "cgpa": 8.38,
+    "github": "https://long-term-attenuation.com",
+    "linkedin": "https://dependent-moment.com",
+    "phone": "(339) 816-1747 x7567",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 281000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 281000000
+    }
+  },
+  {
+    "id": "student_007",
+    "name": "Alberto Schneider Sr.",
+    "email": "Tess_Schmidt@hotmail.com",
+    "college": "IIT Madras",
+    "branch": "Mechanical Engineering",
+    "year": 3,
+    "skills": [
+      "C++",
+      "DevOps",
+      "Robotics",
+      "React",
+      "Flutter"
+    ],
+    "interests": [
+      "Open Source",
+      "AI/ML",
+      "Web Development"
+    ],
+    "bio": "Enthusiastic student pursuing Mechanical Engineering at IIT Madras. Proficient in C++, DevOps, Robotics, React, Flutter and actively involved in Open Source, AI/ML, Web Development.",
+    "location": "Bangalore",
+    "profilePic": "https://avatars.githubusercontent.com/u/82679757",
+    "cgpa": 7.6,
+    "github": "https://acclaimed-colonisation.com/",
+    "linkedin": "https://squeaky-contention.net",
+    "phone": "731-949-0181 x031",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 281000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 281000000
+    }
+  },
+  {
+    "id": "student_008",
+    "name": "Rudolph Bradtke",
+    "email": "Ottilie98@gmail.com",
+    "college": "IIT Hyderabad",
+    "branch": "Civil Engineering",
+    "year": 2,
+    "skills": [
+      "DevOps",
+      "Android",
+      "Data Science"
+    ],
+    "interests": [
+      "Cybersecurity"
+    ],
+    "bio": "Passionate 2 year student at IIT Hyderabad with expertise in DevOps, Android, Data Science. Interested in Cybersecurity and always eager to learn new technologies.",
+    "location": "Mumbai",
+    "profilePic": "https://avatars.githubusercontent.com/u/68085488",
+    "cgpa": 6.53,
+    "github": "https://puzzling-opposite.name/",
+    "linkedin": "https://aware-baseball.org",
+    "phone": "1-680-694-4564 x70833",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 281000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 281000000
+    }
+  },
+  {
+    "id": "student_009",
+    "name": "Rosalie Mitchell PhD",
+    "email": "Maryjane_Bradtke80@yahoo.com",
+    "college": "IIT Kanpur",
+    "branch": "Electrical Engineering",
+    "year": 4,
+    "skills": [
+      "Robotics",
+      "Android",
+      "UI/UX"
+    ],
+    "interests": [
+      "Startups",
+      "Cloud Computing",
+      "Robotics"
+    ],
+    "bio": "Enthusiastic student pursuing Electrical Engineering at IIT Kanpur. Proficient in Robotics, Android, UI/UX and actively involved in Startups, Cloud Computing, Robotics.",
+    "location": "Pune",
+    "profilePic": "https://avatars.githubusercontent.com/u/23956494",
+    "cgpa": 8.23,
+    "github": "https://well-to-do-solitaire.biz/",
+    "linkedin": "https://odd-decimal.name/",
+    "phone": "(525) 209-4673",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 281000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 281000000
+    }
+  },
+  {
+    "id": "student_010",
+    "name": "Francisco Collins",
+    "email": "Molly_Romaguera28@hotmail.com",
+    "college": "IIT Kharagpur",
+    "branch": "Mechanical Engineering",
+    "year": 4,
+    "skills": [
+      "Data Science",
+      "Flutter",
+      "Android",
+      "Blockchain"
+    ],
+    "interests": [
+      "Open Source",
+      "Hackathons",
+      "Web Development"
+    ],
+    "bio": "Passionate 4 year student at IIT Kharagpur with expertise in Data Science, Flutter, Android, Blockchain. Interested in Open Source, Hackathons, Web Development and always eager to learn new technologies.",
+    "location": "Bangalore",
+    "profilePic": "https://avatars.githubusercontent.com/u/29344046",
+    "cgpa": 7.83,
+    "github": "https://turbulent-translation.info/",
+    "linkedin": "https://disastrous-yard.name/",
+    "phone": "499-757-5775",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 281000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 281000000
+    }
+  },
+  {
+    "id": "student_011",
+    "name": "Omar Sawayn",
+    "email": "Florian.VonRueden@hotmail.com",
+    "college": "IIT Madras",
+    "branch": "Mechanical Engineering",
+    "year": 4,
+    "skills": [
+      "Node.js",
+      "IoT",
+      "iOS"
+    ],
+    "interests": [
+      "Hackathons"
+    ],
+    "bio": "Passionate 4 year student at IIT Madras with expertise in Node.js, IoT, iOS. Interested in Hackathons and always eager to learn new technologies.",
+    "location": "Kolkata",
+    "profilePic": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/38.jpg",
+    "cgpa": 7.34,
+    "github": "https://orderly-rivulet.biz",
+    "linkedin": "https://chief-stencil.biz",
+    "phone": "(985) 251-6875",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 281000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 281000000
+    }
+  },
+  {
+    "id": "student_012",
+    "name": "Russell Sawayn",
+    "email": "Mac.Fisher@gmail.com",
+    "college": "IIT Roorkee",
+    "branch": "Electrical Engineering",
+    "year": 1,
+    "skills": [
+      "Node.js",
+      "Java",
+      "Robotics",
+      "iOS",
+      "C++"
+    ],
+    "interests": [
+      "Cloud Computing"
+    ],
+    "bio": "Motivated 1 year student with strong foundation in Node.js, Java, Robotics, iOS, C++. Looking for opportunities in Cloud Computing.",
+    "location": "Bangalore",
+    "profilePic": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/579.jpg",
+    "cgpa": 8.54,
+    "github": "https://elated-siege.net/",
+    "linkedin": "https://peppery-voice.name",
+    "phone": "(350) 632-6894 x87857",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 282000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 282000000
+    }
+  },
+  {
+    "id": "student_013",
+    "name": "Julia Reinger-Hagenes",
+    "email": "Mabel51@gmail.com",
+    "college": "IIT Guwahati",
+    "branch": "Civil Engineering",
+    "year": 3,
+    "skills": [
+      "C++",
+      "Machine Learning"
+    ],
+    "interests": [
+      "Open Source",
+      "Robotics"
+    ],
+    "bio": "Enthusiastic student pursuing Civil Engineering at IIT Guwahati. Proficient in C++, Machine Learning and actively involved in Open Source, Robotics.",
+    "location": "Hyderabad",
+    "profilePic": "https://avatars.githubusercontent.com/u/21218368",
+    "cgpa": 8.51,
+    "github": "https://friendly-crisis.net",
+    "linkedin": "https://roasted-characterization.org/",
+    "phone": "436.660.9601",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 282000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 282000000
+    }
+  },
+  {
+    "id": "student_014",
+    "name": "Kerry Sanford",
+    "email": "Dorothea8@gmail.com",
+    "college": "IIT Guwahati",
+    "branch": "Biotechnology",
+    "year": 4,
+    "skills": [
+      "UI/UX",
+      "C++",
+      "Robotics"
+    ],
+    "interests": [
+      "AI/ML",
+      "Research",
+      "Cloud Computing"
+    ],
+    "bio": "Passionate 4 year student at IIT Guwahati with expertise in UI/UX, C++, Robotics. Interested in AI/ML, Research, Cloud Computing and always eager to learn new technologies.",
+    "location": "Delhi",
+    "profilePic": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/884.jpg",
+    "cgpa": 9.21,
+    "github": "https://trained-messenger.com",
+    "linkedin": "https://noisy-princess.info/",
+    "phone": "923-705-1565 x553",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 282000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 282000000
+    }
+  },
+  {
+    "id": "student_015",
+    "name": "Erica Lemke",
+    "email": "Devonte55@yahoo.com",
+    "college": "IIT Hyderabad",
+    "branch": "Chemical Engineering",
+    "year": 3,
+    "skills": [
+      "Robotics",
+      "Machine Learning",
+      "Data Science",
+      "Flutter"
+    ],
+    "interests": [
+      "Mobile Development"
+    ],
+    "bio": "Motivated 3 year student with strong foundation in Robotics, Machine Learning, Data Science, Flutter. Looking for opportunities in Mobile Development.",
+    "location": "Jaipur",
+    "profilePic": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/597.jpg",
+    "cgpa": 6.79,
+    "github": "https://notable-alley.com",
+    "linkedin": "https://bony-brace.org",
+    "phone": "788-387-5450 x950",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 282000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 282000000
+    }
+  },
+  {
+    "id": "student_016",
+    "name": "Melissa MacGyver V",
+    "email": "Tracey93@hotmail.com",
+    "college": "IIT Delhi",
+    "branch": "Computer Science",
+    "year": 2,
+    "skills": [
+      "Android",
+      "React",
+      "IoT",
+      "iOS"
+    ],
+    "interests": [
+      "Research",
+      "Web Development"
+    ],
+    "bio": "Dedicated 2 year Computer Science student from IIT Delhi. Skilled in Android, React, IoT, iOS and passionate about Research, Web Development.",
+    "location": "Hyderabad",
+    "profilePic": "https://avatars.githubusercontent.com/u/85898051",
+    "cgpa": 9,
+    "github": "https://frightened-barn.name/",
+    "linkedin": "https://warmhearted-amber.org",
+    "phone": "723.988.1137",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 282000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 282000000
+    }
+  },
+  {
+    "id": "student_017",
+    "name": "Blanca Dibbert",
+    "email": "Trycia44@yahoo.com",
+    "college": "IIT Kharagpur",
+    "branch": "Computer Science",
+    "year": 4,
+    "skills": [
+      "Blockchain",
+      "Node.js",
+      "Flutter",
+      "Robotics",
+      "Android"
+    ],
+    "interests": [
+      "Hackathons"
+    ],
+    "bio": "Dedicated 4 year Computer Science student from IIT Kharagpur. Skilled in Blockchain, Node.js, Flutter, Robotics, Android and passionate about Hackathons.",
+    "location": "Bangalore",
+    "profilePic": "https://avatars.githubusercontent.com/u/55864528",
+    "cgpa": 6.93,
+    "github": "https://elementary-clip.com",
+    "linkedin": "https://terrible-navigation.com/",
+    "phone": "759.592.1330 x17776",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 282000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 282000000
+    }
+  },
+  {
+    "id": "student_018",
+    "name": "Monica Rodriguez",
+    "email": "Rowland94@hotmail.com",
+    "college": "IIT Madras",
+    "branch": "Chemical Engineering",
+    "year": 2,
+    "skills": [
+      "UI/UX",
+      "Python",
+      "Node.js",
+      "Java"
+    ],
+    "interests": [
+      "Cloud Computing"
+    ],
+    "bio": "Enthusiastic student pursuing Chemical Engineering at IIT Madras. Proficient in UI/UX, Python, Node.js, Java and actively involved in Cloud Computing.",
+    "location": "Delhi",
+    "profilePic": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/483.jpg",
+    "cgpa": 7,
+    "github": "https://pricey-orange.name/",
+    "linkedin": "https://coordinated-omission.biz",
+    "phone": "1-576-323-6733 x237",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 282000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 282000000
+    }
+  },
+  {
+    "id": "student_019",
+    "name": "Susan Koch",
+    "email": "Myah38@gmail.com",
+    "college": "IIT Kharagpur",
+    "branch": "Chemical Engineering",
+    "year": 3,
+    "skills": [
+      "Machine Learning",
+      "DevOps",
+      "Robotics",
+      "Node.js"
+    ],
+    "interests": [
+      "Startups",
+      "Mobile Development"
+    ],
+    "bio": "Tech-savvy Chemical Engineering student from IIT Kharagpur. Experienced in Machine Learning, DevOps, Robotics, Node.js and passionate about Startups, Mobile Development.",
+    "location": "Pune",
+    "profilePic": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/667.jpg",
+    "cgpa": 6.36,
+    "github": "https://international-dawn.info/",
+    "linkedin": "https://querulous-tomato.name",
+    "phone": "996.724.6923 x446",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 282000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 282000000
+    }
+  },
+  {
+    "id": "student_020",
+    "name": "Toby Hintz",
+    "email": "Selmer75@yahoo.com",
+    "college": "IIT Delhi",
+    "branch": "Mechanical Engineering",
+    "year": 3,
+    "skills": [
+      "DevOps",
+      "iOS",
+      "Robotics",
+      "Java"
+    ],
+    "interests": [
+      "Web Development"
+    ],
+    "bio": "Motivated 3 year student with strong foundation in DevOps, iOS, Robotics, Java. Looking for opportunities in Web Development.",
+    "location": "Pune",
+    "profilePic": "https://avatars.githubusercontent.com/u/53398171",
+    "cgpa": 9.4,
+    "github": "https://every-grade.net/",
+    "linkedin": "https://normal-wrong.biz",
+    "phone": "257-689-4702 x9244",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 282000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 282000000
+    }
+  },
+  {
+    "id": "student_021",
+    "name": "Wendell Jacobi V",
+    "email": "Elza_Jacobson-Frami19@hotmail.com",
+    "college": "IIT Roorkee",
+    "branch": "Civil Engineering",
+    "year": 3,
+    "skills": [
+      "Python",
+      "UI/UX",
+      "Java",
+      "Flutter"
+    ],
+    "interests": [
+      "Web Development"
+    ],
+    "bio": "Enthusiastic student pursuing Civil Engineering at IIT Roorkee. Proficient in Python, UI/UX, Java, Flutter and actively involved in Web Development.",
+    "location": "Kolkata",
+    "profilePic": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/359.jpg",
+    "cgpa": 9.31,
+    "github": "https://unfortunate-timeout.com",
+    "linkedin": "https://bountiful-matchmaker.name/",
+    "phone": "428-936-0954 x31382",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 282000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 282000000
+    }
+  },
+  {
+    "id": "student_022",
+    "name": "Mr. Felix Howell",
+    "email": "Opal.Glover-Prohaska@gmail.com",
+    "college": "IIT Hyderabad",
+    "branch": "Chemical Engineering",
+    "year": 3,
+    "skills": [
+      "Robotics",
+      "Data Science",
+      "C++",
+      "React",
+      "Android"
+    ],
+    "interests": [
+      "Cloud Computing",
+      "Cybersecurity",
+      "Hackathons"
+    ],
+    "bio": "Enthusiastic student pursuing Chemical Engineering at IIT Hyderabad. Proficient in Robotics, Data Science, C++, React, Android and actively involved in Cloud Computing, Cybersecurity, Hackathons.",
+    "location": "Kolkata",
+    "profilePic": "https://avatars.githubusercontent.com/u/34566168",
+    "cgpa": 9.12,
+    "github": "https://gargantuan-scientist.net/",
+    "linkedin": "https://euphoric-fountain.com",
+    "phone": "1-909-781-6301 x79877",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 282000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 282000000
+    }
+  },
+  {
+    "id": "student_023",
+    "name": "Ernestine Skiles-Stanton V",
+    "email": "Norene.Wunsch@gmail.com",
+    "college": "IIT Kanpur",
+    "branch": "Biotechnology",
+    "year": 4,
+    "skills": [
+      "Node.js",
+      "UI/UX",
+      "Flutter",
+      "iOS",
+      "IoT"
+    ],
+    "interests": [
+      "Cloud Computing",
+      "Robotics",
+      "Open Source"
+    ],
+    "bio": "Enthusiastic student pursuing Biotechnology at IIT Kanpur. Proficient in Node.js, UI/UX, Flutter, iOS, IoT and actively involved in Cloud Computing, Robotics, Open Source.",
+    "location": "Mumbai",
+    "profilePic": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1205.jpg",
+    "cgpa": 6.12,
+    "github": "https://far-off-ideal.info",
+    "linkedin": "https://hefty-coincidence.biz/",
+    "phone": "319-679-0949 x2110",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 282000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 282000000
+    }
+  },
+  {
+    "id": "student_024",
+    "name": "Celia McLaughlin",
+    "email": "Eudora14@gmail.com",
+    "college": "IIT Roorkee",
+    "branch": "Mechanical Engineering",
+    "year": 1,
+    "skills": [
+      "C++",
+      "Data Science"
+    ],
+    "interests": [
+      "Robotics",
+      "Web Development",
+      "Cloud Computing"
+    ],
+    "bio": "Passionate 1 year student at IIT Roorkee with expertise in C++, Data Science. Interested in Robotics, Web Development, Cloud Computing and always eager to learn new technologies.",
+    "location": "Jaipur",
+    "profilePic": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/64.jpg",
+    "cgpa": 7.41,
+    "github": "https://grumpy-vogue.name",
+    "linkedin": "https://grim-volcano.net/",
+    "phone": "846.307.4795 x948",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 282000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 282000000
+    }
+  },
+  {
+    "id": "student_025",
+    "name": "Jan Daugherty",
+    "email": "Tess_Yost-Johns80@yahoo.com",
+    "college": "IIT Kharagpur",
+    "branch": "Electrical Engineering",
+    "year": 3,
+    "skills": [
+      "Android",
+      "C++",
+      "Flutter",
+      "Python",
+      "UI/UX"
+    ],
+    "interests": [
+      "Startups"
+    ],
+    "bio": "Tech-savvy Electrical Engineering student from IIT Kharagpur. Experienced in Android, C++, Flutter, Python, UI/UX and passionate about Startups.",
+    "location": "Delhi",
+    "profilePic": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/741.jpg",
+    "cgpa": 7.57,
+    "github": "https://gorgeous-daddy.org/",
+    "linkedin": "https://different-teriyaki.org/",
+    "phone": "1-830-509-7640 x0188",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 282000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 282000000
+    }
+  },
+  {
+    "id": "student_026",
+    "name": "Shawn Little",
+    "email": "Darion55@yahoo.com",
+    "college": "IIT Kanpur",
+    "branch": "Computer Science",
+    "year": 3,
+    "skills": [
+      "Python",
+      "Flutter",
+      "IoT",
+      "Blockchain"
+    ],
+    "interests": [
+      "Mobile Development",
+      "Cloud Computing",
+      "Cybersecurity"
+    ],
+    "bio": "Dedicated 3 year Computer Science student from IIT Kanpur. Skilled in Python, Flutter, IoT, Blockchain and passionate about Mobile Development, Cloud Computing, Cybersecurity.",
+    "location": "Ahmedabad",
+    "profilePic": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/524.jpg",
+    "cgpa": 6.94,
+    "github": "https://yellow-stake.net/",
+    "linkedin": "https://impolite-praise.com/",
+    "phone": "1-605-740-6085 x18775",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 282000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 282000000
+    }
+  },
+  {
+    "id": "student_027",
+    "name": "Tammy Schroeder",
+    "email": "Edison39@yahoo.com",
+    "college": "IIT Delhi",
+    "branch": "Electrical Engineering",
+    "year": 3,
+    "skills": [
+      "Python",
+      "UI/UX",
+      "React",
+      "Machine Learning",
+      "Node.js"
+    ],
+    "interests": [
+      "Startups",
+      "AI/ML",
+      "Cybersecurity"
+    ],
+    "bio": "Dedicated 3 year Electrical Engineering student from IIT Delhi. Skilled in Python, UI/UX, React, Machine Learning, Node.js and passionate about Startups, AI/ML, Cybersecurity.",
+    "location": "Mumbai",
+    "profilePic": "https://avatars.githubusercontent.com/u/60498716",
+    "cgpa": 6.11,
+    "github": "https://unwilling-police.net/",
+    "linkedin": "https://sour-woodland.name",
+    "phone": "1-587-762-7564 x276",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 282000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 282000000
+    }
+  },
+  {
+    "id": "student_028",
+    "name": "Moses Feest",
+    "email": "Burdette_Corkery38@hotmail.com",
+    "college": "IIT Guwahati",
+    "branch": "Biotechnology",
+    "year": 4,
+    "skills": [
+      "UI/UX",
+      "Flutter",
+      "Node.js"
+    ],
+    "interests": [
+      "Hackathons"
+    ],
+    "bio": "Enthusiastic student pursuing Biotechnology at IIT Guwahati. Proficient in UI/UX, Flutter, Node.js and actively involved in Hackathons.",
+    "location": "Chennai",
+    "profilePic": "https://avatars.githubusercontent.com/u/69989150",
+    "cgpa": 7.91,
+    "github": "https://far-capitalism.com/",
+    "linkedin": "https://prime-alcove.biz/",
+    "phone": "(382) 239-4346 x56673",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 282000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 282000000
+    }
+  },
+  {
+    "id": "student_029",
+    "name": "Cassandra Hartmann",
+    "email": "Alayna61@hotmail.com",
+    "college": "IIT Bombay",
+    "branch": "Mechanical Engineering",
+    "year": 3,
+    "skills": [
+      "Flutter",
+      "Data Science",
+      "React",
+      "UI/UX"
+    ],
+    "interests": [
+      "Web Development",
+      "Robotics",
+      "Cloud Computing"
+    ],
+    "bio": "Enthusiastic student pursuing Mechanical Engineering at IIT Bombay. Proficient in Flutter, Data Science, React, UI/UX and actively involved in Web Development, Robotics, Cloud Computing.",
+    "location": "Pune",
+    "profilePic": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/353.jpg",
+    "cgpa": 6.16,
+    "github": "https://clear-trust.com",
+    "linkedin": "https://virtual-editor.org",
+    "phone": "583.900.1374 x693",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 282000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 282000000
+    }
+  },
+  {
+    "id": "student_030",
+    "name": "Sabrina Prosacco",
+    "email": "Cleveland65@hotmail.com",
+    "college": "IIT Roorkee",
+    "branch": "Electrical Engineering",
+    "year": 1,
+    "skills": [
+      "Data Science",
+      "Node.js",
+      "UI/UX",
+      "Flutter",
+      "C++"
+    ],
+    "interests": [
+      "Open Source",
+      "Research"
+    ],
+    "bio": "Dedicated 1 year Electrical Engineering student from IIT Roorkee. Skilled in Data Science, Node.js, UI/UX, Flutter, C++ and passionate about Open Source, Research.",
+    "location": "Mumbai",
+    "profilePic": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/859.jpg",
+    "cgpa": 6.8,
+    "github": "https://obvious-bibliography.com",
+    "linkedin": "https://weary-accountability.net/",
+    "phone": "1-748-728-1155",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 282000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 282000000
+    }
+  },
+  {
+    "id": "student_031",
+    "name": "Paul Hermann",
+    "email": "Roberto_Nader@gmail.com",
+    "college": "IIT Bombay",
+    "branch": "Biotechnology",
+    "year": 1,
+    "skills": [
+      "Android",
+      "Java",
+      "C++",
+      "React",
+      "DevOps"
+    ],
+    "interests": [
+      "Web Development"
+    ],
+    "bio": "Enthusiastic student pursuing Biotechnology at IIT Bombay. Proficient in Android, Java, C++, React, DevOps and actively involved in Web Development.",
+    "location": "Kolkata",
+    "profilePic": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/969.jpg",
+    "cgpa": 6.65,
+    "github": "https://peppery-prompt.name",
+    "linkedin": "https://bruised-precipitation.info/",
+    "phone": "630.237.3537 x556",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 282000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 282000000
+    }
+  },
+  {
+    "id": "student_032",
+    "name": "Mae Cartwright",
+    "email": "Chauncey.Stark34@yahoo.com",
+    "college": "IIT Hyderabad",
+    "branch": "Electrical Engineering",
+    "year": 1,
+    "skills": [
+      "C++",
+      "Flutter",
+      "Java",
+      "IoT"
+    ],
+    "interests": [
+      "Mobile Development",
+      "Robotics"
+    ],
+    "bio": "Tech-savvy Electrical Engineering student from IIT Hyderabad. Experienced in C++, Flutter, Java, IoT and passionate about Mobile Development, Robotics.",
+    "location": "Hyderabad",
+    "profilePic": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/229.jpg",
+    "cgpa": 7.81,
+    "github": "https://tinted-pub.org/",
+    "linkedin": "https://giddy-legislator.biz",
+    "phone": "(829) 801-0179 x72492",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 282000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 282000000
+    }
+  },
+  {
+    "id": "student_033",
+    "name": "Mindy Zulauf",
+    "email": "Luther_Jacobi2@hotmail.com",
+    "college": "IIT Madras",
+    "branch": "Electrical Engineering",
+    "year": 3,
+    "skills": [
+      "Python",
+      "Android"
+    ],
+    "interests": [
+      "Robotics",
+      "AI/ML",
+      "Cybersecurity"
+    ],
+    "bio": "Tech-savvy Electrical Engineering student from IIT Madras. Experienced in Python, Android and passionate about Robotics, AI/ML, Cybersecurity.",
+    "location": "Lucknow",
+    "profilePic": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/533.jpg",
+    "cgpa": 8.8,
+    "github": "https://fresh-saffron.com/",
+    "linkedin": "https://incomparable-mainstream.com/",
+    "phone": "451.307.3732 x74438",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 282000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 282000000
+    }
+  },
+  {
+    "id": "student_034",
+    "name": "Jenna Hettinger",
+    "email": "Octavia.Bergstrom@yahoo.com",
+    "college": "IIT Roorkee",
+    "branch": "Mechanical Engineering",
+    "year": 1,
+    "skills": [
+      "UI/UX",
+      "Machine Learning",
+      "Python",
+      "C++",
+      "Node.js"
+    ],
+    "interests": [
+      "Cloud Computing"
+    ],
+    "bio": "Tech-savvy Mechanical Engineering student from IIT Roorkee. Experienced in UI/UX, Machine Learning, Python, C++, Node.js and passionate about Cloud Computing.",
+    "location": "Hyderabad",
+    "profilePic": "https://avatars.githubusercontent.com/u/63434520",
+    "cgpa": 8.72,
+    "github": "https://revolving-abolishment.net",
+    "linkedin": "https://terrible-bibliography.net/",
+    "phone": "629-652-3381 x25425",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 282000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 282000000
+    }
+  },
+  {
+    "id": "student_035",
+    "name": "Florence Tremblay",
+    "email": "Nathanial_Daugherty@yahoo.com",
+    "college": "IIT Hyderabad",
+    "branch": "Mechanical Engineering",
+    "year": 4,
+    "skills": [
+      "Machine Learning",
+      "DevOps",
+      "UI/UX"
+    ],
+    "interests": [
+      "Web Development",
+      "Open Source",
+      "Startups"
+    ],
+    "bio": "Tech-savvy Mechanical Engineering student from IIT Hyderabad. Experienced in Machine Learning, DevOps, UI/UX and passionate about Web Development, Open Source, Startups.",
+    "location": "Delhi",
+    "profilePic": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/956.jpg",
+    "cgpa": 8.46,
+    "github": "https://sociable-gate.org/",
+    "linkedin": "https://awful-platypus.net/",
+    "phone": "942-872-1999 x940",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 283000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 283000000
+    }
+  },
+  {
+    "id": "student_036",
+    "name": "Jimmie Hahn-Reinger",
+    "email": "Dariana_Kessler87@yahoo.com",
+    "college": "IIT Roorkee",
+    "branch": "Chemical Engineering",
+    "year": 3,
+    "skills": [
+      "iOS",
+      "Data Science",
+      "Robotics",
+      "Android",
+      "UI/UX"
+    ],
+    "interests": [
+      "Startups"
+    ],
+    "bio": "Motivated 3 year student with strong foundation in iOS, Data Science, Robotics, Android, UI/UX. Looking for opportunities in Startups.",
+    "location": "Jaipur",
+    "profilePic": "https://avatars.githubusercontent.com/u/49506576",
+    "cgpa": 7.74,
+    "github": "https://aggressive-beast.org",
+    "linkedin": "https://gargantuan-writer.info/",
+    "phone": "744.809.3269 x690",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 283000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 283000000
+    }
+  },
+  {
+    "id": "student_037",
+    "name": "Maggie Swift",
+    "email": "Dakota_Krajcik@gmail.com",
+    "college": "IIT Kharagpur",
+    "branch": "Mechanical Engineering",
+    "year": 2,
+    "skills": [
+      "UI/UX",
+      "Robotics",
+      "Machine Learning",
+      "iOS",
+      "C++"
+    ],
+    "interests": [
+      "Open Source"
+    ],
+    "bio": "Enthusiastic student pursuing Mechanical Engineering at IIT Kharagpur. Proficient in UI/UX, Robotics, Machine Learning, iOS, C++ and actively involved in Open Source.",
+    "location": "Delhi",
+    "profilePic": "https://avatars.githubusercontent.com/u/96531967",
+    "cgpa": 6.56,
+    "github": "https://realistic-subsection.biz/",
+    "linkedin": "https://gargantuan-collagen.name/",
+    "phone": "(260) 449-0576 x317",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 283000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 283000000
+    }
+  },
+  {
+    "id": "student_038",
+    "name": "Rita Ward",
+    "email": "Marquis.Dickens66@hotmail.com",
+    "college": "IIT Hyderabad",
+    "branch": "Chemical Engineering",
+    "year": 3,
+    "skills": [
+      "Flutter",
+      "Node.js"
+    ],
+    "interests": [
+      "AI/ML"
+    ],
+    "bio": "Dedicated 3 year Chemical Engineering student from IIT Hyderabad. Skilled in Flutter, Node.js and passionate about AI/ML.",
+    "location": "Lucknow",
+    "profilePic": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/382.jpg",
+    "cgpa": 8.53,
+    "github": "https://scratchy-cinema.org/",
+    "linkedin": "https://unwilling-nestling.net/",
+    "phone": "(456) 883-6410 x4666",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 283000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 283000000
+    }
+  },
+  {
+    "id": "student_039",
+    "name": "Vernon Kunze",
+    "email": "Beryl_Howe@yahoo.com",
+    "college": "IIT Hyderabad",
+    "branch": "Civil Engineering",
+    "year": 2,
+    "skills": [
+      "Android",
+      "Data Science",
+      "Blockchain",
+      "React",
+      "iOS"
+    ],
+    "interests": [
+      "Open Source",
+      "AI/ML",
+      "Hackathons"
+    ],
+    "bio": "Tech-savvy Civil Engineering student from IIT Hyderabad. Experienced in Android, Data Science, Blockchain, React, iOS and passionate about Open Source, AI/ML, Hackathons.",
+    "location": "Hyderabad",
+    "profilePic": "https://avatars.githubusercontent.com/u/94952688",
+    "cgpa": 6.37,
+    "github": "https://puzzled-error.info",
+    "linkedin": "https://shocking-south.info",
+    "phone": "239-409-9650 x365",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 283000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 283000000
+    }
+  },
+  {
+    "id": "student_040",
+    "name": "Kara Carroll",
+    "email": "Porter.Schiller7@gmail.com",
+    "college": "IIT Delhi",
+    "branch": "Electrical Engineering",
+    "year": 3,
+    "skills": [
+      "IoT",
+      "Android",
+      "Data Science",
+      "Machine Learning"
+    ],
+    "interests": [
+      "Mobile Development"
+    ],
+    "bio": "Tech-savvy Electrical Engineering student from IIT Delhi. Experienced in IoT, Android, Data Science, Machine Learning and passionate about Mobile Development.",
+    "location": "Hyderabad",
+    "profilePic": "https://avatars.githubusercontent.com/u/61644986",
+    "cgpa": 6.53,
+    "github": "https://solid-t-shirt.name/",
+    "linkedin": "https://fake-lens.net/",
+    "phone": "(455) 833-9972 x78780",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 283000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 283000000
+    }
+  },
+  {
+    "id": "student_041",
+    "name": "Hazel Ferry",
+    "email": "Tristin64@yahoo.com",
+    "college": "IIT Bombay",
+    "branch": "Electrical Engineering",
+    "year": 1,
+    "skills": [
+      "iOS",
+      "Machine Learning"
+    ],
+    "interests": [
+      "Mobile Development",
+      "Cloud Computing",
+      "Open Source"
+    ],
+    "bio": "Passionate 1 year student at IIT Bombay with expertise in iOS, Machine Learning. Interested in Mobile Development, Cloud Computing, Open Source and always eager to learn new technologies.",
+    "location": "Mumbai",
+    "profilePic": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/565.jpg",
+    "cgpa": 9.41,
+    "github": "https://decimal-harpsichord.org",
+    "linkedin": "https://quick-witted-bias.org",
+    "phone": "1-611-993-5624 x015",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 283000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 283000000
+    }
+  },
+  {
+    "id": "student_042",
+    "name": "Erma Murphy MD",
+    "email": "Carmelo65@gmail.com",
+    "college": "IIT Roorkee",
+    "branch": "Biotechnology",
+    "year": 1,
+    "skills": [
+      "DevOps",
+      "UI/UX",
+      "Android"
+    ],
+    "interests": [
+      "Hackathons"
+    ],
+    "bio": "Tech-savvy Biotechnology student from IIT Roorkee. Experienced in DevOps, UI/UX, Android and passionate about Hackathons.",
+    "location": "Mumbai",
+    "profilePic": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/287.jpg",
+    "cgpa": 8.61,
+    "github": "https://anchored-square.com/",
+    "linkedin": "https://chubby-emerald.name",
+    "phone": "1-788-219-5037 x61924",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 283000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 283000000
+    }
+  },
+  {
+    "id": "student_043",
+    "name": "Dwayne Thiel",
+    "email": "Soledad.Hamill97@gmail.com",
+    "college": "IIT Roorkee",
+    "branch": "Mechanical Engineering",
+    "year": 2,
+    "skills": [
+      "Robotics",
+      "Android"
+    ],
+    "interests": [
+      "Startups",
+      "Robotics"
+    ],
+    "bio": "Motivated 2 year student with strong foundation in Robotics, Android. Looking for opportunities in Startups, Robotics.",
+    "location": "Pune",
+    "profilePic": "https://avatars.githubusercontent.com/u/15482717",
+    "cgpa": 8.34,
+    "github": "https://bad-policeman.net",
+    "linkedin": "https://wan-globe.biz",
+    "phone": "418.669.8620 x114",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 283000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 283000000
+    }
+  },
+  {
+    "id": "student_044",
+    "name": "Merle Bayer",
+    "email": "Tobin.Nicolas58@hotmail.com",
+    "college": "IIT Delhi",
+    "branch": "Computer Science",
+    "year": 1,
+    "skills": [
+      "Data Science",
+      "DevOps",
+      "Blockchain",
+      "IoT",
+      "React"
+    ],
+    "interests": [
+      "Research"
+    ],
+    "bio": "Motivated 1 year student with strong foundation in Data Science, DevOps, Blockchain, IoT, React. Looking for opportunities in Research.",
+    "location": "Mumbai",
+    "profilePic": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/401.jpg",
+    "cgpa": 7.97,
+    "github": "https://overlooked-sunlamp.biz",
+    "linkedin": "https://hurtful-neglect.info/",
+    "phone": "382-551-3492",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 283000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 283000000
+    }
+  },
+  {
+    "id": "student_045",
+    "name": "Roland Will",
+    "email": "Muriel_Ritchie39@gmail.com",
+    "college": "IIT Madras",
+    "branch": "Mechanical Engineering",
+    "year": 4,
+    "skills": [
+      "Java",
+      "Machine Learning"
+    ],
+    "interests": [
+      "Cloud Computing",
+      "Hackathons"
+    ],
+    "bio": "Motivated 4 year student with strong foundation in Java, Machine Learning. Looking for opportunities in Cloud Computing, Hackathons.",
+    "location": "Jaipur",
+    "profilePic": "https://avatars.githubusercontent.com/u/35726215",
+    "cgpa": 7.96,
+    "github": "https://gigantic-guilt.com/",
+    "linkedin": "https://authorized-footrest.org/",
+    "phone": "(744) 850-6633 x8197",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 283000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 283000000
+    }
+  },
+  {
+    "id": "student_046",
+    "name": "Maureen Wehner",
+    "email": "Harmony_Schoen50@gmail.com",
+    "college": "IIT Kanpur",
+    "branch": "Mechanical Engineering",
+    "year": 3,
+    "skills": [
+      "C++",
+      "iOS"
+    ],
+    "interests": [
+      "Cloud Computing",
+      "Cybersecurity"
+    ],
+    "bio": "Enthusiastic student pursuing Mechanical Engineering at IIT Kanpur. Proficient in C++, iOS and actively involved in Cloud Computing, Cybersecurity.",
+    "location": "Chennai",
+    "profilePic": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/606.jpg",
+    "cgpa": 8.12,
+    "github": "https://crafty-confidentiality.biz/",
+    "linkedin": "https://known-thaw.org",
+    "phone": "542-564-4282 x20860",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 283000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 283000000
+    }
+  },
+  {
+    "id": "student_047",
+    "name": "Heather Langosh MD",
+    "email": "Madie.Funk60@hotmail.com",
+    "college": "IIT Bombay",
+    "branch": "Electrical Engineering",
+    "year": 3,
+    "skills": [
+      "DevOps",
+      "Android",
+      "IoT",
+      "Node.js"
+    ],
+    "interests": [
+      "Open Source"
+    ],
+    "bio": "Tech-savvy Electrical Engineering student from IIT Bombay. Experienced in DevOps, Android, IoT, Node.js and passionate about Open Source.",
+    "location": "Mumbai",
+    "profilePic": "https://avatars.githubusercontent.com/u/38967982",
+    "cgpa": 9.3,
+    "github": "https://lost-double.com/",
+    "linkedin": "https://honorable-lace.org",
+    "phone": "620-436-1314 x2549",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 283000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 283000000
+    }
+  },
+  {
+    "id": "student_048",
+    "name": "Emanuel Ruecker",
+    "email": "Jeff93@hotmail.com",
+    "college": "IIT Kharagpur",
+    "branch": "Mechanical Engineering",
+    "year": 4,
+    "skills": [
+      "UI/UX",
+      "Blockchain"
+    ],
+    "interests": [
+      "Cloud Computing",
+      "Web Development",
+      "Cybersecurity"
+    ],
+    "bio": "Enthusiastic student pursuing Mechanical Engineering at IIT Kharagpur. Proficient in UI/UX, Blockchain and actively involved in Cloud Computing, Web Development, Cybersecurity.",
+    "location": "Bangalore",
+    "profilePic": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/907.jpg",
+    "cgpa": 7.2,
+    "github": "https://putrid-attack.org",
+    "linkedin": "https://flowery-accommodation.net/",
+    "phone": "1-279-969-1919 x914",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 283000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 283000000
+    }
+  },
+  {
+    "id": "student_049",
+    "name": "Dr. Chad Bernhard",
+    "email": "Patsy.Bauch12@yahoo.com",
+    "college": "IIT Roorkee",
+    "branch": "Computer Science",
+    "year": 4,
+    "skills": [
+      "iOS",
+      "C++",
+      "Java"
+    ],
+    "interests": [
+      "Open Source",
+      "AI/ML"
+    ],
+    "bio": "Tech-savvy Computer Science student from IIT Roorkee. Experienced in iOS, C++, Java and passionate about Open Source, AI/ML.",
+    "location": "Chennai",
+    "profilePic": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/838.jpg",
+    "cgpa": 8.05,
+    "github": "https://windy-return.net/",
+    "linkedin": "https://hateful-dinghy.org",
+    "phone": "(743) 713-2870 x61591",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 283000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 283000000
+    }
+  },
+  {
+    "id": "student_050",
+    "name": "Pablo King",
+    "email": "Oswald.Kunze@yahoo.com",
+    "college": "IIT Kharagpur",
+    "branch": "Biotechnology",
+    "year": 2,
+    "skills": [
+      "Machine Learning",
+      "Node.js"
+    ],
+    "interests": [
+      "Cybersecurity"
+    ],
+    "bio": "Tech-savvy Biotechnology student from IIT Kharagpur. Experienced in Machine Learning, Node.js and passionate about Cybersecurity.",
+    "location": "Delhi",
+    "profilePic": "https://avatars.githubusercontent.com/u/91994737",
+    "cgpa": 8.83,
+    "github": "https://unequaled-week.org/",
+    "linkedin": "https://lustrous-percent.info",
+    "phone": "826-227-4665 x0911",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 283000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 283000000
+    }
+  }
+]
