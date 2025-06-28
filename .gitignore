@@ -7,10 +7,24 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
+# Node modules
+node_modules/
+backend/node_modules/
+scripts/node_modules/
+
+# Build output
 dist
 dist-ssr
 *.local
+
+# Sensitive files
+serviceAccountKey.json
+backend/serviceAccountKey.json
+.env
+backend/.env
+
+# Python cache
+__pycache__/
 
 # Editor directories and files
 .vscode/*
@@ -22,3 +36,14 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Markdown files
+*.md
+
+# Virtual environments
+.venv/
+
+# Ignore lock files (optional)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
