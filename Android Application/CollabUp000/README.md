@@ -24,7 +24,6 @@ CollabUp is an Android application designed to bridge the gap between students, 
 - **🏆 Opportunities**: Discover hackathons, internships, and research opportunities
 - **🤖 AI Assistant**: Built-in chatbot for guidance and support
 - **📧 Email Integration**: Seamless communication between users
-- **☁️ Cloud Storage**: Google Drive integration for profile images
 
 ## 🏗️ Architecture
 
@@ -58,7 +57,6 @@ app/src/main/java/com/princemaurya/collabup000/
 
 - Android Studio Arctic Fox or later
 - Android SDK API 26+
-- Google Cloud Console account
 - Firebase project
 
 ### Installation
@@ -114,4 +112,188 @@ app/src/main/java/com/princemaurya/collabup000/
 - **Project Creation**: Build new collaborative projects
 - **Project Discovery**: Find projects to join
 - **Category Filtering**: Browse by domain and technology
-- **Detailed Project View
+- **Detailed Project Views**: Comprehensive project information
+
+### 👤 Profile Fragment
+- **User Profile Management**: Edit personal information
+- **Skills & Interests**: Manage expertise areas
+- **Connection History**: View past interactions
+- **Settings & Preferences**: Customize app experience
+
+## ⚙️ Configuration
+
+### Firebase Setup
+
+1. **Authentication**
+   - Enable Email/Password authentication
+   - Enable Google Sign-In
+   - Configure OAuth consent screen
+
+2. **Firestore Rules**
+   ```javascript
+   rules_version = '2';
+   service cloud.firestore {
+     match /databases/{database}/documents {
+       // Add your security rules here
+     }
+   }
+   ```
+
+3. **Storage Rules**
+   ```javascript
+   rules_version = '2';
+   service firebase.storage {
+     match /b/{bucket}/o {
+       // Add your storage rules here
+     }
+   }
+   ```
+
+### Google Drive Integration
+
+The app includes Google Drive integration for profile image uploads. See [GOOGLE_DRIVE_SETUP.md](GOOGLE_DRIVE_SETUP.md) for detailed setup instructions.
+
+## 🎨 UI/UX Features
+
+### Design System
+- **Material Design 3**: Modern, accessible design language
+- **Custom Gradients**: Beautiful card backgrounds
+- **Smooth Animations**: Lottie animations and transitions
+- **Responsive Layout**: Adapts to different screen sizes
+
+### Navigation
+- **Bottom Navigation**: Easy access to main sections
+- **Floating Action Button**: Quick access to chatbot
+- **Profile Menu**: Overlay menu with user options
+
+### Interactive Elements
+- **Search Bars**: Real-time search with debouncing
+- **Carousel Views**: Swipeable content cards
+- **Horizontal Lists**: Scrollable item collections
+- **Loading States**: User feedback during operations
+
+## 🔍 Search & Discovery
+
+### Intelligent Search
+- **Multi-field Search**: Search across names, skills, descriptions
+- **AI Recommendations**: Smart content suggestions
+- **Real-time Results**: Instant search feedback
+- **Filter Options**: Refine search results
+
+### Recommendation Engine
+- **Skill-based Matching**: Connect users with similar interests
+- **Location-based Suggestions**: Find people in your area
+- **Project Recommendations**: Suggest relevant projects
+- **Opportunity Matching**: Personalized opportunity suggestions
+
+## 📧 Communication
+
+### Email Integration
+- **Connection Requests**: Send connection emails to students
+- **Session Bookings**: Email mentors for sessions
+- **Project Invitations**: Invite collaborators via email
+- **Feedback System**: Send app feedback to developers
+
+### Chatbot Assistant
+- **24/7 Support**: Always available AI assistant
+- **Context-aware Responses**: Intelligent conversation flow
+- **Quick Actions**: Direct access to app features
+- **Help & Guidance**: User onboarding and support
+
+## 🛠️ Development
+
+### Code Quality
+- **Kotlin Best Practices**: Modern Android development
+- **MVVM Architecture**: Clean separation of concerns
+- **Repository Pattern**: Centralized data management
+- **Error Handling**: Comprehensive exception management
+
+### Testing
+- **Unit Tests**: Core functionality testing
+- **UI Tests**: User interface validation
+- **Integration Tests**: Firebase integration testing
+
+### Performance
+- **Image Optimization**: Efficient image loading with Glide
+- **Lazy Loading**: On-demand content loading
+- **Caching**: Smart data caching strategies
+- **Memory Management**: Efficient resource utilization
+
+## 📊 Data Models
+
+### User Types
+- **Students**: Academic background, skills, interests
+- **Mentors**: Expertise, experience, availability
+- **Startups**: Company info, project requirements
+- **Faculty**: Academic credentials, research areas
+
+### Content Types
+- **Projects**: Collaborative work opportunities
+- **Hackathons**: Competitive programming events
+- **Internships**: Professional development opportunities
+- **Research**: Academic collaboration projects
+
+## 🔐 Security
+
+### Authentication
+- **Firebase Auth**: Secure user authentication
+- **Google Sign-In**: OAuth 2.0 integration
+- **Session Management**: Secure session handling
+- **Permission Control**: Role-based access control
+
+### Data Protection
+- **Encrypted Storage**: Secure data storage
+- **Privacy Controls**: User privacy settings
+- **Data Validation**: Input sanitization
+- **Secure Communication**: HTTPS API calls
+
+## 🚀 Deployment
+
+### Release Process
+1. **Version Management**: Semantic versioning
+2. **Build Configuration**: Release build setup
+3. **Code Signing**: APK signing and verification
+4. **Distribution**: Google Play Store deployment
+
+### Monitoring
+- **Crash Reporting**: Firebase Crashlytics
+- **Analytics**: User behavior tracking
+- **Performance Monitoring**: App performance metrics
+- **Error Tracking**: Comprehensive error logging
+
+## 🤝 Contributing
+
+We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
+
+### Development Setup
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Add tests
+5. Submit a pull request
+
+### Code Style
+- Follow Kotlin coding conventions
+- Use meaningful variable names
+- Add comments for complex logic
+- Maintain consistent formatting
+
+## 📦 Download APK
+
+[⬇️ Click here to download the latest APK](https://drive.google.com/file/d/1GqlPC04rYMIvm0cEGGehJdKpVbC0P3ek/view?usp=sharing)
+
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- **Firebase Team**: For the excellent backend services
+- **Material Design Team**: For the beautiful design system
+- **Open Source Community**: For the amazing libraries and tools
+- **Beta Testers**: For valuable feedback and suggestions
+
+## 📞 Support
+
+- **Email**: collabup4@gmail.com
