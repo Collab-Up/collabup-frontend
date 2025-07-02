@@ -374,4 +374,10 @@ For support and questions:
 
 ---
 
+
 **CollabUp** - Empowering students to connect, collaborate, and grow together! 🚀
+=======
+**CollabUp** - Empowering students to connect, collaborate, and grow together! 🚀 
+
+## 📄 License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
