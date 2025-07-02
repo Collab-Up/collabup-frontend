@@ -1,7 +1,6 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
-import connectDb from "./server/db/connection.js";
 import nodemailer from "nodemailer";
 dotenv.config();
 
@@ -47,8 +46,6 @@ Message: ${message}
     res.status(500).json({ error: "Failed to send email" });
   }
 });
-
-// connectDb();
 
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
