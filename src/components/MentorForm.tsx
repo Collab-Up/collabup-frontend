@@ -2,7 +2,6 @@ import React, { useState, FormEvent } from 'react';
 import { auth, db } from '../firebase/firebaseConfig';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { doc, setDoc } from 'firebase/firestore';
-import { useNavigate } from 'react-router-dom';
 
 const MentorForm: React.FC = () => {
   const [fullName, setFullName] = useState<string>('');
@@ -14,7 +13,6 @@ const MentorForm: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  const navigate = useNavigate();
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
@@ -63,18 +61,13 @@ const MentorForm: React.FC = () => {
       });
       console.log('Firestore document saved for user:', user.uid);
 
-      setSuccess('Mentor account created successfully! Redirecting to mentorship...');
+      setSuccess('Mentor account created successfully!');
       setFullName('');
       setEmail('');
       setExpertiseAreas('');
       setYearsOfExperience('');
       setLinkedInUrl('');
       setPassword('');
-
-      // Redirect to mentorship page after a short delay
-      setTimeout(() => {
-        navigate('/mentorship');
-      }, 2000);
     } catch (err: any) {
       let errorMessage = 'An error occurred during signup.';
       if (err.code === 'auth/email-already-in-use') {

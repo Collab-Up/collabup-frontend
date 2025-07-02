@@ -1,10 +1,8 @@
 import React, { useState, FormEvent } from 'react';
 import { Dialog } from '@headlessui/react';
 import { X, ArrowLeft } from 'lucide-react';
-import { auth, db } from '../firebase/firebaseConfig'; // Adjust path if needed (e.g., '@/firebase/firebase')
+import { auth } from '../firebase/firebaseConfig'; // Adjust path if needed (e.g., '@/firebase/firebase')
 import { signInWithEmailAndPassword } from 'firebase/auth';
-import { doc, getDoc } from 'firebase/firestore';
-import { useNavigate } from 'react-router-dom';
 import StudentForm from './StudentForm';
 import FacultyForm from './FacultyForm';
 import StartupForm from './StartupForm';
@@ -25,7 +23,6 @@ export default function AuthModal({ isOpen, onClose, type }: AuthModalProps) {
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  const navigate = useNavigate();
 
   const handleLoginSubmit = async (e: FormEvent) => {
     e.preventDefault();
@@ -40,42 +37,17 @@ export default function AuthModal({ isOpen, onClose, type }: AuthModalProps) {
       }
 
       // Sign in with Firebase Authentication
-      const userCredential = await signInWithEmailAndPassword(auth, email, password);
-      const user = userCredential.user;
+      await signInWithEmailAndPassword(auth, email, password);
 
-      // Get user role from Firestore
-      const userDoc = await getDoc(doc(db, 'users', user.uid));
-      if (userDoc.exists()) {
-        const userData = userDoc.data();
-        const role = userData.role;
-
-        setSuccess('Logged in successfully! Redirecting...');
-        setEmail('');
-        setPassword('');
-
-        // Redirect based on role
-        setTimeout(() => {
-          onClose();
-          switch (role) {
-            case 'student':
-              navigate('/student-projects');
-              break;
-            case 'faculty':
-              navigate('/research-projects');
-              break;
-            case 'startup':
-              navigate('/startup-proj');
-              break;
-            case 'mentor':
-              navigate('/mentorship');
-              break;
-            default:
-              navigate('/student-projects');
-          }
-        }, 1500);
-      } else {
-        setError('User data not found. Please contact support.');
-      }
+      setSuccess('Logged in successfully!');
+      setEmail('');
+      setPassword('');
+      // Optionally close the modal after a brief delay to show the success message
+      setTimeout(onClose, 1500);
+      // Optional: Redirect to dashboard (uncomment if using react-router-dom)
+      // import { useNavigate } from 'react-router-dom';
+      // const navigate = useNavigate();
+      // navigate('/dashboard');
     } catch (err: any) {
       setError(err.message || 'Invalid email or password.');
       console.error('Login error:', err);

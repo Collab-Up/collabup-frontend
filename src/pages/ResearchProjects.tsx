@@ -329,13 +329,12 @@ const ResearchProject = () => {
           setIsLoading(false);
           console.error('Error fetching user data:', err);
         }
+      } else {
+        setFacultyList(mockFaculties);
+        setResearchProjects(mockResearchProjects);
+        setSelectedInstitute('IIT Delhi');
+        setIsLoading(false);
       }
-      
-      // Always start with mock data
-      setFacultyList(mockFaculties);
-      setResearchProjects(mockResearchProjects);
-      setSelectedInstitute('IIT Delhi');
-      setIsLoading(false);
     });
 
     const fetchData = async () => {
@@ -345,28 +344,14 @@ const ResearchProject = () => {
       try {
         // Fetch research projects
         const projects = await getResearchProjects(userData.role, userData);
-        
+        setResearchProjects(projects);
+
         // Fetch faculties
         const faculties = await getFaculties();
-        
-        // Transform real faculty data to match mock data structure
-        const transformedFaculties = faculties.map(faculty => ({
-          ...faculty,
-          spotsAvailable: Math.floor(Math.random() * 5) + 1, // Random spots for real faculty
-          startDate: new Date(Date.now() + Math.random() * 365 * 24 * 60 * 60 * 1000).toISOString().split('T')[0], // Random start date
-        }));
-        
-        // Combine mock data with real data
-        const combinedFaculties = [...mockFaculties, ...transformedFaculties];
-        const combinedProjects = [...mockResearchProjects, ...projects];
-        
-        setFacultyList(combinedFaculties);
-        setResearchProjects(combinedProjects);
+        setFacultyList(faculties);
       } catch (err) {
-        console.error('Error fetching real data:', err);
-        // Keep mock data even if real data fails to load
-        setFacultyList(mockFaculties);
-        setResearchProjects(mockResearchProjects);
+        setError('Failed to load data.');
+        console.error('Error fetching data:', err);
       } finally {
         setIsLoading(false);
       }

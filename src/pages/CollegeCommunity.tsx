@@ -49,38 +49,6 @@ const mockGroups: Group[] = [
     memberCount: 15,
     domain: 'Web Development',
   },
-  {
-    id: 'group3',
-    name: 'Data Science Enthusiasts',
-    topic: 'Python for Data Analysis',
-    college: 'IIT Bombay',
-    memberCount: 12,
-    domain: 'Data Science',
-  },
-  {
-    id: 'group4',
-    name: 'Cybersecurity Warriors',
-    topic: 'Network Security',
-    college: 'IIT Kanpur',
-    memberCount: 8,
-    domain: 'Cybersecurity',
-  },
-  {
-    id: 'group5',
-    name: 'Blockchain Innovators',
-    topic: 'Smart Contracts',
-    college: 'IIT Madras',
-    memberCount: 6,
-    domain: 'Blockchain',
-  },
-  {
-    id: 'group6',
-    name: 'IoT Explorers',
-    topic: 'Internet of Things',
-    college: 'IIT Kharagpur',
-    memberCount: 9,
-    domain: 'IoT',
-  },
 ];
 
 const mockEvents: Event[] = [
@@ -97,34 +65,6 @@ const mockEvents: Event[] = [
     date: 'March 23, 2025',
     time: '2:00 PM',
     location: 'H05',
-  },
-  {
-    id: 'event3',
-    title: 'Hackathon: Smart City Solutions',
-    date: 'March 25, 2025',
-    time: '9:00 AM',
-    location: 'Computer Center',
-  },
-  {
-    id: 'event4',
-    title: 'Workshop: Cloud Computing',
-    date: 'March 26, 2025',
-    time: '4:00 PM',
-    location: 'Lecture Hall 1',
-  },
-  {
-    id: 'event5',
-    title: 'Career Fair: Tech Companies',
-    date: 'March 28, 2025',
-    time: '10:00 AM',
-    location: 'Auditorium',
-  },
-  {
-    id: 'event6',
-    title: 'Seminar: Future of Blockchain',
-    date: 'March 30, 2025',
-    time: '2:00 PM',
-    location: 'Conference Room',
   },
 ];
 
@@ -167,12 +107,11 @@ const CollegeCommunity = () => {
           setIsLoading(false);
           console.error('Error fetching user data:', err);
         }
+      } else {
+        setGroups(mockGroups);
+        setEvents(mockEvents);
+        setIsLoading(false);
       }
-      
-      // Always start with mock data
-      setGroups(mockGroups);
-      setEvents(mockEvents);
-      setIsLoading(false);
     });
 
     const fetchData = async () => {
@@ -202,10 +141,7 @@ const CollegeCommunity = () => {
             domain: groupDoc.data().domain || '',
           });
         }
-        
-        // Combine mock groups with real groups
-        const combinedGroups = [...mockGroups, ...groupList];
-        setGroups(combinedGroups);
+        setGroups(groupList);
 
         // Fetch events
         const eventsQuery = query(collection(db, 'events'), orderBy('date', 'asc'));
@@ -217,15 +153,10 @@ const CollegeCommunity = () => {
           time: doc.data().time || '',
           location: doc.data().location || '',
         }));
-        
-        // Combine mock events with real events
-        const combinedEvents = [...mockEvents, ...eventList];
-        setEvents(combinedEvents);
+        setEvents(eventList);
       } catch (err) {
-        console.error('Error fetching real community data:', err);
-        // Keep mock data even if real data fails to load
-        setGroups(mockGroups);
-        setEvents(mockEvents);
+        setError('Failed to load community data.');
+        console.error('Error fetching data:', err);
       } finally {
         setIsLoading(false);
       }
@@ -247,16 +178,16 @@ const CollegeCommunity = () => {
           setSocket(newSocket);
 
           newSocket.on('connect_error', (err) => {
+            setError('Failed to connect to chat server.');
             console.error('Socket connection error:', err);
-            // Don't show error to user, just log it
           });
 
           socketCleanup = () => {
             newSocket.disconnect();
           };
         } catch (err) {
+          setError('Failed to initialize chat.');
           console.error('Socket initialization error:', err);
-          // Don't show error to user, just log it
         }
       }
     };

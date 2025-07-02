@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Users, Handshake, Lightbulb, Rocket, GraduationCap, FlaskConical, MessageCircle, HelpCircle } from 'lucide-react';
+import { Users, Handshake, Lightbulb, Rocket, GraduationCap, FlaskConical } from 'lucide-react';
 
 const FeatureCard = ({ icon: Icon, title, description, link, color }: any) => (
   <Link to={link} className="bg-[#1E293B] p-6 rounded-xl transform hover:scale-105 hover:bg-[#2D3B4E] transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/20">
@@ -15,13 +15,7 @@ const FeatureCard = ({ icon: Icon, title, description, link, color }: any) => (
 const Home = () => {
   return (
     <div className="container mx-auto px-4 py-12">
-      {/* Centered Header Section */}
-      <div className="text-center mb-16">
-        <h1 className="text-5xl font-bold gradient-text mb-4">C&lt;&gt;llab to Grow</h1>
-        <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-          Connect, collaborate, and build amazing projects together with students from around the world
-        </p>
-      </div>
+      <h1 className="text-5xl font-bold text-blue-400 mb-16">Collab to Grow</h1>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
         <FeatureCard
@@ -79,44 +73,6 @@ const Home = () => {
             <FlaskConical className="w-5 h-5" />
             Research Projects
           </Link>
-        </div>
-      </div>
-
-      {/* Help Section */}
-      <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl p-8 transform hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-indigo-500/20">
-        <div className="flex items-center gap-4 mb-4">
-          <HelpCircle className="w-8 h-8 text-white" />
-          <h2 className="text-2xl font-semibold text-white">Need Help?</h2>
-        </div>
-        <p className="text-indigo-100 mb-6">
-          Our AI assistant is here to help! Get instant answers to your questions about mentorship, 
-          projects, community features, and more. Click the chat icon in the navbar or use the button below.
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-          <div className="bg-white/10 rounded-lg p-4">
-            <h3 className="font-semibold text-white mb-2">Quick Questions</h3>
-            <ul className="text-indigo-100 text-sm space-y-1">
-              <li>• How to book a mentor?</li>
-              <li>• What are research projects?</li>
-              <li>• How to enroll in startup projects?</li>
-              <li>• Tell me about the community</li>
-            </ul>
-          </div>
-          <div className="bg-white/10 rounded-lg p-4">
-            <h3 className="font-semibold text-white mb-2">Platform Features</h3>
-            <ul className="text-indigo-100 text-sm space-y-1">
-              <li>• Mentorship booking & pricing</li>
-              <li>• Research project applications</li>
-              <li>• Startup project enrollments</li>
-              <li>• College community & events</li>
-            </ul>
-          </div>
-        </div>
-        <div className="flex items-center gap-3">
-          <MessageCircle className="w-5 h-5 text-white" />
-          <span className="text-indigo-100 text-sm">
-            Click the chat icon in the navbar or bottom right corner of this page to start chatting with our assistant!
-          </span>
         </div>
       </div>
     </div>

@@ -106,22 +106,23 @@ function Mentorship() {
           const data = userDoc.data();
           setUserData({ email: data.email, fullName: data.fullName || data.startupName || data.founderName || '' });
         }
+      } else {
+        // Non-logged-in users see mock data
+        setMentors(mockMentors);
+        setIsLoading(false);
       }
-      
-      // Always start with mock data
-      setMentors(mockMentors);
-      setIsLoading(false);
     });
 
-    // Fetch real mentors for students (in addition to mock data)
-    const fetchRealMentors = async () => {
+    // Fetch mentors for students or mentors
+    const fetchMentors = async () => {
       if (!currentUser || userRole !== 'student') {
+        setIsLoading(false);
         return;
       }
       try {
         const mentorsQuery = query(collection(db, 'users'), where('role', '==', 'mentor'));
         const querySnapshot = await getDocs(mentorsQuery);
-        const realMentorList: Mentor[] = querySnapshot.docs.map((doc) => {
+        const mentorList: Mentor[] = querySnapshot.docs.map((doc) => {
           const data = doc.data();
           return {
             id: doc.id,
@@ -136,23 +137,17 @@ function Mentorship() {
             skills: data.expertiseAreas || [],
           };
         });
-        
-        // Combine mock data with real data, ensuring no duplicates
-        const existingIds = new Set(mockMentors.map(m => m.id));
-        const uniqueRealMentors = realMentorList.filter(mentor => !existingIds.has(mentor.id));
-        const combinedMentors = [...mockMentors, ...uniqueRealMentors];
-        
-        console.log('Combined mentors:', combinedMentors.length, 'Mock:', mockMentors.length, 'Real:', uniqueRealMentors.length);
-        setMentors(combinedMentors);
+        setMentors(mentorList);
       } catch (err) {
-        console.error('Error fetching real mentors:', err);
-        // Keep mock data even if real data fails to load
-        setMentors(mockMentors);
+        console.error('Error fetching mentors:', err);
+        setError('Failed to load mentors.');
+      } finally {
+        setIsLoading(false);
       }
     };
 
     if (currentUser && userRole === 'student') {
-      fetchRealMentors();
+      fetchMentors();
     }
     return () => unsubscribe();
   }, [currentUser, userRole]);
@@ -182,60 +177,6 @@ function Mentorship() {
     setIsBookingModalOpen(true);
   };
 
-  const sendEmail = async (templateParams: any, templateId: string, recipient: string) => {
-    try {
-      // Try different parameter formats that might work with the template
-      const params = {
-        ...templateParams,
-        // Alternative parameter names that might be expected
-        user_name: templateParams.to_name,
-        mentor_name: templateParams.from_name,
-        student_name: templateParams.to_name,
-        student_email: templateParams.to_email,
-        mentor_email: templateParams.from_email,
-        date: templateParams.date,
-        time_slot: templateParams.time_slot,
-        platform: templateParams.platform,
-        message: templateParams.message,
-        subject: templateParams.subject,
-      };
-
-      console.log(`Attempting to send email to ${recipient} with template ${templateId}`);
-      console.log('Email parameters:', params);
-
-      const result = await emailjs.send('service_qv37c1r', templateId, params);
-      console.log(`Email sent successfully to ${recipient}:`, result);
-      return true;
-    } catch (error: any) {
-      console.error(`Failed to send email to ${recipient}:`, error);
-      console.error('Error details:', {
-        message: error.message,
-        text: error.text,
-        status: error.status
-      });
-      return false;
-    }
-  };
-
-  const testEmailService = async () => {
-    try {
-      console.log('Testing EmailJS service...');
-      const result = await emailjs.send('service_qv37c1r', 'template_a9799k9', {
-        to_name: 'Test User',
-        to_email: 'test@example.com',
-        from_name: 'Test Sender',
-        from_email: 'sender@example.com',
-        message: 'This is a test email',
-        subject: 'Test Email'
-      });
-      console.log('EmailJS test successful:', result);
-      return true;
-    } catch (error: any) {
-      console.error('EmailJS test failed:', error);
-      return false;
-    }
-  };
-
   const handleConfirmBooking = async () => {
     if (!bookingDetails.date || !bookingDetails.timeSlot || !bookingDetails.platform || !currentUser || !selectedMentor) {
       setError('Please fill out all booking details.');
@@ -244,7 +185,6 @@ function Mentorship() {
 
     setIsLoading(true);
     try {
-      // Save booking to database
       await addDoc(collection(db, 'bookings'), {
         userId: currentUser.uid,
         mentorId: selectedMentor.id,
@@ -254,80 +194,26 @@ function Mentorship() {
         createdAt: new Date().toISOString(),
       });
 
-      console.log('Booking saved to database successfully');
+      await emailjs.send('service_qv37c1r', 'mentor_booking_notification', {
+        mentor_name: selectedMentor.name,
+        user_name: userData?.fullName || 'User',
+        user_email: userData?.email || currentUser.email,
+        date: bookingDetails.date,
+        time_slot: bookingDetails.timeSlot,
+        platform: bookingDetails.platform,
+      });
 
-      // Send email to mentor with student details
-      try {
-        const mentorEmailParams = {
-          to_name: selectedMentor.name,
-          to_email: selectedMentor.email,
-          from_name: 'CollabUp Team',
-          from_email: 'noreply@collabup.com',
-          subject: 'New Mentorship Session Booking',
-          message: `Hello ${selectedMentor.name},
+      await emailjs.send('service_qv37c1r', 'user_booking_confirmation', {
+        user_name: userData?.fullName || 'User',
+        mentor_name: selectedMentor.name,
+        date: bookingDetails.date,
+        time_slot: bookingDetails.timeSlot,
+        platform: bookingDetails.platform,
+      });
 
-A new mentorship session has been booked with you.
-
-Student Details:
-- Name: ${userData?.fullName || 'Student'}
-- Email: ${userData?.email || currentUser.email}
-
-Session Details:
-- Date: ${bookingDetails.date}
-- Time: ${bookingDetails.timeSlot}
-- Platform: ${bookingDetails.platform}
-
-Please contact the student at ${userData?.email || currentUser.email} to confirm the session details.
-
-Best regards,
-CollabUp Team`
-        };
-
-        await emailjs.send('service_qv37c1r', 'template_a9799k9', mentorEmailParams);
-        console.log('Email sent to mentor successfully');
-      } catch (emailErr) {
-        console.error('Error sending email to mentor:', emailErr);
-      }
-
-      // Send confirmation email to user
-      const userEmail = userData?.email || currentUser.email;
-      if (userEmail) {
-        try {
-          const userEmailParams = {
-            to_name: userData?.fullName || 'Student',
-            to_email: userEmail,
-            from_name: 'CollabUp Team',
-            from_email: 'noreply@collabup.com',
-            subject: 'Mentorship Session Confirmation',
-            message: `Hello ${userData?.fullName || 'Student'},
-
-Your mentorship session has been successfully booked!
-
-Session Details:
-- Mentor: ${selectedMentor.name}
-- Date: ${bookingDetails.date}
-- Time: ${bookingDetails.timeSlot}
-- Platform: ${bookingDetails.platform}
-
-Your details have been shared with the mentor. He will contact you soon.
-
-Best regards,
-CollabUp Team`
-          };
-
-          await emailjs.send('service_qv37c1r', 'template_a9799k9', userEmailParams);
-          console.log('Email sent to user successfully');
-        } catch (emailErr) {
-          console.error('Error sending email to user:', emailErr);
-        }
-      }
-
-      // Show success message
       setIsBookingModalOpen(false);
       setIsConfirmationModalOpen(true);
       setBookingDetails({ date: '', timeSlot: '', platform: '' });
-      setError(null);
-
     } catch (err: any) {
       setError(err.message || 'Failed to confirm booking.');
       console.error('Booking error:', err);
@@ -585,9 +471,9 @@ CollabUp Team`
             <div className="flex justify-center mb-4">
               <PartyPopper size={48} className="text-yellow-400" />
             </div>
-            <h3 className="text-2xl font-semibold text-white mb-4">Booking Confirmed! 🎉</h3>
+            <h3 className="text-2xl font-semibold text-white mb-4">Thanks for Connecting! 🎉</h3>
             <p className="text-gray-300 mb-6">
-              Your details have been shared with the mentor. He will contact you soon.
+              Our mentors will connect with you on {bookingDetails.date} at {bookingDetails.timeSlot} via {bookingDetails.platform}
             </p>
             <button
               onClick={() => setIsConfirmationModalOpen(false)}

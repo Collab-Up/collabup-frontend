@@ -4,7 +4,6 @@ import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { doc, setDoc } from 'firebase/firestore';
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import { v4 as uuidv4 } from 'uuid';
-import { useNavigate } from 'react-router-dom';
 
 const FacultyForm: React.FC = () => {
   const [fullName, setFullName] = useState<string>('');
@@ -16,7 +15,6 @@ const FacultyForm: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  const navigate = useNavigate();
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -116,7 +114,7 @@ const FacultyForm: React.FC = () => {
       });
       console.log('Firestore document saved for user:', user.uid);
 
-      setSuccess('Faculty account created successfully! Redirecting to research projects...');
+      setSuccess('Faculty account created successfully!');
       setFullName('');
       setInstitute('');
       setEmail('');
@@ -125,11 +123,6 @@ const FacultyForm: React.FC = () => {
       setPassword('');
       const fileInputs = document.querySelectorAll('input[type="file"]') as NodeListOf<HTMLInputElement>;
       fileInputs.forEach(input => (input.value = ''));
-
-      // Redirect to research projects page after a short delay
-      setTimeout(() => {
-        navigate('/research-projects');
-      }, 2000);
     } catch (err: any) {
       let errorMessage = 'An error occurred during signup.';
       if (err.code === 'storage/unauthorized') {

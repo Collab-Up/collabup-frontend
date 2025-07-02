@@ -19,8 +19,4 @@
     @apply transform hover:scale-105 transition-all duration-300 
            hover:shadow-xl hover:shadow-blue-500/20;
   }
-
-  .gradient-text {
-    @apply bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent;
-  }
 }
