@@ -4,6 +4,7 @@ import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { doc, setDoc } from 'firebase/firestore';
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import { v4 as uuidv4 } from 'uuid';
+import { signInWithGoogle } from '../firebase/authService';
 
 const FacultyForm: React.FC = () => {
   const [fullName, setFullName] = useState<string>('');
@@ -143,9 +144,39 @@ const FacultyForm: React.FC = () => {
     }
   };
 
+  const handleGoogleSignUp = async () => {
+    setError(null);
+    setSuccess(null);
+    setIsLoading(true);
+    try {
+      const user = await signInWithGoogle();
+      await setDoc(doc(db, 'users', user.uid), {
+        fullName: user.displayName || '',
+        email: user.email,
+        role: 'faculty',
+        createdAt: new Date().toISOString(),
+      }, { merge: true });
+      setSuccess('Signed up with Google! Please complete your profile.');
+      // Optionally redirect or update UI
+    } catch (err: any) {
+      setError('Google sign-in failed. ' + (err.message || ''));
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   return (
     <div className="max-w-md mx-auto bg-[#1E293B] p-8 rounded-xl shadow-lg border border-gray-700">
       <h2 className="text-2xl font-bold text-white mb-6 text-center">Faculty Sign Up</h2>
+      <button
+        type="button"
+        onClick={handleGoogleSignUp}
+        className="w-full mb-4 flex items-center justify-center gap-2 bg-white text-gray-800 font-semibold py-2 rounded-lg shadow hover:bg-gray-100 transition-all"
+        disabled={isLoading}
+      >
+        <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google" className="w-5 h-5" />
+        Sign up with Google
+      </button>
       
       {error && (
         <div className="mb-4 p-3 bg-red-900/50 text-red-300 rounded-lg border border-red-800">
