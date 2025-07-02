@@ -138,7 +138,7 @@ const StudentForm: React.FC = () => {
       );
       console.log('Confirmation email sent to:', email);
 
-      setSuccess('Account created successfully! Redirecting to student projects...');
+      setSuccess('Account created, please sign in.');
       setFullName('');
       setInstituteName('');
       setEmail('');
@@ -152,10 +152,7 @@ const StudentForm: React.FC = () => {
       const fileInputs = document.querySelectorAll('input[type="file"]') as NodeListOf<HTMLInputElement>;
       fileInputs.forEach(input => (input.value = ''));
 
-      // Redirect to student projects page after a short delay
-      setTimeout(() => {
-        navigate('/student-projects');
-      }, 2000);
+      navigate('/signin');
     } catch (err: any) {
       let errorMessage = 'An error occurred during signup.';
       if (err.code === 'storage/unauthorized') {

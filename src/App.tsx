@@ -2,7 +2,6 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import ChatButton from './components/ChatButton';
 import Home from './pages/Home';
 import CollegeCommunity from './pages/CollegeCommunity';
 import ResearchProjects from './pages/ResearchProjects';
@@ -27,7 +26,6 @@ function App() {
         <Route path='/edit-profile' element={<EditProfile/>}/>
       </Routes>
       <Footer />
-      <ChatButton />
     </div>
   );
 }

@@ -2,7 +2,6 @@ import React, { useState, FormEvent } from 'react';
 import { auth, db } from '../firebase/firebaseConfig'; // Adjust path if needed (e.g., '@/firebase/firebase')
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { doc, setDoc } from 'firebase/firestore';
-import { useNavigate } from 'react-router-dom';
 
 const StartupForm: React.FC = () => {
   const [startupName, setStartupName] = useState<string>('');
@@ -15,7 +14,6 @@ const StartupForm: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  const navigate = useNavigate();
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
@@ -45,7 +43,7 @@ const StartupForm: React.FC = () => {
         createdAt: new Date().toISOString(),
       });
 
-      setSuccess('Startup account created successfully! Redirecting to startup projects...');
+      setSuccess('Startup account created successfully!');
       // Reset form
       setStartupName('');
       setFounderName('');
@@ -54,11 +52,6 @@ const StartupForm: React.FC = () => {
       setIndustry('');
       setCompanyDescription('');
       setPassword('');
-
-      // Redirect to startup projects page after a short delay
-      setTimeout(() => {
-        navigate('/startup-proj');
-      }, 2000);
     } catch (err: any) {
       setError(err.message || 'An error occurred during signup.');
       console.error('Signup error:', err);
