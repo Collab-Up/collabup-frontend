@@ -2,6 +2,7 @@ import React, { useState, FormEvent } from 'react';
 import { auth, db } from '../firebase/firebaseConfig';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { doc, setDoc } from 'firebase/firestore';
+import { signInWithGoogle } from '../firebase/authService';
 
 const MentorForm: React.FC = () => {
   const [fullName, setFullName] = useState<string>('');
@@ -79,6 +80,27 @@ const MentorForm: React.FC = () => {
       }
       setError(errorMessage);
       console.error('Signup error:', err.code, err.message);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const handleGoogleSignUp = async () => {
+    setError(null);
+    setSuccess(null);
+    setIsLoading(true);
+    try {
+      const user = await signInWithGoogle();
+      await setDoc(doc(db, 'users', user.uid), {
+        fullName: user.displayName || '',
+        email: user.email,
+        role: 'mentor',
+        createdAt: new Date().toISOString(),
+      }, { merge: true });
+      setSuccess('Signed up with Google! Please complete your profile.');
+      // Optionally redirect or update UI
+    } catch (err: any) {
+      setError('Google sign-in failed. ' + (err.message || ''));
     } finally {
       setIsLoading(false);
     }
@@ -181,6 +203,16 @@ const MentorForm: React.FC = () => {
           {isLoading ? 'Creating Account...' : 'Create Account'}
         </button>
       </form>
+
+      <button
+        type="button"
+        onClick={handleGoogleSignUp}
+        className="w-full mb-4 flex items-center justify-center gap-2 bg-white text-gray-800 font-semibold py-2 rounded-lg shadow hover:bg-gray-100 transition-all"
+        disabled={isLoading}
+      >
+        <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google" className="w-5 h-5" />
+        Sign up with Google
+      </button>
     </div>
   );
 };
