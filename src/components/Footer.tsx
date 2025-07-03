@@ -8,56 +8,31 @@ const Footer = () => {
     message: "",
   });
 
-  // const handleSubmit = async (e: React.FormEvent) => {
-  //   e.preventDefault();
-  
-  //   try {
-  //     const response = await fetch("http://localhost:5173/send-feedback", {
-  //       method: "POST",
-  //       headers: { "Content-Type": "application/json" },
-  //       body: JSON.stringify(feedbackForm),
-  //     });
-  
-  //     if (response.ok) {
-  //       alert("Feedback sent successfully!");
-  //       setFeedbackForm({ name: "", email: "", message: "" });
-  //     } else {
-  //       alert("Failed to send feedback. Try again later.");
-  //     }
-  //   } catch (error) {
-  //     console.error("Error:", error);
-  //     alert("An error occurred. Please try again.");
-  //   }
-  // };
-
   const handleSubmit = async (e: React.FormEvent) => {
-  e.preventDefault();
+    e.preventDefault();
 
-  try {
-    const response = await fetch("http://localhost:5050/send-feedback", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(feedbackForm),
-    });
+    try {
+      const response = await fetch(import.meta.env.VITE_EMAIL_API_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(feedbackForm),
+      });
 
-    const result = await response.json();
+      const result = await response.json();
 
-    if (response.ok) {
-      alert("Feedback sent successfully!");
-      setFeedbackForm({ name: "", email: "", message: "" });
-    } else {
-      alert(result.error || "Failed to send feedback. Try again later.");
+      if (response.ok) {
+        alert("Feedback sent successfully!");
+        setFeedbackForm({ name: "", email: "", message: "" });
+      } else {
+        alert(result.error || "Failed to send feedback. Try again later.");
+      }
+    } catch (error) {
+      console.error("Error sending feedback:", error);
+      alert("An unexpected error occurred. Please try again later.");
     }
-  } catch (error) {
-    console.error("Error sending feedback:", error);
-    alert("An unexpected error occurred. Please try again later.");
-  }
-};
-
-  
-  
+  };
 
   return (
     <footer className="bg-[#1E293B] text-gray-300 py-12 mt-20">

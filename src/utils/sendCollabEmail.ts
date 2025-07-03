@@ -7,7 +7,7 @@ interface SendCollabEmailParams {
 }
 
 export async function sendCollabEmail({ to, subject, text, html }: SendCollabEmailParams) {
-  const response = await fetch('http://localhost:5050/api/send-email', {
+  const response = await fetch(import.meta.env.VITE_EMAIL_API_URL, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ to, subject, text, html })
