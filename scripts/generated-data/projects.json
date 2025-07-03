@@ -52,19 +52,18 @@
   },
   {
     "id": "project_003",
-    "title": "Innovative Mobile Development Platform",
-    "type": "Research",
-    "domain": "Mobile Development",
+    "title": "IoT-based Smart Agriculture",
+    "type": "Student",
+    "domain": "IoT",
     "skillsRequired": [
       "IoT",
-      "iOS",
-      "Android",
-      "Python"
+      "Python",
+      "React"
     ],
-    "status": "In Progress",
-    "description": "A comprehensive Mobile Development project that leverages IoT, iOS, Android, Python to solve real-world problems. Perfect for students interested in {domain}.",
-    "duration": "6 Months",
-    "teamSize": 5,
+    "status": "Open",
+    "description": "A student project for smart agriculture using IoT and web technologies.",
+    "duration": "4 Months",
+    "teamSize": 3,
     "difficulty": "Intermediate",
     "createdAt": {
       "_seconds": 1751117752,
@@ -74,8 +73,23 @@
       "_seconds": 1751117752,
       "_nanoseconds": 287000000
     },
-    "facultyId": "faculty_013",
-    "publication": false
+    "creatorId": "student_004",
+    "ownerName": "Ashutosh Shandilya",
+    "ownerEmail": "cs22b2050@iiitdm.ac.in",
+    "team": [
+      {
+        "name": "Ashutosh Shandilya",
+        "email": "cs22b2050@iiitdm.ac.in"
+      },
+      {
+        "name": "Nitin Thaber",
+        "email": "cs22b2047@iiitdm.ac.in"
+      },
+      {
+        "name": "Anshu Saini",
+        "email": "cs22b2051@iiitdm.ac.in"
+      }
+    ]
   },
   {
     "id": "project_004",
@@ -1043,5 +1057,87 @@
     },
     "startupId": "startup_015",
     "compensation": "Stipend"
+  },
+  {
+    "id": "project_041",
+    "title": "Smart Campus Automation",
+    "type": "Student",
+    "domain": "IoT",
+    "skillsRequired": [
+      "IoT",
+      "React",
+      "Python"
+    ],
+    "status": "In Progress",
+    "description": "A student project for automating campus facilities using IoT and web technologies.",
+    "duration": "3 Months",
+    "teamSize": 4,
+    "difficulty": "Intermediate",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "creatorId": "student_001",
+    "team": [
+      {
+        "name": "Subhash Bishnoi",
+        "email": "me22b2044@iiitdm.ac.in"
+      },
+      {
+        "name": "Vikas Yadav",
+        "email": "me22b1051@iiitdm.ac.in"
+      },
+      {
+        "name": "Prashant Tyagi",
+        "email": "me22b1069@iiitdm.ac.in"
+      },
+      {
+        "name": "Ashutosh Shandilya",
+        "email": "cs22b2050@iiitdm.ac.in"
+      }
+    ]
+  },
+  {
+    "id": "project_042",
+    "title": "AI-based Attendance System",
+    "type": "Student",
+    "domain": "AI/ML",
+    "skillsRequired": [
+      "AI/ML",
+      "Python",
+      "React"
+    ],
+    "status": "Open",
+    "description": "A student project to automate attendance using AI/ML and facial recognition.",
+    "duration": "2 Months",
+    "teamSize": 3,
+    "difficulty": "Beginner",
+    "createdAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "updatedAt": {
+      "_seconds": 1751117752,
+      "_nanoseconds": 287000000
+    },
+    "creatorId": "student_002",
+    "team": [
+      {
+        "name": "Nitin Thaber",
+        "email": "cs22b2047@iiitdm.ac.in"
+      },
+      {
+        "name": "Anshu Saini",
+        "email": "cs22b2051@iiitdm.ac.in"
+      },
+      {
+        "name": "Arpita Roy",
+        "email": "me22b1078@iiitdm.ac.in"
+      }
+    ]
   }
 ]

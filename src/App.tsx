@@ -10,6 +10,8 @@ import BuddyFinder from './pages/BuddyFinder';
 import Mentorship from './pages/Mentorship';
 import StartupProj from './pages/StartupProjects';
 import EditProfile from './pages/EditProfile';
+import ChatButton from './components/ChatButton';
+import ChooseRole from './pages/ChooseRole';
 
 function App() {
   return (
@@ -24,8 +26,10 @@ function App() {
         <Route path='/mentorship' element={<Mentorship/>}/>
         <Route path='/startup-proj' element={<StartupProj/>}/>
         <Route path='/edit-profile' element={<EditProfile/>}/>
+        <Route path="/choose-role" element={<ChooseRole />} />
       </Routes>
       <Footer />
+      <ChatButton />
     </div>
   );
 }

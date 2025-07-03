@@ -1,23 +1,23 @@
 [
   {
     "id": "mentor_001",
-    "name": "Dr. Aaron Glover",
-    "email": "Ismael6@gmail.com",
+    "name": "Ashutosh Shandilya",
+    "email": "cs22b2050@iiitdm.ac.in",
     "expertise": [
       "DevOps",
       "Data Science"
     ],
     "experience": 14,
-    "bio": "Experienced professional working as National Intranet Director at Google. Expert in DevOps, Data Science with 14 years in the industry.",
-    "currentCompany": "Google",
-    "designation": "National Intranet Director",
+    "bio": "Expert in DevOps and Data Science, passionate about mentoring students at IIITDM.",
+    "currentCompany": "IIITDM Kancheepuram",
+    "designation": "Mentor",
     "hourlyRate": 4721,
-    "rating": 3.9,
+    "rating": 4.8,
     "totalSessions": 27,
     "profilePic": "https://avatars.githubusercontent.com/u/78014692",
-    "linkedin": "https://definitive-temporariness.com/",
-    "github": "https://defiant-fragrance.biz",
-    "availability": "Not Available",
+    "linkedin": "https://linkedin.com/in/ashutoshshandilya",
+    "github": "https://github.com/ashutoshshandilya",
+    "availability": "Available",
     "createdAt": {
       "_seconds": 1751117752,
       "_nanoseconds": 285000000
@@ -29,24 +29,24 @@
   },
   {
     "id": "mentor_002",
-    "name": "Mrs. Priscilla Hirthe",
-    "email": "Trisha85@gmail.com",
+    "name": "Nitin Thaber",
+    "email": "cs22b2047@iiitdm.ac.in",
     "expertise": [
       "Investment",
       "UI/UX",
       "Marketing"
     ],
-    "experience": 20,
-    "bio": "Tech leader and Product Accountability Assistant at Airbnb. Specialized in Investment, UI/UX, Marketing with 20 years of hands-on experience.",
-    "currentCompany": "Airbnb",
-    "designation": "Product Accountability Assistant",
+    "experience": 12,
+    "bio": "UI/UX and Marketing mentor at IIITDM Kancheepuram, with a passion for investment strategies.",
+    "currentCompany": "IIITDM Kancheepuram",
+    "designation": "Mentor",
     "hourlyRate": 1604,
-    "rating": 5,
+    "rating": 4.6,
     "totalSessions": 75,
     "profilePic": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/103.jpg",
-    "linkedin": "https://rowdy-foot.org",
-    "github": "https://immediate-optimist.info/",
-    "availability": "Not Available",
+    "linkedin": "https://linkedin.com/in/nitinthaber",
+    "github": "https://github.com/nitinthaber",
+    "availability": "Available",
     "createdAt": {
       "_seconds": 1751117752,
       "_nanoseconds": 286000000
@@ -58,23 +58,23 @@
   },
   {
     "id": "mentor_003",
-    "name": "Chris Leuschke",
-    "email": "Billy_Keeling@yahoo.com",
+    "name": "Anshu Saini",
+    "email": "cs22b2051@iiitdm.ac.in",
     "expertise": [
       "Product Management",
       "Investment"
     ],
     "experience": 10,
-    "bio": "Experienced professional working as Investor Metrics Architect at Amazon. Expert in Product Management, Investment with 10 years in the industry.",
-    "currentCompany": "Amazon",
-    "designation": "Investor Metrics Architect",
+    "bio": "Product Management and Investment mentor at IIITDM Kancheepuram.",
+    "currentCompany": "IIITDM Kancheepuram",
+    "designation": "Mentor",
     "hourlyRate": 3621,
-    "rating": 5,
+    "rating": 4.9,
     "totalSessions": 16,
     "profilePic": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/120.jpg",
-    "linkedin": "https://annual-puppet.info/",
-    "github": "https://exemplary-range.com",
-    "availability": "Not Available",
+    "linkedin": "https://linkedin.com/in/anshusaini",
+    "github": "https://github.com/anshusaini",
+    "availability": "Available",
     "createdAt": {
       "_seconds": 1751117752,
       "_nanoseconds": 286000000
@@ -86,30 +86,30 @@
   },
   {
     "id": "mentor_004",
-    "name": "Miranda Connelly",
-    "email": "Rebecca73@yahoo.com",
+    "name": "Prashant Tyagi",
+    "email": "me22b1069@iiitdm.ac.in",
     "expertise": [
-      "Marketing",
-      "Mobile Development"
+      "AI/ML",
+      "Data Science"
     ],
-    "experience": 15,
-    "bio": "Senior Corporate Optimization Agent at Stripe with 15 years of experience in Marketing, Mobile Development. Passionate about mentoring and helping others grow.",
-    "currentCompany": "Stripe",
-    "designation": "Corporate Optimization Agent",
-    "hourlyRate": 1502,
-    "rating": 3.8,
-    "totalSessions": 57,
-    "profilePic": "https://avatars.githubusercontent.com/u/73541327",
-    "linkedin": "https://solid-maggot.net",
-    "github": "https://sardonic-crewmate.info",
-    "availability": "Not Available",
+    "experience": 7,
+    "bio": "Mentor in AI/ML and Data Science at IIITDM Kancheepuram.",
+    "currentCompany": "IIITDM Kancheepuram",
+    "designation": "Mentor",
+    "hourlyRate": 2000,
+    "rating": 4.7,
+    "totalSessions": 10,
+    "profilePic": "https://avatars.githubusercontent.com/u/58777820",
+    "linkedin": "https://linkedin.com/in/prashanttyagi",
+    "github": "https://github.com/prashanttyagi",
+    "availability": "Available",
     "createdAt": {
       "_seconds": 1751117752,
-      "_nanoseconds": 286000000
+      "_nanoseconds": 285000000
     },
     "updatedAt": {
       "_seconds": 1751117752,
-      "_nanoseconds": 286000000
+      "_nanoseconds": 285000000
     }
   },
   {

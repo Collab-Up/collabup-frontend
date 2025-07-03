@@ -3,12 +3,12 @@ import { Users, Calendar, Trophy, Send, X, Search, ChevronDown } from 'lucide-re
 import { auth, db } from '../firebase/firebaseConfig';
 import { onAuthStateChanged, User } from 'firebase/auth';
 import { collection, getDocs, doc, getDoc, addDoc, query, where } from 'firebase/firestore';
-import { useNavigate } from 'react-router-dom';
-import emailjs from 'emailjs-com';
+import { useNavigate, useLocation } from 'react-router-dom';
+import { sendCollabEmail } from '../utils/sendCollabEmail';
 import { getUserRole } from '../utils/getUserRole';
 import { getResearchProjects, getFaculties } from '../firebase/firebaseService';
-
-interface Faculty {
+// Define the faculty interface locally since it's not exported from firebaseService
+interface faculty {
   id: string;
   fullName: string;
   email: string;
@@ -47,40 +47,40 @@ interface UserData {
   researchAreas?: string[];
 }
 
-const mockFaculties: Faculty[] = [
+const mockFaculties: faculty[] = [
   {
     id: 'faculty1',
-    fullName: 'Dr. Anil Kumar',
-    email: 'anil.kumar@example.com',
-    instituteName: 'IIT Delhi',
-    researchInterests: ['Quantum Computing', 'Cryptography'],
+    fullName: 'Arpita Roy',
+    email: 'me22b1078@iiitdm.ac.in',
+    instituteName: 'IIITDM Kancheepuram',
+    researchInterests: ['AI/ML', 'Data Science'],
     spotsAvailable: 5,
     startDate: '2024-01-01',
   },
   {
     id: 'faculty2',
-    fullName: 'Dr. Priya Sharma',
-    email: 'priya.sharma@example.com',
-    instituteName: 'IIT Chennai',
-    researchInterests: ['Artificial Intelligence', 'Climate Modeling'],
+    fullName: 'Rishit Rastogi',
+    email: 'me22b2017@iiitdm.ac.in',
+    instituteName: 'IIITDM Kancheepuram',
+    researchInterests: ['Robotics', 'Manufacturing'],
     spotsAvailable: 3,
     startDate: '2024-02-01',
   },
   {
     id: 'faculty3',
-    fullName: 'Dr. Rajesh Verma',
-    email: 'rajesh.verma@example.com',
-    instituteName: 'IIT Bombay',
-    researchInterests: ['Machine Learning', 'Computer Vision'],
+    fullName: 'Kush Jain',
+    email: 'cs22b2010@iiitdm.ac.in',
+    instituteName: 'IIITDM Kancheepuram',
+    researchInterests: ['Cybersecurity', 'Networks'],
     spotsAvailable: 2,
     startDate: '2024-03-01',
   },
   {
     id: 'faculty4',
-    fullName: 'Dr. Meera Patel',
-    email: 'meera.patel@example.com',
-    instituteName: 'IIT Kanpur',
-    researchInterests: ['Data Science', 'Big Data Analytics'],
+    fullName: 'Subhash Bishnoi',
+    email: 'me22b2044@iiitdm.ac.in',
+    instituteName: 'IIITDM Kancheepuram',
+    researchInterests: ['Robotics', 'Manufacturing'],
     spotsAvailable: 4,
     startDate: '2024-04-01',
   },
@@ -270,16 +270,17 @@ const ResearchProject = () => {
   const [selectedInstitute, setSelectedInstitute] = useState<string>('');
   const [selectedDomain, setSelectedDomain] = useState<string>('');
   const [selectedLevel, setSelectedLevel] = useState<string>('');
-  const [facultyList, setFacultyList] = useState<Faculty[]>([]);
+  const [facultyList, setFacultyList] = useState<faculty[]>([]);
   const [researchProjects, setResearchProjects] = useState<ResearchProject[]>([]);
   const [isSignInModalOpen, setIsSignInModalOpen] = useState(false);
   const [isApplicationModalOpen, setIsApplicationModalOpen] = useState(false);
   const [isSuccessModalOpen, setIsSuccessModalOpen] = useState(false);
-  const [selectedFaculty, setSelectedFaculty] = useState<Faculty | null>(null);
+  const [selectedFaculty, setSelectedFaculty] = useState<faculty | null>(null);
   const [formData, setFormData] = useState<ApplicationFormData>({ projectTitle: '', proposal: '', currentSemester: '', currentCGPA: '', resume: null });
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const navigate = useNavigate();
+  const location = useLocation();
 
   const institutes = [
     'IIT Delhi', 'IIT Chennai', 'IIT Bombay', 'IIT Kanpur', 'IIT Madras', 
@@ -331,8 +332,16 @@ const ResearchProject = () => {
         }
       } else {
         setFacultyList(mockFaculties);
-        setResearchProjects(mockResearchProjects);
-        setSelectedInstitute('IIT Delhi');
+        // Filter by ID if present in query string
+        const params = new URLSearchParams(location.search);
+        const id = params.get('id');
+        if (id) {
+          const filtered = mockResearchProjects.filter((p) => p.id === id);
+          setResearchProjects(filtered);
+        } else {
+          setResearchProjects(mockResearchProjects);
+        }
+        setSelectedInstitute(''); // Show all institutes by default
         setIsLoading(false);
       }
     });
@@ -344,11 +353,21 @@ const ResearchProject = () => {
       try {
         // Fetch research projects
         const projects = await getResearchProjects(userData.role, userData);
-        setResearchProjects(projects);
+        setResearchProjects(projects.length > 0 ? projects : mockResearchProjects);
 
         // Fetch faculties
         const faculties = await getFaculties();
-        setFacultyList(faculties);
+        setFacultyList(
+          (faculties.length > 0 ? faculties : mockFaculties).map((f: any) => ({
+            id: f.id,
+            fullName: f.fullName,
+            email: f.email,
+            instituteName: f.instituteName,
+            researchInterests: f.researchInterests || [],
+            spotsAvailable: f.spotsAvailable ?? 0,
+            startDate: f.startDate ?? '',
+          }))
+        );
       } catch (err) {
         setError('Failed to load data.');
         console.error('Error fetching data:', err);
@@ -359,17 +378,31 @@ const ResearchProject = () => {
 
     if (currentUser && userData) {
       fetchData();
+      setSelectedInstitute(''); // Show all institutes by default for logged-in users too
     }
 
     return () => unsubscribeAuth();
-  }, [currentUser, userData]);
+  }, [currentUser, userData, location.search]);
 
-  const handleApply = (faculty: Faculty) => {
+  // Fallback: treat missing role as 'student' for demo/testing
+  const effectiveRole = userData?.role || (currentUser ? 'student' : null);
+
+  // DEBUG LOGGING
+  React.useEffect(() => {
+    console.log('DEBUG userData:', userData);
+    console.log('DEBUG effectiveRole:', effectiveRole);
+    console.log('DEBUG facultyList:', facultyList);
+    console.log('DEBUG researchProjects:', researchProjects);
+    console.log('DEBUG currentUser:', currentUser);
+  }, [userData, effectiveRole, facultyList, researchProjects, currentUser]);
+
+  const handleApply = (faculty: faculty) => {
     if (!currentUser || !userData) {
       setIsSignInModalOpen(true);
       return;
     }
-    if (userData.role !== 'student') {
+    // Use effectiveRole for fallback
+    if (effectiveRole !== 'student') {
       setError('Only students can apply for research projects.');
       return;
     }
@@ -405,25 +438,22 @@ const ResearchProject = () => {
         timestamp: new Date().toISOString(),
       });
 
-      const templateParams = {
-        studentName: userData.fullName,
-        studentEmail: userData.email,
-        studentInstitute: userData.instituteName,
-        facultyName: selectedFaculty.fullName,
-        facultyEmail: selectedFaculty.email,
-        projectTitle: formData.projectTitle,
-        proposal: formData.proposal,
-        currentSemester: formData.currentSemester,
-        currentCGPA: formData.currentCGPA,
-        resumeUploaded: formData.resume ? 'Yes' : 'No',
-      };
-
-      await emailjs.send(
-        'service_qv37c1r', // Replace with your EmailJS Service ID
-        'template_a9799k9', // Replace with your EmailJS Template ID
-        templateParams,
-        'wtGOHmGUOT5eVZGq4' // Replace with your EmailJS Public Key
-      );
+      // Email to faculty with all student details and correct subject
+      await sendCollabEmail({
+        to: selectedFaculty.email,
+        subject: 'Request for collaboration in your research project',
+        text: `A student has requested to collaborate on your research project.\n\nProject Title: ${formData.projectTitle}\nStudent Name: ${userData.fullName}\nStudent Email: ${userData.email}\nStudent Institute: ${userData.instituteName}\nCurrent Semester: ${formData.currentSemester}\nCurrent CGPA: ${formData.currentCGPA}\nProposal: ${formData.proposal}`,
+        html: `<p>A student has requested to collaborate on your research project.</p>
+        <ul>
+          <li><b>Project Title:</b> ${formData.projectTitle}</li>
+          <li><b>Student Name:</b> ${userData.fullName}</li>
+          <li><b>Student Email:</b> ${userData.email}</li>
+          <li><b>Student Institute:</b> ${userData.instituteName}</li>
+          <li><b>Current Semester:</b> ${formData.currentSemester}</li>
+          <li><b>Current CGPA:</b> ${formData.currentCGPA}</li>
+          <li><b>Proposal:</b> ${formData.proposal}</li>
+        </ul>`
+      });
 
       setIsApplicationModalOpen(false);
       setFormData({ projectTitle: '', proposal: '', currentSemester: '', currentCGPA: '', resume: null });
@@ -445,19 +475,27 @@ const ResearchProject = () => {
     }
   };
 
-  const filteredProjects = researchProjects.filter(project => {
-    const faculty = facultyList.find(f => f.id === project.facultyId);
-    const searchMatch = searchTerm === '' ||
-      project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      project.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      project.skills.some(skill => skill.toLowerCase().includes(searchTerm.toLowerCase())) ||
-      faculty?.fullName.toLowerCase().includes(searchTerm.toLowerCase());
-    const instituteMatch = selectedInstitute === '' || faculty?.instituteName === selectedInstitute;
-    const domainMatch = selectedDomain === '' || project.domain === selectedDomain;
-    const levelMatch = selectedLevel === '' || project.level === selectedLevel;
-    
-    return searchMatch && instituteMatch && domainMatch && levelMatch;
-  });
+  const params = new URLSearchParams(location.search);
+  const selectedId = params.get('id');
+
+  const selectedProject = selectedId
+    ? researchProjects.find(p => String(p.id) === selectedId)
+    : null;
+
+  const filteredProjects = !selectedId
+    ? researchProjects.filter(project => {
+        const faculty = facultyList.find(f => f.id === project.facultyId);
+        const searchMatch = searchTerm === '' ||
+          project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          project.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          project.skills.some(skill => skill.toLowerCase().includes(searchTerm.toLowerCase())) ||
+          faculty?.fullName.toLowerCase().includes(searchTerm.toLowerCase());
+        const instituteMatch = selectedInstitute === '' || faculty?.instituteName === selectedInstitute;
+        const domainMatch = selectedDomain === '' || project.domain === selectedDomain;
+        const levelMatch = selectedLevel === '' || project.level === selectedLevel;
+        return searchMatch && instituteMatch && domainMatch && levelMatch;
+      })
+    : [];
 
   return (
     <div className="max-w-7xl mx-auto p-6">
@@ -570,54 +608,119 @@ const ResearchProject = () => {
               <p className="text-gray-400">No research projects found matching your criteria.</p>
             )}
             <div className="space-y-6">
-              {filteredProjects.map((project) => {
-                const faculty = facultyList.find(f => f.id === project.facultyId);
-                return (
-                  <div key={project.id} className="bg-[#0F172A] rounded-lg p-6 border border-gray-700">
-                    <div className="flex flex-col lg:flex-row justify-between gap-4">
-                      <div className="flex-1">
-                        <h3 className="text-xl font-semibold text-white mb-2">{project.title}</h3>
-                        <p className="text-gray-400 mb-3">{project.description}</p>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                          <div>
-                            <p className="text-gray-400"><span className="text-gray-300 font-medium">Faculty:</span> {faculty?.fullName || 'Unknown'}</p>
-                            <p className="text-gray-400"><span className="text-gray-300 font-medium">Institute:</span> {faculty?.instituteName || 'Unknown'}</p>
-                            <p className="text-gray-400"><span className="text-gray-300 font-medium">Domain:</span> {project.domain}</p>
-                            <p className="text-gray-400"><span className="text-gray-300 font-medium">Level:</span> {project.level}</p>
+              {selectedProject ? (
+                (() => {
+                  const faculty = facultyList.find(f => f.id === selectedProject.facultyId);
+                  return (
+                    <div key={selectedProject.id} className="bg-[#0F172A] rounded-lg p-6 border border-gray-700">
+                      <div className="flex flex-col lg:flex-row justify-between gap-4">
+                        <div className="flex-1">
+                          <h3 className="text-xl font-semibold text-white mb-2">{selectedProject.title}</h3>
+                          <p className="text-gray-400 mb-3">{selectedProject.description}</p>
+                          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                            <div>
+                              <p className="text-gray-400"><span className="text-gray-300 font-medium">Faculty:</span> {faculty?.fullName || 'Unknown'}</p>
+                              <p className="text-gray-400"><span className="text-gray-300 font-medium">Institute:</span> {faculty?.instituteName || 'Unknown'}</p>
+                              <p className="text-gray-400"><span className="text-gray-300 font-medium">Domain:</span> {selectedProject.domain}</p>
+                              <p className="text-gray-400"><span className="text-gray-300 font-medium">Level:</span> {selectedProject.level}</p>
+                            </div>
+                            <div>
+                              <p className="text-gray-400"><span className="text-gray-300 font-medium">Skills:</span> {selectedProject.skills.join(', ')}</p>
+                              <p className="text-gray-400"><span className="text-gray-300 font-medium">Location:</span> {selectedProject.location}</p>
+                              <p className="text-gray-400"><span className="text-gray-300 font-medium">Duration:</span> {selectedProject.duration}</p>
+                              <p className="text-gray-400"><span className="text-gray-300 font-medium">Start Date:</span> {faculty?.startDate ? new Date(faculty.startDate).toLocaleDateString() : 'TBD'}</p>
+                            </div>
                           </div>
-                          <div>
-                            <p className="text-gray-400"><span className="text-gray-300 font-medium">Skills:</span> {project.skills.join(', ')}</p>
-                            <p className="text-gray-400"><span className="text-gray-300 font-medium">Location:</span> {project.location}</p>
-                            <p className="text-gray-400"><span className="text-gray-300 font-medium">Duration:</span> {project.duration}</p>
-                            <p className="text-gray-400"><span className="text-gray-300 font-medium">Start Date:</span> {faculty?.startDate ? new Date(faculty.startDate).toLocaleDateString() : 'TBD'}</p>
+                          <div className="flex items-center gap-4">
+                            <div className="flex items-center gap-2">
+                              <Users className="w-4 h-4 text-blue-400" />
+                              <span className="text-gray-400">
+                                <span className="text-gray-300 font-medium">Spots Available:</span> {faculty?.spotsAvailable || 0}
+                              </span>
+                            </div>
+                            {faculty?.spotsAvailable === 0 && (
+                              <span className="text-red-400 text-sm font-medium">No spots available</span>
+                            )}
                           </div>
                         </div>
-                        <div className="flex items-center gap-4">
-                          <div className="flex items-center gap-2">
-                            <Users className="w-4 h-4 text-blue-400" />
-                            <span className="text-gray-400">
-                              <span className="text-gray-300 font-medium">Spots Available:</span> {faculty?.spotsAvailable || 0}
-                            </span>
+                        {/* Use effectiveRole for fallback */}
+                        {effectiveRole === 'student' && faculty && faculty.spotsAvailable > 0 && (
+                          <div className="flex flex-col gap-2">
+                            <button
+                              onClick={() => handleApply(faculty)}
+                              className="bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700 transition-colors font-medium"
+                            >
+                              Apply Now
+                            </button>
                           </div>
-                          {faculty?.spotsAvailable === 0 && (
-                            <span className="text-red-400 text-sm font-medium">No spots available</span>
-                          )}
-                        </div>
+                        )}
+                        {/* If not student, show message */}
+                        {currentUser && effectiveRole !== 'student' && (
+                          <div className="flex flex-col gap-2">
+                            <span className="text-red-400 text-sm font-medium">Only students can apply for research projects.</span>
+                          </div>
+                        )}
                       </div>
-                      {userData?.role === 'student' && faculty && faculty.spotsAvailable > 0 && (
-                        <div className="flex flex-col gap-2">
-                          <button
-                            onClick={() => handleApply(faculty)}
-                            className="bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700 transition-colors font-medium"
-                          >
-                            Apply Now
-                          </button>
-                        </div>
-                      )}
                     </div>
-                  </div>
-                );
-              })}
+                  );
+                })()
+              ) : (
+                filteredProjects.map((project) => {
+                  const faculty = facultyList.find(f => f.id === project.facultyId);
+                  return (
+                    <div key={project.id} className="bg-[#0F172A] rounded-lg p-6 border border-gray-700">
+                      <div className="flex flex-col lg:flex-row justify-between gap-4">
+                        <div className="flex-1">
+                          <h3 className="text-xl font-semibold text-white mb-2">{project.title}</h3>
+                          <p className="text-gray-400 mb-3">{project.description}</p>
+                          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                            <div>
+                              <p className="text-gray-400"><span className="text-gray-300 font-medium">Faculty:</span> {faculty?.fullName || 'Unknown'}</p>
+                              <p className="text-gray-400"><span className="text-gray-300 font-medium">Institute:</span> {faculty?.instituteName || 'Unknown'}</p>
+                              <p className="text-gray-400"><span className="text-gray-300 font-medium">Domain:</span> {project.domain}</p>
+                              <p className="text-gray-400"><span className="text-gray-300 font-medium">Level:</span> {project.level}</p>
+                            </div>
+                            <div>
+                              <p className="text-gray-400"><span className="text-gray-300 font-medium">Skills:</span> {project.skills.join(', ')}</p>
+                              <p className="text-gray-400"><span className="text-gray-300 font-medium">Location:</span> {project.location}</p>
+                              <p className="text-gray-400"><span className="text-gray-300 font-medium">Duration:</span> {project.duration}</p>
+                              <p className="text-gray-400"><span className="text-gray-300 font-medium">Start Date:</span> {faculty?.startDate ? new Date(faculty.startDate).toLocaleDateString() : 'TBD'}</p>
+                            </div>
+                          </div>
+                          <div className="flex items-center gap-4">
+                            <div className="flex items-center gap-2">
+                              <Users className="w-4 h-4 text-blue-400" />
+                              <span className="text-gray-400">
+                                <span className="text-gray-300 font-medium">Spots Available:</span> {faculty?.spotsAvailable || 0}
+                              </span>
+                            </div>
+                            {faculty?.spotsAvailable === 0 && (
+                              <span className="text-red-400 text-sm font-medium">No spots available</span>
+                            )}
+                          </div>
+                        </div>
+                        {/* Use effectiveRole for fallback */}
+                        {effectiveRole === 'student' && faculty && faculty.spotsAvailable > 0 && (
+                          <div className="flex flex-col gap-2">
+                            <button
+                              onClick={() => handleApply(faculty)}
+                              className="bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700 transition-colors font-medium"
+                            >
+                              Apply Now
+                            </button>
+                          </div>
+                        )}
+                        {/* If not student, show message */}
+                        {currentUser && effectiveRole !== 'student' && (
+                          <div className="flex flex-col gap-2">
+                            <span className="text-red-400 text-sm font-medium">Only students can apply for research projects.</span>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  );
+                })
+              )}
             </div>
           </div>
         </>

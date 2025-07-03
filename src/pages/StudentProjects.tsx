@@ -3,8 +3,8 @@ import { Search, BookOpen, Code, Star, MapPin, Clock, ChevronDown, Upload, X, Ch
 import { auth, db } from '../firebase/firebaseConfig';
 import { onAuthStateChanged, User } from 'firebase/auth';
 import { doc, getDoc } from 'firebase/firestore';
-import emailjs from '@emailjs/browser';
-import { useNavigate } from 'react-router-dom';
+import { sendCollabEmail } from '../utils/sendCollabEmail';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 interface Project {
   id: number;
@@ -74,10 +74,10 @@ const mockProjects: Project[] = [
     technologies: ["Python", "Machine Learning", "NLP", "Flask"],
     duration: "3 Months",
     coverUrl: "https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&h=256&q=80",
-    ownerId: "user1",
-    ownerEmail: "alice.smith@example.com",
-    ownerName: "Alice Smith",
-    location: "Bangalore, India",
+    ownerId: "me22b2044@iiitdm.ac.in",
+    ownerEmail: "me22b2044@iiitdm.ac.in",
+    ownerName: "Subhash Bishnoi",
+    location: "Jodhpur, India",
     matchScore: 95
   },
   {
@@ -90,10 +90,10 @@ const mockProjects: Project[] = [
     technologies: ["React Native", "Firebase", "Maps API", "JavaScript"],
     duration: "2 Months",
     coverUrl: "https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&h=256&q=80",
-    ownerId: "user2",
-    ownerEmail: "bob.johnson@example.com",
-    ownerName: "Bob Johnson",
-    location: "Mumbai, India",
+    ownerId: "me22b1051@iiitdm.ac.in",
+    ownerEmail: "me22b1051@iiitdm.ac.in",
+    ownerName: "Vikas Yadav",
+    location: "Gurgaon, India",
     matchScore: 88
   },
   {
@@ -106,10 +106,10 @@ const mockProjects: Project[] = [
     technologies: ["Solidity", "Web3.js", "React", "IPFS"],
     duration: "6 Months",
     coverUrl: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&h=256&q=80",
-    ownerId: "user3",
-    ownerEmail: "carol.davis@example.com",
-    ownerName: "Carol Davis",
-    location: "Delhi, India",
+    ownerId: "me22b1069@iiitdm.ac.in",
+    ownerEmail: "me22b1069@iiitdm.ac.in",
+    ownerName: "Prashant Tyagi",
+    location: "Meerut, India",
     matchScore: 92
   },
   {
@@ -122,10 +122,10 @@ const mockProjects: Project[] = [
     technologies: ["Arduino", "Python", "IoT", "Data Analytics"],
     duration: "4 Months",
     coverUrl: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&h=256&q=80",
-    ownerId: "user4",
-    ownerEmail: "david.wilson@example.com",
-    ownerName: "David Wilson",
-    location: "Chennai, India",
+    ownerId: "cs22b2050@iiitdm.ac.in",
+    ownerEmail: "cs22b2050@iiitdm.ac.in",
+    ownerName: "Ashutosh Shandilya",
+    location: "Kanpur, India",
     matchScore: 85
   },
   {
@@ -138,10 +138,10 @@ const mockProjects: Project[] = [
     technologies: ["Python", "Machine Learning", "Network Security", "Docker"],
     duration: "5 Months",
     coverUrl: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&h=256&q=80",
-    ownerId: "user5",
-    ownerEmail: "emma.brown@example.com",
-    ownerName: "Emma Brown",
-    location: "Pune, India",
+    ownerId: "cs22b2047@iiitdm.ac.in",
+    ownerEmail: "cs22b2047@iiitdm.ac.in",
+    ownerName: "Nitin Thaber",
+    location: "Delhi, India",
     matchScore: 90
   },
   {
@@ -154,12 +154,60 @@ const mockProjects: Project[] = [
     technologies: ["AWS", "React", "Node.js", "MongoDB"],
     duration: "3 Months",
     coverUrl: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&h=256&q=80",
-    ownerId: "user6",
-    ownerEmail: "frank.miller@example.com",
-    ownerName: "Frank Miller",
-    location: "Hyderabad, India",
-    matchScore: 87
-  }
+    ownerId: "cs22b2051@iiitdm.ac.in",
+    ownerEmail: "cs22b2051@iiitdm.ac.in",
+    ownerName: "Anshu Saini",
+    location: "Chennai, India",
+    matchScore: 92
+  },
+  {
+    id: 7,
+    title: "Data Science for Social Good",
+    description: "A project using data science to solve social issues and improve community well-being.",
+    domain: "Data Science",
+    level: "Beginner",
+    levelColor: "bg-green-500/20 text-green-400",
+    technologies: ["Python", "Pandas", "Data Visualization"],
+    duration: "2 Months",
+    coverUrl: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&h=256&q=80",
+    ownerId: "me22b1078@iiitdm.ac.in",
+    ownerEmail: "me22b1078@iiitdm.ac.in",
+    ownerName: "Arpita Roy",
+    location: "Kolkata, India",
+    matchScore: 89
+  },
+  {
+    id: 8,
+    title: "IoT for Smart Cities",
+    description: "A project focused on using IoT to improve urban infrastructure and services.",
+    domain: "IoT",
+    level: "Advanced",
+    levelColor: "bg-red-500/20 text-red-400",
+    technologies: ["Arduino", "IoT", "Python"],
+    duration: "6 Months",
+    coverUrl: "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&h=256&q=80",
+    ownerId: "me22b2017@iiitdm.ac.in",
+    ownerEmail: "me22b2017@iiitdm.ac.in",
+    ownerName: "Rishit Rastogi",
+    location: "Lucknow, India",
+    matchScore: 91
+  },
+  {
+    id: 9,
+    title: "Blockchain for Secure Voting",
+    description: "A blockchain-based voting system to ensure secure and transparent elections.",
+    domain: "Blockchain",
+    level: "Intermediate",
+    levelColor: "bg-yellow-500/20 text-yellow-400",
+    technologies: ["Solidity", "Web3.js", "React"],
+    duration: "4 Months",
+    coverUrl: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&h=256&q=80",
+    ownerId: "cs22b2010@iiitdm.ac.in",
+    ownerEmail: "cs22b2010@iiitdm.ac.in",
+    ownerName: "Kush Jain",
+    location: "Jaipur, India",
+    matchScore: 86
+  },
 ];
 
 const ProjectCard = ({ project }: { project: Project }) => {
@@ -204,38 +252,20 @@ const ProjectCard = ({ project }: { project: Project }) => {
 
     try {
       // Email to project owner
-      const ownerTemplateParams = {
-        to_email: project.ownerEmail,
-        to_name: project.ownerName,
-        from_name: userData.fullName,
-        from_email: userData.email,
-        project_title: project.title,
-        message: `${userData.fullName} wants to collaborate on your project "${project.title}". Contact them at ${userData.email} to discuss collaboration details.`
-      };
-
-      await emailjs.send(
-        'service_qv37c1r',
-        'template_a9799k9',
-        ownerTemplateParams,
-        'wtGOHmGUOT5eVZGq4'
-      );
+      await sendCollabEmail({
+        to: project.ownerEmail,
+        subject: `Collaboration Request for ${project.title}`,
+        text: `${userData.fullName} (${userData.email}) wants to collaborate on your project "${project.title}".`,
+        html: `<p>${userData.fullName} (${userData.email}) wants to collaborate on your project "${project.title}".</p>`
+      });
 
       // Email to collaborator
-      const collaboratorTemplateParams = {
-        to_email: userData.email,
-        to_name: userData.fullName,
-        project_owner_name: project.ownerName,
-        project_owner_email: project.ownerEmail,
-        project_title: project.title,
-        message: `You have successfully requested to collaborate on "${project.title}". The project owner ${project.ownerName} has been notified and will contact you at ${userData.email}.`
-      };
-
-      await emailjs.send(
-        'service_qv37c1r',
-        'template_a9799k9',
-        collaboratorTemplateParams,
-        'wtGOHmGUOT5eVZGq4'
-      );
+      await sendCollabEmail({
+        to: userData.email,
+        subject: `Collaboration Request Sent for ${project.title}`,
+        text: `You have successfully requested to collaborate on "${project.title}". The project owner ${project.ownerName} has been notified and will contact you at ${userData.email}.`,
+        html: `<p>You have successfully requested to collaborate on "${project.title}". The project owner ${project.ownerName} has been notified and will contact you at ${userData.email}.</p>`
+      });
 
       setIsCollaborateModalOpen(false);
       setIsSuccessModalOpen(true);
@@ -413,23 +443,157 @@ const StudentProjects = () => {
   const [selectedLevel, setSelectedLevel] = useState('');
   const [selectedDuration, setSelectedDuration] = useState('');
   const [selectedTechnology, setSelectedTechnology] = useState('');
-
-  const filteredProjects = mockProjects.filter(project => {
-    const searchMatch = searchTerm === '' || 
-      project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      project.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      project.technologies.some(tech => tech.toLowerCase().includes(searchTerm.toLowerCase()));
-    
-    const domainMatch = !selectedDomain || project.domain === selectedDomain;
-    const levelMatch = !selectedLevel || project.level === selectedLevel;
-    const durationMatch = !selectedDuration || project.duration === selectedDuration;
-    const technologyMatch = !selectedTechnology || project.technologies.includes(selectedTechnology);
-    
-    return searchMatch && domainMatch && levelMatch && durationMatch && technologyMatch;
+  const [showThankYou, setShowThankYou] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState('');
+  const [projects, setProjects] = useState<Project[]>(mockProjects);
+  const [form, setForm] = useState({
+    title: '',
+    description: '',
+    domain: '',
+    level: '',
+    technologies: '',
+    duration: '',
+    ownerName: '',
+    ownerEmail: '',
+    location: '',
+    coverUrl: '',
   });
+  const [showForm, setShowForm] = useState(false);
+  const location = useLocation();
+
+  // If an ID is present, show only the selected project card (with fallback for string/number IDs)
+  const params = new URLSearchParams(location.search);
+  const selectedId = params.get('id');
+  let selectedProject: Project | undefined = undefined;
+  if (selectedId) {
+    selectedProject = projects.find(p => String(p.id) === String(selectedId));
+    if (!selectedProject) {
+      // Fallback: try to parse as number for mock data
+      const numId = Number(selectedId);
+      if (!isNaN(numId)) {
+        selectedProject = projects.find(p => p.id === numId);
+      }
+    }
+  }
+
+  if (selectedId && selectedProject) {
+    return (
+      <div className="max-w-7xl mx-auto p-6">
+        <div className="mb-8">
+          <button onClick={() => window.history.back()} className="text-blue-400 hover:underline mb-4">&larr; Back</button>
+        </div>
+        <ProjectCard project={selectedProject} />
+      </div>
+    );
+  }
+
+  const filteredProjects = !selectedId
+    ? projects.filter(project => {
+        const searchMatch = searchTerm === '' || 
+          project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          project.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          project.technologies.some(tech => tech.toLowerCase().includes(searchTerm.toLowerCase()));
+        const domainMatch = !selectedDomain || project.domain === selectedDomain;
+        const levelMatch = !selectedLevel || project.level === selectedLevel;
+        const durationMatch = !selectedDuration || project.duration === selectedDuration;
+        const technologyMatch = !selectedTechnology || project.technologies.includes(selectedTechnology);
+        return searchMatch && domainMatch && levelMatch && durationMatch && technologyMatch;
+      })
+    : [];
+
+  const handleFormChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleProjectSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setSubmitting(true);
+    setSubmitError('');
+    try {
+      // Compose email body
+      const html = `<h2>New Student Project Submission</h2><ul>${Object.entries(form).map(([k,v]) => `<li><b>${k}:</b> ${v}</li>`).join('')}</ul>`;
+      await sendCollabEmail({
+        to: 'collabup4@gmail.com',
+        subject: '[URGENT]! Project Review',
+        text: `New project submitted: ${form.title} by ${form.ownerName} (${form.ownerEmail})`,
+        html
+      });
+      setShowThankYou(true);
+      setProjects([
+        {
+          ...form,
+          id: Date.now(),
+          technologies: form.technologies.split(',').map(t => t.trim()),
+          levelColor: 'bg-green-500/20 text-green-400',
+          matchScore: 100,
+        } as Project,
+        ...projects
+      ]);
+      setForm({ title: '', description: '', domain: '', level: '', technologies: '', duration: '', ownerName: '', ownerEmail: '', location: '', coverUrl: '' });
+    } catch (err: any) {
+      setSubmitError('Failed to submit project. Please try again.');
+    } finally {
+      setSubmitting(false);
+    }
+  };
 
   return (
     <div className="max-w-7xl mx-auto p-6">
+      {/* Upload Project Button */}
+      <div className="flex justify-end mb-6">
+        <button
+          onClick={() => setShowForm(true)}
+          className="flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 rounded-lg font-semibold shadow-lg transition-all duration-300"
+        >
+          <Upload size={20} /> Upload Project
+        </button>
+      </div>
+      {/* Project Submission Modal */}
+      {showForm && (
+        <div className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50">
+          <div className="bg-gray-900 rounded-xl p-8 max-w-2xl w-full mx-4 border border-indigo-700 relative">
+            <button
+              onClick={() => setShowForm(false)}
+              className="absolute top-4 right-4 text-gray-400 hover:text-white"
+            >
+              <X size={28} />
+            </button>
+            <h2 className="text-2xl font-bold text-white mb-4">Submit Your Project</h2>
+            <form className="grid grid-cols-1 md:grid-cols-2 gap-4" onSubmit={handleProjectSubmit}>
+              <input name="title" value={form.title} onChange={handleFormChange} required placeholder="Project Title" className="p-2 rounded bg-gray-800 text-white border border-gray-700" />
+              <input name="ownerName" value={form.ownerName} onChange={handleFormChange} required placeholder="Your Name" className="p-2 rounded bg-gray-800 text-white border border-gray-700" />
+              <input name="ownerEmail" value={form.ownerEmail} onChange={handleFormChange} required type="email" placeholder="Your Email" className="p-2 rounded bg-gray-800 text-white border border-gray-700" />
+              <input name="location" value={form.location} onChange={handleFormChange} required placeholder="Location" className="p-2 rounded bg-gray-800 text-white border border-gray-700" />
+              <input name="domain" value={form.domain} onChange={handleFormChange} required placeholder="Domain (e.g. AI, Web)" className="p-2 rounded bg-gray-800 text-white border border-gray-700" />
+              <input name="level" value={form.level} onChange={handleFormChange} required placeholder="Level (Beginner/Intermediate/Advanced)" className="p-2 rounded bg-gray-800 text-white border border-gray-700" />
+              <input name="duration" value={form.duration} onChange={handleFormChange} required placeholder="Duration (e.g. 3 Months)" className="p-2 rounded bg-gray-800 text-white border border-gray-700" />
+              <input name="coverUrl" value={form.coverUrl} onChange={handleFormChange} placeholder="Cover Image URL (optional)" className="p-2 rounded bg-gray-800 text-white border border-gray-700" />
+              <input name="technologies" value={form.technologies} onChange={handleFormChange} required placeholder="Technologies (comma separated)" className="p-2 rounded bg-gray-800 text-white border border-gray-700 md:col-span-2" />
+              <textarea name="description" value={form.description} onChange={handleFormChange} required placeholder="Project Description" className="p-2 rounded bg-gray-800 text-white border border-gray-700 md:col-span-2" rows={3} />
+              <div className="md:col-span-2 flex gap-4 items-center">
+                <button type="submit" disabled={submitting} className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 rounded-lg font-semibold">
+                  {submitting ? 'Submitting...' : 'Submit Project'}
+                </button>
+                {submitError && <span className="text-red-400">{submitError}</span>}
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
+      {/* Thank You Modal */}
+      {showThankYou && (
+        <div className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50">
+          <div className="bg-gray-900 rounded-xl p-8 max-w-md w-full mx-4 border border-green-700 text-center">
+            <div className="flex justify-center mb-4">
+              <div className="bg-green-500 rounded-full p-2"><Check size={32} className="text-white" /></div>
+            </div>
+            <h3 className="text-2xl font-semibold text-white mb-4">Thank you for your submission! 🎉</h3>
+            <p className="text-gray-300 mb-6">Your project has been submitted for review. We will contact you soon.</p>
+            <button onClick={() => setShowThankYou(false)} className="bg-indigo-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700 transition-colors">Close</button>
+          </div>
+        </div>
+      )}
       {/* Header */}
       <div className="text-center mb-12 pt-6">
         <h1 className="text-4xl font-bold text-white mb-4">
@@ -528,9 +692,15 @@ const StudentProjects = () => {
 
       {/* Projects Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {filteredProjects.map((project) => (
-          <ProjectCard key={project.id} project={project} />
-        ))}
+        {selectedId && !selectedProject ? (
+          <div className="col-span-full text-center text-red-400 font-semibold text-lg">Project not found.</div>
+        ) : selectedProject ? (
+          <ProjectCard key={selectedProject.id} project={selectedProject} />
+        ) : (
+          filteredProjects.map((project) => (
+            <ProjectCard key={project.id} project={project} />
+          ))
+        )}
       </div>
     </div>
   );

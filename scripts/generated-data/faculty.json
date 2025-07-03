@@ -1,20 +1,20 @@
 [
   {
     "id": "faculty_001",
-    "name": "Vicki Lehner",
-    "email": "Victor87@yahoo.com",
-    "institute": "IIT Kanpur",
-    "department": "Electrical Engineering",
+    "name": "Arpita Roy",
+    "email": "me22b1078@iiitdm.ac.in",
+    "institute": "IIITDM Kancheepuram",
+    "department": "Computer Science",
     "researchAreas": [
-      "Biomedical Engineering",
-      "Renewable Energy"
+      "AI/ML",
+      "Data Science"
     ],
-    "bio": "Renowned Associate Professor at IIT Kanpur with expertise in Biomedical Engineering, Renewable Energy. Author of 55 publications.",
-    "designation": "Associate Professor",
-    "experience": 12,
-    "publications": 55,
-    "profilePic": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/823.jpg",
-    "website": "https://rapid-pint.info/",
+    "bio": "Faculty at IIITDM Kancheepuram, specializing in AI/ML and Data Science.",
+    "designation": "Assistant Professor",
+    "experience": 8,
+    "publications": 12,
+    "profilePic": "https://avatars.githubusercontent.com/u/58777820",
+    "website": "https://faculty.iiitdm.ac.in/arpitaroy",
     "createdAt": {
       "_seconds": 1751117752,
       "_nanoseconds": 285000000
@@ -26,21 +26,20 @@
   },
   {
     "id": "faculty_002",
-    "name": "Woodrow Kertzmann",
-    "email": "Austyn34@yahoo.com",
-    "institute": "IIT Bombay",
-    "department": "Electrical Engineering",
+    "name": "Rishit Rastogi",
+    "email": "me22b2017@iiitdm.ac.in",
+    "institute": "IIITDM Kancheepuram",
+    "department": "Mechanical Engineering",
     "researchAreas": [
-      "Quantum Computing",
-      "Blockchain",
-      "Nanotechnology"
+      "Robotics",
+      "Manufacturing"
     ],
-    "bio": "Experienced Professor specializing in Quantum Computing, Blockchain, Nanotechnology. Currently working at IIT Bombay with 15 years of academic experience.",
-    "designation": "Professor",
-    "experience": 15,
-    "publications": 17,
-    "profilePic": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/227.jpg",
-    "website": "https://careless-clock.com",
+    "bio": "Faculty at IIITDM Kancheepuram, expert in Robotics and Manufacturing.",
+    "designation": "Associate Professor",
+    "experience": 10,
+    "publications": 18,
+    "profilePic": "https://avatars.githubusercontent.com/u/58777820",
+    "website": "https://faculty.iiitdm.ac.in/rishitrastogi",
     "createdAt": {
       "_seconds": 1751117752,
       "_nanoseconds": 285000000
@@ -52,21 +51,20 @@
   },
   {
     "id": "faculty_003",
-    "name": "Chester Flatley-Padberg",
-    "email": "Brionna_McGlynn51@gmail.com",
-    "institute": "IIT Bombay",
-    "department": "Chemical Engineering",
+    "name": "Kush Jain",
+    "email": "cs22b2010@iiitdm.ac.in",
+    "institute": "IIITDM Kancheepuram",
+    "department": "Computer Science",
     "researchAreas": [
-      "Data Science",
-      "Biomedical Engineering",
-      "Quantum Computing"
+      "Cybersecurity",
+      "Networks"
     ],
-    "bio": "Distinguished Head of Department with 22 years at IIT Bombay. Research focus on Data Science, Biomedical Engineering, Quantum Computing.",
-    "designation": "Head of Department",
-    "experience": 22,
-    "publications": 93,
-    "profilePic": "https://avatars.githubusercontent.com/u/14484529",
-    "website": "https://meaty-oxygen.org",
+    "bio": "Faculty at IIITDM Kancheepuram, specializing in Cybersecurity and Networks.",
+    "designation": "Professor",
+    "experience": 15,
+    "publications": 25,
+    "profilePic": "https://avatars.githubusercontent.com/u/58777820",
+    "website": "https://faculty.iiitdm.ac.in/kushjain",
     "createdAt": {
       "_seconds": 1751117752,
       "_nanoseconds": 285000000
@@ -78,20 +76,20 @@
   },
   {
     "id": "faculty_004",
-    "name": "Leon Zemlak",
-    "email": "Carmine_OConnell47@yahoo.com",
-    "institute": "IIT Madras",
-    "department": "Electrical Engineering",
+    "name": "Subhash Bishnoi",
+    "email": "me22b2044@iiitdm.ac.in",
+    "institute": "IIITDM Kancheepuram",
+    "department": "Mechanical Engineering",
     "researchAreas": [
       "Robotics",
-      "Artificial Intelligence"
+      "Manufacturing"
     ],
-    "bio": "Experienced Professor specializing in Robotics, Artificial Intelligence. Currently working at IIT Madras with 14 years of academic experience.",
-    "designation": "Professor",
-    "experience": 14,
-    "publications": 88,
-    "profilePic": "https://avatars.githubusercontent.com/u/32511978",
-    "website": "https://idolized-blowhole.org/",
+    "bio": "Faculty at IIITDM Kancheepuram, expert in Robotics and Manufacturing.",
+    "designation": "Assistant Professor",
+    "experience": 6,
+    "publications": 8,
+    "profilePic": "https://avatars.githubusercontent.com/u/58777820",
+    "website": "https://faculty.iiitdm.ac.in/subhashbishnoi",
     "createdAt": {
       "_seconds": 1751117752,
       "_nanoseconds": 285000000

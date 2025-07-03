@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Search, BookOpen, Code, Star, MapPin, GraduationCap, Clock, ChevronDown, Upload, X, Check } from 'lucide-react';
 import { auth } from '../firebase/firebaseConfig';
 import { enrollInProject, getProjects } from '../firebase/firebaseService';
+import { useLocation } from 'react-router-dom';
 
 interface Project {
   id: number;
@@ -16,6 +17,7 @@ interface Project {
   matchScore: number;
   certificate: boolean;
   offeredBy: string;
+  description: string;
 }
 
 interface EnrollmentModalProps {
@@ -70,6 +72,19 @@ const skillsList = [
   'UI/UX'
 ];
 
+const startupImages = [
+  'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=256&q=80',
+  'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=256&q=80',
+  'https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=256&q=80',
+  'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=256&q=80',
+  'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=256&q=80',
+  'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=256&q=80',
+  'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=256&q=80',
+  'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=256&q=80',
+  'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=256&q=80',
+  'https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=256&q=80',
+];
+
 const projects: Project[] = [
   {
     id: 1,
@@ -78,12 +93,13 @@ const projects: Project[] = [
     domain: "Machine Learning",
     duration: "3 Months",
     level: "Intermediate",
-    imageUrl: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&h=256&q=80",
+    imageUrl: startupImages[0],
     location: "Bangalore, India",
     matchScore: 95,
     skills: ["Python", "Machine Learning", "AWS", "Docker"],
     certificate: true,
-    offeredBy: "MedAI Innovations"
+    offeredBy: "MedAI Innovations",
+    description: "A platform leveraging AI to assist doctors in diagnosis and patient management."
   },
   {
     id: 2,
@@ -92,13 +108,60 @@ const projects: Project[] = [
     domain: "IoT",
     duration: "6 Months",
     level: "Advanced",
-    imageUrl: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&h=256&q=80",
+    imageUrl: startupImages[1],
     location: "Mumbai, India",
     matchScore: 88,
     skills: ["IoT", "Python", "Cloud Computing", "Data Analytics"],
     certificate: true,
-    offeredBy: "SmartCity Tech"
-  }
+    offeredBy: "SmartCity Tech",
+    description: "IoT-based solution for smart city infrastructure and analytics."
+  },
+  {
+    id: 3,
+    title: "Blockchain-based Voting System",
+    company: "SecureVote",
+    domain: "Blockchain",
+    duration: "4 Months",
+    level: "Intermediate",
+    imageUrl: startupImages[2],
+    location: "Delhi, India",
+    matchScore: 90,
+    skills: ["Solidity", "Web3.js", "React"],
+    certificate: true,
+    offeredBy: "SecureVote Labs",
+    description: "A secure, transparent voting platform using blockchain technology."
+  },
+  {
+    id: 4,
+    title: "EdTech Learning Platform",
+    company: "Learnify",
+    domain: "Web Development",
+    duration: "2 Months",
+    level: "Beginner",
+    imageUrl: startupImages[3],
+    location: "Chennai, India",
+    matchScore: 85,
+    skills: ["React", "Node.js", "UI/UX"],
+    certificate: true,
+    offeredBy: "Learnify Pvt Ltd",
+    description: "Interactive learning platform for students and teachers."
+  },
+  {
+    id: 5,
+    title: "Cloud-based Student Management System",
+    company: "EduCloud",
+    domain: "Cloud Computing",
+    duration: "3 Months",
+    level: "Intermediate",
+    imageUrl: startupImages[4],
+    location: "Hyderabad, India",
+    matchScore: 92,
+    skills: ["AWS", "React", "Node.js", "MongoDB"],
+    certificate: true,
+    offeredBy: "EduCloud Solutions",
+    description: "Manage student records, attendance, and performance in the cloud."
+  },
+  // ...existing code for more projects, update their imageUrl and add description as above...
 ];
 
 const EnrollmentModal: React.FC<EnrollmentModalProps> = ({ isOpen, onClose, project }) => {
@@ -268,23 +331,29 @@ function StartupProj() {
   const [selectedDuration, setSelectedDuration] = useState('');
   const [selectedLevel, setSelectedLevel] = useState('');
   const [selectedSkills, setSelectedSkills] = useState('');
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const fetchProjects = async () => {
       try {
         const fetchedProjects = await getProjects();
-        setProjects(fetchedProjects);
+        const params = new URLSearchParams(location.search);
+        const selectedId = params.get('id');
+        if (selectedId) {
+          const found = fetchedProjects.find(p => String(p.id) === selectedId);
+          setProjects(found ? [found] : []);
+        } else {
+          setProjects(fetchedProjects);
+        }
       } catch (error) {
         console.error('Error fetching projects:', error);
       } finally {
         setLoading(false);
       }
     };
-
     fetchProjects();
-  }, []);
+  }, [location.search]);
 
   if (loading) {
     return (
@@ -294,24 +363,93 @@ function StartupProj() {
     );
   }
 
-  const filteredProjects = projects.filter(project => {
-    const searchMatch = searchTerm === '' || 
-      project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      project.company.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      project.skills.some(skill => skill.toLowerCase().includes(searchTerm.toLowerCase()));
-    
-    const domainMatch = !selectedDomain || project.domain === selectedDomain;
-    const durationMatch = !selectedDuration || project.duration === selectedDuration;
-    const levelMatch = !selectedLevel || project.level === selectedLevel;
-    const skillsMatch = !selectedSkills || project.skills.includes(selectedSkills);
-    
-    return searchMatch && domainMatch && durationMatch && levelMatch && skillsMatch;
-  });
+  // If an ID is present, show only the selected project card (with fallback for string/number IDs)
+  const params = new URLSearchParams(location.search);
+  const selectedId = params.get('id');
+  let selectedProject: Project | undefined = undefined;
+  if (selectedId) {
+    selectedProject = projects.find(p => String(p.id) === String(selectedId));
+    if (!selectedProject) {
+      // Fallback: try to parse as number for mock data
+      const numId = Number(selectedId);
+      if (!isNaN(numId)) {
+        selectedProject = projects.find(p => p.id === numId);
+      }
+    }
+  }
 
-  const handleEnrollClick = (project: Project) => {
-    setSelectedProject(project);
-    setIsModalOpen(true);
-  };
+  if (selectedId && selectedProject) {
+    return (
+      <div className="max-w-7xl mx-auto p-6">
+        <div className="mb-8">
+          <button onClick={() => window.history.back()} className="text-blue-400 hover:underline mb-4">&larr; Back</button>
+        </div>
+        <div className="grid grid-cols-1 gap-6">
+          <div className="bg-gray-800 rounded-xl shadow-lg overflow-hidden border border-gray-700">
+            <div className="relative">
+              <img
+                src={selectedProject.imageUrl}
+                alt={selectedProject.title}
+                className="w-full h-48 object-cover"
+                onError={(e) => (e.currentTarget.src = 'https://via.placeholder.com/400x256/1f2937/6b7280?text=Project')}
+              />
+              <div className="absolute top-4 right-4 bg-gray-900 px-3 py-1 rounded-full shadow-md border border-gray-700">
+                <div className="flex items-center gap-1">
+                  <Star className="text-yellow-400" size={16} fill="currentColor" />
+                  <span className="font-semibold text-gray-200">{selectedProject.matchScore}%</span>
+                </div>
+              </div>
+            </div>
+            <div className="p-6">
+              <div className="mb-4">
+                <h3 className="text-xl font-semibold text-gray-200 mb-2">{selectedProject.title}</h3>
+                <div className="flex items-center gap-2 text-gray-400">
+                  <MapPin size={16} />
+                  <span className="text-sm">{selectedProject.location}</span>
+                </div>
+              </div>
+              <p className="text-gray-400 mb-4 line-clamp-3">{selectedProject.description}</p>
+              <div className="mb-4 space-y-2">
+                <div className="flex items-center gap-2">
+                  <BookOpen size={16} className="text-indigo-400" />
+                  <span className="font-medium text-gray-300">{selectedProject.domain}</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Clock size={16} className="text-indigo-400" />
+                  <span className="text-gray-400">{selectedProject.duration}</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Code size={16} className="text-indigo-400" />
+                  <span className="text-gray-400">{selectedProject.level}</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <GraduationCap size={16} className="text-indigo-400" />
+                  <span className="text-gray-400">{selectedProject.company}</span>
+                </div>
+              </div>
+              <div className="flex flex-wrap gap-2 mb-4">
+                {selectedProject.skills.map((skill, index) => (
+                  <span
+                    key={index}
+                    className="px-3 py-1 bg-gray-700 text-indigo-300 rounded-full text-sm border border-gray-600"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+              <button
+                onClick={() => setIsModalOpen(true)}
+                className="w-full bg-indigo-600 text-white py-2 rounded-lg hover:bg-indigo-700 transition-colors"
+              >
+                Enroll
+              </button>
+            </div>
+          </div>
+          <EnrollmentModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} project={selectedProject} />
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="max-w-7xl mx-auto p-6">
@@ -413,7 +551,7 @@ function StartupProj() {
 
       {/* Projects Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
-        {filteredProjects.map((project) => (
+        {projects.map((project) => (
           <div key={project.id} className="bg-gray-800 rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300 border border-gray-700">
             <div className="relative">
               <img
@@ -477,7 +615,7 @@ function StartupProj() {
               )}
 
               <button 
-                onClick={() => handleEnrollClick(project)}
+                onClick={() => setIsModalOpen(true)}
                 className="w-full bg-indigo-600 text-white py-2 rounded-lg hover:bg-indigo-700 transition-colors"
               >
                 Enroll Now

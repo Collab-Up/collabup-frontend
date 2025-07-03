@@ -2,7 +2,7 @@
 export const CHATBOT_CONFIG = {
   // Use Vite's import.meta.env for environment variables
   // If no API URL is provided, the chatbot will use fallback responses
-  baseURL: import.meta.env.VITE_CHATBOT_API_URL || 'https://3t3bpy.buildship.run',
+  baseURL: 'https://3t3bpy.buildship.run',
   endpoint: '/chatbot-9b77d1e54578',
   
   // API Headers
@@ -69,4 +69,4 @@ export const getChatbotPayload = (message: string, additionalData?: any) => {
     // version: '1.0.0',
     ...additionalData,
   };
-}; 
+};

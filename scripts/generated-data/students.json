@@ -1,10 +1,10 @@
 [
   {
     "id": "student_001",
-    "name": "Gladys Gulgowski",
-    "email": "Karolann.Hessel@yahoo.com",
-    "college": "IIT Guwahati",
-    "branch": "Electrical Engineering",
+    "name": "Subhash Bishnoi",
+    "email": "me22b2044@iiitdm.ac.in",
+    "college": "IIITDM Kancheepuram",
+    "branch": "Mechanical Engineering",
     "year": 3,
     "skills": [
       "React",
@@ -15,12 +15,12 @@
     "interests": [
       "Robotics"
     ],
-    "bio": "Enthusiastic student pursuing Electrical Engineering at IIT Guwahati. Proficient in React, Flutter, Data Science, Machine Learning and actively involved in Robotics.",
-    "location": "Ahmedabad",
+    "bio": "Enthusiastic student pursuing Mechanical Engineering at IIITDM Kancheepuram. Proficient in React, Flutter, Data Science, Machine Learning and actively involved in Robotics.",
+    "location": "Jodhpur",
     "profilePic": "https://avatars.githubusercontent.com/u/58777820",
-    "cgpa": 6.97,
-    "github": "https://exhausted-adulthood.net/",
-    "linkedin": "https://rotating-individual.com",
+    "cgpa": 8.2,
+    "github": "https://github.com/subhashbishnoi",
+    "linkedin": "https://linkedin.com/in/subhashbishnoi",
     "phone": "933-361-8066 x818",
     "createdAt": {
       "_seconds": 1751117752,
@@ -33,10 +33,10 @@
   },
   {
     "id": "student_002",
-    "name": "Norman Bernier",
-    "email": "Nicklaus68@hotmail.com",
-    "college": "IIT Bombay",
-    "branch": "Computer Science",
+    "name": "Vikas Yadav",
+    "email": "me22b1051@iiitdm.ac.in",
+    "college": "IIITDM Kancheepuram",
+    "branch": "Mechanical Engineering",
     "year": 4,
     "skills": [
       "Flutter",
@@ -49,12 +49,12 @@
       "Cybersecurity",
       "Open Source"
     ],
-    "bio": "Motivated 4 year student with strong foundation in Flutter, Android, React, UI/UX, DevOps. Looking for opportunities in Cybersecurity, Open Source.",
-    "location": "Pune",
+    "bio": "Motivated student with strong foundation in Flutter, Android, React, UI/UX, DevOps. Looking for opportunities in Cybersecurity, Open Source.",
+    "location": "Gurgaon",
     "profilePic": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/982.jpg",
-    "cgpa": 7.27,
-    "github": "https://disgusting-choosing.name/",
-    "linkedin": "https://clean-morning.net",
+    "cgpa": 7.9,
+    "github": "https://github.com/vikasyadav",
+    "linkedin": "https://linkedin.com/in/vikasyadav",
     "phone": "1-961-852-4496",
     "createdAt": {
       "_seconds": 1751117752,
@@ -67,11 +67,11 @@
   },
   {
     "id": "student_003",
-    "name": "Clint Metz",
-    "email": "Marc43@hotmail.com",
-    "college": "IIT Delhi",
-    "branch": "Biotechnology",
-    "year": 1,
+    "name": "Prashant Tyagi",
+    "email": "me22b1069@iiitdm.ac.in",
+    "college": "IIITDM Kancheepuram",
+    "branch": "Mechanical Engineering",
+    "year": 2,
     "skills": [
       "Robotics",
       "Android",
@@ -83,12 +83,12 @@
       "Web Development",
       "Open Source"
     ],
-    "bio": "Dedicated 1 year Biotechnology student from IIT Delhi. Skilled in Robotics, Android, Java, Data Science, Machine Learning and passionate about Web Development, Open Source.",
-    "location": "Jaipur",
+    "bio": "Dedicated student from IIITDM Kancheepuram. Skilled in Robotics, Android, Java, Data Science, Machine Learning and passionate about Web Development, Open Source.",
+    "location": "Meerut",
     "profilePic": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/612.jpg",
-    "cgpa": 6.62,
-    "github": "https://violet-recess.name/",
-    "linkedin": "https://other-woodchuck.com",
+    "cgpa": 8.0,
+    "github": "https://github.com/prashanttyagi",
+    "linkedin": "https://linkedin.com/in/prashanttyagi",
     "phone": "(982) 215-6551 x250",
     "createdAt": {
       "_seconds": 1751117752,
@@ -101,68 +101,63 @@
   },
   {
     "id": "student_004",
-    "name": "Everett Bernhard",
-    "email": "Loraine_Goldner@yahoo.com",
-    "college": "IIT Delhi",
-    "branch": "Civil Engineering",
+    "name": "Ashutosh Shandilya",
+    "email": "cs22b2050@iiitdm.ac.in",
+    "college": "IIITDM Kancheepuram",
+    "branch": "Computer Science",
     "year": 3,
     "skills": [
-      "Machine Learning",
-      "UI/UX",
-      "DevOps",
-      "Android"
+      "React",
+      "Node.js",
+      "TypeScript"
     ],
     "interests": [
-      "Cybersecurity"
+      "Web Development"
     ],
-    "bio": "Tech-savvy Civil Engineering student from IIT Delhi. Experienced in Machine Learning, UI/UX, DevOps, Android and passionate about Cybersecurity.",
-    "location": "Pune",
-    "profilePic": "https://avatars.githubusercontent.com/u/18072686",
-    "cgpa": 6.25,
-    "github": "https://useless-apple.net/",
-    "linkedin": "https://powerful-snowsuit.name",
-    "phone": "1-498-313-6798 x59694",
+    "bio": "Web developer and enthusiast at IIITDM Kancheepuram.",
+    "location": "Kanpur",
+    "profilePic": "https://avatars.githubusercontent.com/u/58777820",
+    "cgpa": 8.5,
+    "github": "https://github.com/ashutoshshandilya",
+    "linkedin": "https://linkedin.com/in/ashutoshshandilya",
+    "phone": "999-999-9999",
     "createdAt": {
       "_seconds": 1751117752,
-      "_nanoseconds": 281000000
+      "_nanoseconds": 280000000
     },
     "updatedAt": {
       "_seconds": 1751117752,
-      "_nanoseconds": 281000000
+      "_nanoseconds": 280000000
     }
   },
   {
     "id": "student_005",
-    "name": "Jamie Gorczany",
-    "email": "Emelia_Watsica@gmail.com",
-    "college": "IIT Madras",
-    "branch": "Mechanical Engineering",
-    "year": 4,
+    "name": "Nitin Thaber",
+    "email": "cs22b2047@iiitdm.ac.in",
+    "college": "IIITDM Kancheepuram",
+    "branch": "Computer Science",
+    "year": 2,
     "skills": [
-      "Data Science",
-      "React",
-      "Blockchain",
-      "UI/UX",
-      "Python"
-    ],
-    "interests": [
-      "Cloud Computing",
+      "Python",
       "AI/ML"
     ],
-    "bio": "Dedicated 4 year Mechanical Engineering student from IIT Madras. Skilled in Data Science, React, Blockchain, UI/UX, Python and passionate about Cloud Computing, AI/ML.",
-    "location": "Chennai",
-    "profilePic": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/209.jpg",
-    "cgpa": 9.26,
-    "github": "https://dual-airship.name",
-    "linkedin": "https://wee-commitment.name",
-    "phone": "866.379.3502",
+    "interests": [
+      "AI/ML"
+    ],
+    "bio": "AI/ML enthusiast at IIITDM Kancheepuram.",
+    "location": "Delhi",
+    "profilePic": "https://avatars.githubusercontent.com/u/58777820",
+    "cgpa": 8.7,
+    "github": "https://github.com/nitinthaber",
+    "linkedin": "https://linkedin.com/in/nitinthaber",
+    "phone": "888-888-8888",
     "createdAt": {
       "_seconds": 1751117752,
-      "_nanoseconds": 281000000
+      "_nanoseconds": 280000000
     },
     "updatedAt": {
       "_seconds": 1751117752,
-      "_nanoseconds": 281000000
+      "_nanoseconds": 280000000
     }
   },
   {

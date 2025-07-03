@@ -14,6 +14,7 @@ interface Project {
   matchScore: number;
   certificate: boolean;
   offeredBy: string;
+  description: string; // <-- Add description here
 }
 
 interface ResearchProject {
@@ -35,6 +36,8 @@ interface Faculty {
   email: string;
   instituteName: string;
   researchInterests: string[];
+  spotsAvailable: number; // <-- Add spotsAvailable here
+  startDate: string; // <-- Add startDate here
 }
 
 export const enrollInProject = async (enrollmentData: {
@@ -81,6 +84,7 @@ export const getProjects = async (
       matchScore: doc.data().matchScore || Math.floor(Math.random() * 20) + 80,
       certificate: doc.data().certificate || false,
       offeredBy: doc.data().offeredBy || '',
+      description: doc.data().description || '', // <-- Add this line
     } as Project));
   } catch (error) {
     console.error('Error fetching projects:', error);
@@ -118,7 +122,8 @@ export const getResearchProjects = async (
 
 export const getFaculties = async (): Promise<Faculty[]> => {
   try {
-    const facultyQuery = query(collection(db, 'users'), where('role', '==', 'faculty'));
+    // Fetch from 'faculty' collection instead of 'users'
+    const facultyQuery = query(collection(db, 'faculty'));
     const querySnapshot = await getDocs(facultyQuery);
     return querySnapshot.docs.map((doc) => ({
       id: doc.id,
@@ -126,6 +131,8 @@ export const getFaculties = async (): Promise<Faculty[]> => {
       email: doc.data().email || '',
       instituteName: doc.data().instituteName || '',
       researchInterests: doc.data().researchInterests || [],
+      spotsAvailable: doc.data().spotsAvailable ?? 0,
+      startDate: doc.data().startDate ?? '',
     } as Faculty));
   } catch (error) {
     console.error('Error fetching faculties:', error);

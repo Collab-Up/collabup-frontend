@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { Search, Filter, BookOpen, Code, Star, MapPin, MessageCircle, ChevronDown, Calendar, Clock, Video, X, PartyPopper } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Search, BookOpen, Code, Star, MapPin, MessageCircle, ChevronDown, Calendar, Clock, Video, X, PartyPopper } from 'lucide-react';
 import { auth, db } from '../firebase/firebaseConfig';
 import { onAuthStateChanged, User } from 'firebase/auth';
 import { collection, query, where, getDocs, addDoc, doc, getDoc } from 'firebase/firestore';
-import emailjs from '@emailjs/browser';
-import { useNavigate } from 'react-router-dom';
+import { sendCollabEmail } from '../utils/sendCollabEmail';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { getUserRole } from '../utils/getUserRole'; // From previous artifact
 
 interface Mentor {
@@ -42,30 +42,103 @@ const timeSlots = [
   '05:00 PM', '06:00 PM', '07:00 PM', '08:00 PM',
 ];
 
+const mentorImages = [
+  'https://randomuser.me/api/portraits/men/32.jpg',
+  'https://randomuser.me/api/portraits/women/44.jpg',
+  'https://randomuser.me/api/portraits/men/45.jpg',
+  'https://randomuser.me/api/portraits/women/65.jpg',
+  'https://randomuser.me/api/portraits/men/77.jpg',
+  'https://randomuser.me/api/portraits/women/88.jpg',
+  'https://randomuser.me/api/portraits/men/99.jpg',
+  'https://randomuser.me/api/portraits/women/12.jpg',
+  'https://randomuser.me/api/portraits/men/13.jpg',
+  'https://randomuser.me/api/portraits/women/14.jpg',
+];
+
 const mockMentors: Mentor[] = [
   {
     id: 'mock1',
-    name: 'John Doe',
-    imageUrl: 'https://via.placeholder.com/150',
-    domain: 'Full Stack Development',
+    name: 'Ashutosh Shandilya',
+    imageUrl: mentorImages[0],
+    domain: 'Cloud Computing',
     pricing: '5000-10000',
     experience: 5,
-    location: 'Mumbai, India',
+    location: 'Kanpur, India',
     matchScore: 85,
-    skills: ['React', 'Node.js', 'TypeScript'],
-    email: 'john.doe@example.com',
+    skills: ['AWS', 'Docker', 'Kubernetes'],
+    email: 'cs22b2050@iiitdm.ac.in',
   },
   {
     id: 'mock2',
-    name: 'Jane Smith',
-    imageUrl: 'https://via.placeholder.com/150',
-    domain: 'Data Science',
+    name: 'Nitin Thaber',
+    imageUrl: mentorImages[1],
+    domain: 'Cybersecurity',
     pricing: '10000-15000',
     experience: 3,
-    location: 'Bangalore, India',
+    location: 'Delhi, India',
     matchScore: 90,
-    skills: ['Python', 'TensorFlow', 'SQL'],
-    email: 'jane.smith@example.com',
+    skills: ['Network Security', 'Python', 'Linux'],
+    email: 'cs22b2047@iiitdm.ac.in',
+  },
+  {
+    id: 'mock3',
+    name: 'Anshu Saini',
+    imageUrl: mentorImages[2],
+    domain: 'Mobile Development',
+    pricing: '2000-5000',
+    experience: 4,
+    location: 'Chennai, India',
+    matchScore: 92,
+    skills: ['Flutter', 'React Native', 'Android'],
+    email: 'cs22b2051@iiitdm.ac.in',
+  },
+  {
+    id: 'mock4',
+    name: 'Prashant Tyagi',
+    imageUrl: mentorImages[3],
+    domain: 'AI/ML',
+    pricing: '5000-10000',
+    experience: 7,
+    location: 'Meerut, India',
+    matchScore: 89,
+    skills: ['Python', 'Machine Learning', 'Data Science'],
+    email: 'me22b1069@iiitdm.ac.in',
+  },
+  {
+    id: 'mock5',
+    name: 'Arpita Roy',
+    imageUrl: mentorImages[4],
+    domain: 'Data Science',
+    pricing: '2000-5000',
+    experience: 2,
+    location: 'Kolkata, India',
+    matchScore: 88,
+    skills: ['Python', 'Pandas', 'Data Visualization'],
+    email: 'me22b1078@iiitdm.ac.in',
+  },
+  {
+    id: 'mock6',
+    name: 'Rishit Rastogi',
+    imageUrl: mentorImages[5],
+    domain: 'IoT',
+    pricing: '10000-15000',
+    experience: 6,
+    location: 'Lucknow, India',
+    matchScore: 91,
+    skills: ['Arduino', 'Raspberry Pi', 'C++'],
+    email: 'me22b2017@iiitdm.ac.in',
+  },
+  {
+    id: 'mock7',
+    name: 'Kush Jain',
+    imageUrl: mentorImages[6],
+    domain: 'Blockchain',
+    pricing: '5000-10000',
+    experience: 3,
+    location: 'Jaipur, India',
+    matchScore: 86,
+    skills: ['Solidity', 'Web3.js', 'React'],
+    email: 'cs22b2010@iiitdm.ac.in',
   },
 ];
 
@@ -77,7 +150,7 @@ function Mentorship() {
   const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
   const [isConfirmationModalOpen, setIsConfirmationModalOpen] = useState(false);
   const [isSignInModalOpen, setIsSignInModalOpen] = useState(false);
-  const [selectedMentor, setSelectedMentor] = useState<Mentor | null>(null);
+  const [bookingMentor, setBookingMentor] = useState<Mentor | null>(null);
   const [bookingDetails, setBookingDetails] = useState<BookingDetails>({
     date: '',
     timeSlot: '',
@@ -90,11 +163,9 @@ function Mentorship() {
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
-    // Initialize EmailJS
-    emailjs.init('wtGOHmGUOT5eVZGq4'); // Replace with your EmailJS Public Key
-
     // Check authentication status and fetch user role
     const unsubscribe = onAuthStateChanged(auth, async (user) => {
       setCurrentUser(user);
@@ -108,7 +179,15 @@ function Mentorship() {
         }
       } else {
         // Non-logged-in users see mock data
-        setMentors(mockMentors);
+        // Filter by ID if present in query string
+        const params = new URLSearchParams(location.search);
+        const id = params.get('id');
+        if (id) {
+          const filtered = mockMentors.filter((m) => m.id === id);
+          setMentors(filtered);
+        } else {
+          setMentors(mockMentors);
+        }
         setIsLoading(false);
       }
     });
@@ -150,35 +229,137 @@ function Mentorship() {
       fetchMentors();
     }
     return () => unsubscribe();
-  }, [currentUser, userRole]);
+  }, [currentUser, userRole, location.search]);
 
-  const filteredMentors = mentors.filter(mentor => {
-    const searchMatch = searchTerm === '' ||
-      mentor.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      mentor.skills.some(skill => skill.toLowerCase().includes(searchTerm.toLowerCase())) ||
-      mentor.location.toLowerCase().includes(searchTerm.toLowerCase());
-    const domainMatch = !selectedDomain || mentor.domain === selectedDomain;
-    const priceMatch = !selectedPrice || mentor.pricing === selectedPrice;
-    const experienceMatch = !selectedExperience ||
-      (selectedExperience === '3+' ? mentor.experience >= 3 : mentor.experience === selectedExperience);
-    return searchMatch && domainMatch && priceMatch && experienceMatch;
-  });
+  // If an ID is present, show only the selected mentor card (with fallback for string/number IDs)
+  const params = new URLSearchParams(location.search);
+  const selectedId = params.get('id');
+  let selectedMentor: Mentor | undefined = undefined;
+  if (selectedId) {
+    selectedMentor = mentors.find(m => String(m.id) === String(selectedId));
+    if (!selectedMentor) {
+      // Fallback: try to parse as number for mock data
+      const numId = Number(selectedId);
+      if (!isNaN(numId)) {
+        selectedMentor = mentors.find(m => String(m.id) === String(numId));
+      }
+    }
+  }
+
+  if (selectedId && selectedMentor) {
+    return (
+      <div className="max-w-7xl mx-auto p-6">
+        <div className="mb-8">
+          <button onClick={() => window.history.back()} className="text-blue-400 hover:underline mb-4">&larr; Back</button>
+        </div>
+        {/* Render the single selected mentor card here, similar to your normal card UI */}
+        <div className="grid grid-cols-1 gap-6">
+          <div className="bg-gray-800 rounded-xl shadow-lg overflow-hidden border border-gray-700">
+            <div className="relative">
+              <div className="absolute top-4 right-4 bg-gray-900 px-3 py-1 rounded-full shadow-md border border-gray-700">
+                <div className="flex items-center gap-1">
+                  <Star className="text-yellow-400" size={16} fill="currentColor" />
+                  <span className="font-semibold text-gray-200">{selectedMentor.matchScore}%</span>
+                </div>
+              </div>
+            </div>
+            <div className="p-6">
+              <div className="flex items-center gap-4 mb-4">
+                <img
+                  src={selectedMentor.imageUrl}
+                  alt={selectedMentor.name}
+                  className="w-16 h-16 rounded-full object-cover border-2 border-gray-600"
+                  onError={(e) => (e.currentTarget.src = 'https://via.placeholder.com/150')}
+                />
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-200">{selectedMentor.name}</h3>
+                  <div className="flex items-center gap-2 text-gray-400">
+                    <MapPin size={16} />
+                    <span className="text-sm">{selectedMentor.location}</span>
+                  </div>
+                </div>
+              </div>
+              <div className="mb-4">
+                <div className="flex items-center gap-2 mb-2">
+                  <BookOpen size={16} className="text-indigo-400" />
+                  <span className="font-medium text-gray-300">{selectedMentor.domain}</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Code size={16} className="text-indigo-400" />
+                  <span className="text-gray-400">{selectedMentor.experience} Years Experience</span>
+                </div>
+              </div>
+              <div className="flex flex-wrap gap-2 mb-4">
+                {selectedMentor.skills.map((skill, index) => (
+                  <span
+                    key={index}
+                    className="px-3 py-1 bg-gray-700 text-indigo-300 rounded-full text-sm border border-gray-600"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+              <div className="mb-4">
+                <div className="text-sm text-gray-400 mb-2">Price Range:</div>
+                <span className="px-3 py-1 bg-indigo-900/50 text-indigo-300 rounded-full text-sm border border-indigo-800">
+                  ₹{selectedMentor.pricing}
+                </span>
+              </div>
+              <button
+                onClick={() => handleBookSession(selectedMentor)}
+                className="w-full flex items-center justify-center gap-2 bg-indigo-600 text-white py-2 rounded-lg hover:bg-indigo-700 transition-colors"
+              >
+                <MessageCircle size={20} />
+                Book Session
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  if (selectedId && !selectedMentor) {
+    return (
+      <div className="max-w-7xl mx-auto p-6 text-center">
+        <div className="mb-8">
+          <button onClick={() => window.history.back()} className="text-blue-400 hover:underline mb-4">&larr; Back</button>
+        </div>
+        <div className="bg-gray-800 rounded-xl p-8 border border-gray-700 text-gray-300">
+          <h2 className="text-2xl font-bold mb-4">Mentor Not Found</h2>
+          <p>The mentor you are looking for does not exist or is not available in the current data set.</p>
+        </div>
+      </div>
+    );
+  }
+
+  const filteredMentors = !selectedId
+    ? mentors.filter(mentor => {
+        const searchMatch = searchTerm === '' ||
+          mentor.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          mentor.skills.some(skill => skill.toLowerCase().includes(searchTerm.toLowerCase())) ||
+          mentor.location.toLowerCase().includes(searchTerm.toLowerCase());
+        const domainMatch = !selectedDomain || mentor.domain === selectedDomain;
+        const priceMatch = !selectedPrice || mentor.pricing === selectedPrice;
+        const experienceMatch = !selectedExperience ||
+          (selectedExperience === '3+' ? mentor.experience >= 3 : mentor.experience === selectedExperience);
+        return searchMatch && domainMatch && priceMatch && experienceMatch;
+      })
+    : [];
 
   const handleBookSession = (mentor: Mentor) => {
     if (!currentUser) {
       setIsSignInModalOpen(true);
+      // Do NOT redirect here. Wait for sign-in.
       return;
     }
-    if (userRole !== 'student') {
-      setError('Only students can book mentorship sessions.');
-      return;
-    }
-    setSelectedMentor(mentor);
+    // Removed userRole check: allow any authenticated user to book
+    setBookingMentor(mentor);
     setIsBookingModalOpen(true);
   };
 
   const handleConfirmBooking = async () => {
-    if (!bookingDetails.date || !bookingDetails.timeSlot || !bookingDetails.platform || !currentUser || !selectedMentor) {
+    if (!bookingDetails.date || !bookingDetails.timeSlot || !bookingDetails.platform || !currentUser || !bookingMentor) {
       setError('Please fill out all booking details.');
       return;
     }
@@ -187,28 +368,27 @@ function Mentorship() {
     try {
       await addDoc(collection(db, 'bookings'), {
         userId: currentUser.uid,
-        mentorId: selectedMentor.id,
+        mentorId: bookingMentor.id,
         date: bookingDetails.date,
         timeSlot: bookingDetails.timeSlot,
         platform: bookingDetails.platform,
         createdAt: new Date().toISOString(),
       });
 
-      await emailjs.send('service_qv37c1r', 'mentor_booking_notification', {
-        mentor_name: selectedMentor.name,
-        user_name: userData?.fullName || 'User',
-        user_email: userData?.email || currentUser.email,
-        date: bookingDetails.date,
-        time_slot: bookingDetails.timeSlot,
-        platform: bookingDetails.platform,
+      // Email to mentor
+      await sendCollabEmail({
+        to: bookingMentor.email,
+        subject: `Mentorship Session Booking with ${bookingMentor.name}`,
+        text: `${userData?.fullName || 'User'} (${userData?.email || currentUser.email}) has booked a mentorship session with you. Date: ${bookingDetails.date}, Time: ${bookingDetails.timeSlot}, Platform: ${bookingDetails.platform}`,
+        html: `<p>${userData?.fullName || 'User'} (${userData?.email || currentUser.email}) has booked a mentorship session with you.<br/>Date: ${bookingDetails.date}<br/>Time: ${bookingDetails.timeSlot}<br/>Platform: ${bookingDetails.platform}</p>`
       });
 
-      await emailjs.send('service_qv37c1r', 'user_booking_confirmation', {
-        user_name: userData?.fullName || 'User',
-        mentor_name: selectedMentor.name,
-        date: bookingDetails.date,
-        time_slot: bookingDetails.timeSlot,
-        platform: bookingDetails.platform,
+      // Email to user (confirmation)
+      await sendCollabEmail({
+        to: userData?.email ?? currentUser.email ?? '',
+        subject: `Mentorship Session Booking Confirmation`,
+        text: `Your mentorship session with ${bookingMentor.name} has been booked. Date: ${bookingDetails.date}, Time: ${bookingDetails.timeSlot}, Platform: ${bookingDetails.platform}`,
+        html: `<p>Your mentorship session with ${bookingMentor.name} has been booked.<br/>Date: ${bookingDetails.date}<br/>Time: ${bookingDetails.timeSlot}<br/>Platform: ${bookingDetails.platform}</p>`
       });
 
       setIsBookingModalOpen(false);
@@ -298,44 +478,44 @@ function Mentorship() {
       )}
       {!isLoading && filteredMentors.length > 0 && (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredMentors.map((mentor) => (
-            <div key={mentor.id} className="bg-gray-800 rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300 border border-gray-700">
+          {selectedMentor ? (
+            <div key={selectedMentor.id} className="bg-gray-800 rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300 border border-gray-700">
               <div className="relative">
                 <div className="absolute top-4 right-4 bg-gray-900 px-3 py-1 rounded-full shadow-md border border-gray-700">
                   <div className="flex items-center gap-1">
                     <Star className="text-yellow-400" size={16} fill="currentColor" />
-                    <span className="font-semibold text-gray-200">{mentor.matchScore}%</span>
+                    <span className="font-semibold text-gray-200">{selectedMentor.matchScore}%</span>
                   </div>
                 </div>
               </div>
               <div className="p-6">
                 <div className="flex items-center gap-4 mb-4">
                   <img
-                    src={mentor.imageUrl}
-                    alt={mentor.name}
+                    src={selectedMentor.imageUrl}
+                    alt={selectedMentor.name}
                     className="w-16 h-16 rounded-full object-cover border-2 border-gray-600"
                     onError={(e) => (e.currentTarget.src = 'https://via.placeholder.com/150')}
                   />
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-200">{mentor.name}</h3>
+                    <h3 className="text-xl font-semibold text-gray-200">{selectedMentor.name}</h3>
                     <div className="flex items-center gap-2 text-gray-400">
                       <MapPin size={16} />
-                      <span className="text-sm">{mentor.location}</span>
+                      <span className="text-sm">{selectedMentor.location}</span>
                     </div>
                   </div>
                 </div>
                 <div className="mb-4">
                   <div className="flex items-center gap-2 mb-2">
                     <BookOpen size={16} className="text-indigo-400" />
-                    <span className="font-medium text-gray-300">{mentor.domain}</span>
+                    <span className="font-medium text-gray-300">{selectedMentor.domain}</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <Code size={16} className="text-indigo-400" />
-                    <span className="text-gray-400">{mentor.experience} Years Experience</span>
+                    <span className="text-gray-400">{selectedMentor.experience} Years Experience</span>
                   </div>
                 </div>
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {mentor.skills.map((skill, index) => (
+                  {selectedMentor.skills.map((skill, index) => (
                     <span
                       key={index}
                       className="px-3 py-1 bg-gray-700 text-indigo-300 rounded-full text-sm border border-gray-600"
@@ -347,11 +527,11 @@ function Mentorship() {
                 <div className="mb-4">
                   <div className="text-sm text-gray-400 mb-2">Price Range:</div>
                   <span className="px-3 py-1 bg-indigo-900/50 text-indigo-300 rounded-full text-sm border border-indigo-800">
-                    ₹{mentor.pricing}
+                    ₹{selectedMentor.pricing}
                   </span>
                 </div>
                 <button
-                  onClick={() => handleBookSession(mentor)}
+                  onClick={() => handleBookSession(selectedMentor)}
                   className="w-full flex items-center justify-center gap-2 bg-indigo-600 text-white py-2 rounded-lg hover:bg-indigo-700 transition-colors"
                 >
                   <MessageCircle size={20} />
@@ -359,7 +539,70 @@ function Mentorship() {
                 </button>
               </div>
             </div>
-          ))}
+          ) : (
+            filteredMentors.map((mentor) => (
+              <div key={mentor.id} className="bg-gray-800 rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300 border border-gray-700">
+                <div className="relative">
+                  <div className="absolute top-4 right-4 bg-gray-900 px-3 py-1 rounded-full shadow-md border border-gray-700">
+                    <div className="flex items-center gap-1">
+                      <Star className="text-yellow-400" size={16} fill="currentColor" />
+                      <span className="font-semibold text-gray-200">{mentor.matchScore}%</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <div className="flex items-center gap-4 mb-4">
+                    <img
+                      src={mentor.imageUrl}
+                      alt={mentor.name}
+                      className="w-16 h-16 rounded-full object-cover border-2 border-gray-600"
+                      onError={(e) => (e.currentTarget.src = 'https://via.placeholder.com/150')}
+                    />
+                    <div>
+                      <h3 className="text-xl font-semibold text-gray-200">{mentor.name}</h3>
+                      <div className="flex items-center gap-2 text-gray-400">
+                        <MapPin size={16} />
+                        <span className="text-sm">{mentor.location}</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="mb-4">
+                    <div className="flex items-center gap-2 mb-2">
+                      <BookOpen size={16} className="text-indigo-400" />
+                      <span className="font-medium text-gray-300">{mentor.domain}</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Code size={16} className="text-indigo-400" />
+                      <span className="text-gray-400">{mentor.experience} Years Experience</span>
+                    </div>
+                  </div>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {mentor.skills.map((skill, index) => (
+                      <span
+                        key={index}
+                        className="px-3 py-1 bg-gray-700 text-indigo-300 rounded-full text-sm border border-gray-600"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="mb-4">
+                    <div className="text-sm text-gray-400 mb-2">Price Range:</div>
+                    <span className="px-3 py-1 bg-indigo-900/50 text-indigo-300 rounded-full text-sm border border-indigo-800">
+                      ₹{mentor.pricing}
+                    </span>
+                  </div>
+                  <button
+                    onClick={() => handleBookSession(mentor)}
+                    className="w-full flex items-center justify-center gap-2 bg-indigo-600 text-white py-2 rounded-lg hover:bg-indigo-700 transition-colors"
+                  >
+                    <MessageCircle size={20} />
+                    Book Session
+                  </button>
+                </div>
+              </div>
+            ))
+          )}
         </div>
       )}
 
@@ -389,11 +632,11 @@ function Mentorship() {
         </div>
       )}
 
-      {isBookingModalOpen && selectedMentor && (
+      {isBookingModalOpen && bookingMentor && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
           <div className="bg-gray-800 rounded-xl p-6 max-w-md w-full border border-gray-700">
             <div className="flex justify-between items-center mb-6">
-              <h3 className="text-xl font-semibold text-white">Book Session with {selectedMentor.name}</h3>
+              <h3 className="text-xl font-semibold text-white">Book Session with {bookingMentor.name}</h3>
               <button
                 onClick={() => setIsBookingModalOpen(false)}
                 className="text-gray-400 hover:text-white"

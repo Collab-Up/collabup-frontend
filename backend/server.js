@@ -47,6 +47,34 @@ Message: ${message}
   }
 });
 
+app.post("/api/send-email", async (req, res) => {
+  const { to, subject, text, html } = req.body;
+  if (!to || !subject || !text) {
+    return res.status(400).json({ error: "To, subject, and text are required." });
+  }
+  try {
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: process.env.MAIL_USER,
+        pass: process.env.MAIL_PASS,
+      },
+    });
+    const mailOptions = {
+      from: `CollabUp <${process.env.MAIL_USER}>`,
+      to,
+      subject,
+      text,
+      html: html || `<p>${text}</p>`
+    };
+    await transporter.sendMail(mailOptions);
+    res.status(200).json({ success: true, message: "Email sent!" });
+  } catch (error) {
+    console.error("Mail error:", error);
+    res.status(500).json({ error: "Failed to send email" });
+  }
+});
+console.log("Loaded [server.js](http://_vscodecontentref_/0) and registered /api/send-email");
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
 });
