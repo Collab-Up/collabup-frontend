@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # CollabUp - Student Collaboration Platform
 
 A comprehensive platform designed to help students connect, collaborate, and grow through community-driven project building, hackathons, mentorship, and startup engagements.
@@ -381,3 +382,7 @@ For support and questions:
 
 ## 📄 License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+=======
+# collabup-frontend
+This contains the frontend part of CollabUp
+>>>>>>> 521d96b14c4527edb58d49f55f1ad023d779c57c
