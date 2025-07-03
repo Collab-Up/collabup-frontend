@@ -48,11 +48,14 @@ const Navbar = () => {
     setSearchTerm(value);
     if (value.length > 2) {
       try {
-        const res = await fetch('http://localhost:8000/recommend', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ query: value, top_n: 5 })
-        });
+        const res = await fetch(
+          import.meta.env.VITE_RECOMMENDATION_API_URL,
+          {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ query: value, top_n: 5 })
+          }
+        );
         const data = await res.json();
         setRecommendations(data);
         setShowDropdown(true);
