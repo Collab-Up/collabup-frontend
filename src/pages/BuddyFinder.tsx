@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Search, Filter, BookOpen, Code, Users, Star, MapPin, MessageCircle, User } from 'lucide-react';
 import { auth, db } from '../firebase/firebaseConfig';
 import { doc, getDoc } from 'firebase/firestore';
-import emailjs from '@emailjs/browser';
+import { sendCollabEmail } from '../utils/sendCollabEmail';
 
 interface BuddyProfile {
   id: number;
@@ -149,7 +149,8 @@ const buddyEmailMap: Record<string, string> = {
   "Nitin Thaber": "cs22b2047@iiitdm.ac.in",
   "Anshu Saini": "cs22b2051@iiitdm.ac.in",
   "Arpita Roy": "me22b1078@iiitdm.ac.in",
-  "Rishit Rastogi": "cs22b2052@iiitdm.ac.in"
+  "Rishit Rastogi": "me22b2017@iiitdm.ac.in",
+  "Kush Jain": "cs22b2010@iiitdm.ac.in",
 };
 
 const BuddyFinder: React.FC = () => {
@@ -196,15 +197,15 @@ const BuddyFinder: React.FC = () => {
   });
 
   const handleConnect = async (buddy: BuddyProfile) => {
-    if (!userData) {
+    if (!userData || !userData.email) {
       setModalMessage('Please sign in to connect with a buddy.');
       setShowModal(true);
       return;
     }
 
-    // Ensure buddy email is always present
-    const buddyEmail = buddy.email || buddyEmailMap[buddy.name] || '';
-    if (!buddyEmail) {
+    // Always use mapping for buddy email, fallback to profile email, then show error
+    const buddyEmail = buddyEmailMap[buddy.name] || buddy.email || '';
+    if (!buddyEmail || buddyEmail.trim() === '') {
       setModalMessage('Could not find a valid email for the selected buddy.');
       setShowModal(true);
       return;
@@ -212,38 +213,22 @@ const BuddyFinder: React.FC = () => {
 
     try {
       // Email to logged-in user
-      const userTemplateParams = {
-        user_name: userData.name,
-        user_email: userData.email,
-        buddy_name: buddy.name,
-        buddy_email: buddyEmail,
-      };
-      await emailjs.send(
-        'service_qv37c1r',
-        'template_a9799k9',
-        userTemplateParams,
-        'wtGOHmGUOT5eVZGq4'
-      );
-      console.log('Email sent to user:', userData.email);
-
+      await sendCollabEmail({
+        to: userData.email,
+        subject: `Buddy Connection Request: ${buddy.name}`,
+        text: `You have requested to connect with ${buddy.name} (${buddyEmail}).`,
+        html: `<p>You have requested to connect with <b>${buddy.name}</b> (${buddyEmail}).</p>`
+      });
       // Email to buddy
-      const buddyTemplateParams = {
-        user_name: userData.name,
-        user_email: userData.email,
-        buddy_name: buddy.name,
-        buddy_email: buddyEmail,
-      };
-      await emailjs.send(
-        'service_abc123',
-        'template_buddy_connect',
-        buddyTemplateParams,
-        'user_123456789'
-      );
-      console.log('Email sent to buddy:', buddyEmail);
-
+      await sendCollabEmail({
+        to: buddyEmail,
+        subject: `Buddy Connection Request from ${userData.name}`,
+        text: `${userData.name} (${userData.email}) wants to connect with you via CollabUp Buddy Finder!`,
+        html: `<p><b>${userData.name}</b> (${userData.email}) wants to connect with you via CollabUp Buddy Finder!</p>`
+      });
       setModalMessage('You can reach out to the project owner with the credentials shared via mail.');
       setShowModal(true);
-    } catch (err) {
+    } catch (err: any) {
       console.error('Email sending error:', err);
       setModalMessage('Failed to send connection emails. Please try again.');
       setShowModal(true);
