@@ -4,13 +4,24 @@ interface SendCollabEmailParams {
   subject: string;
   text?: string;
   html?: string;
+  type?: 'collab' | 'feedback'; // New: type to select endpoint
 }
 
-export async function sendCollabEmail({ to, subject, text, html }: SendCollabEmailParams) {
-  const response = await fetch(import.meta.env.VITE_EMAIL_API_URL, {
+export async function sendCollabEmail({ to, subject, text, html, type = 'collab' }: SendCollabEmailParams) {
+  // Choose endpoint based on type
+  const endpoint = type === 'feedback'
+    ? import.meta.env.VITE_FEEDBACK_API_URL
+    : import.meta.env.VITE_EMAIL_API_URL;
+
+  // For feedback, backend expects { name, email, message }
+  const body = type === 'feedback'
+    ? JSON.stringify({ name: to, email: subject, message: text }) // Map fields for feedback
+    : JSON.stringify({ to, subject, text, html });
+
+  const response = await fetch(endpoint, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ to, subject, text, html })
+    body
   });
   const raw = await response.text();
   let responseBody;

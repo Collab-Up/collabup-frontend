@@ -453,6 +453,7 @@ const ResearchProject = () => {
           <li><b>Current CGPA:</b> ${formData.currentCGPA}</li>
           <li><b>Proposal:</b> ${formData.proposal}</li>
         </ul>`
+        // type: 'collab' // default
       });
 
       setIsApplicationModalOpen(false);

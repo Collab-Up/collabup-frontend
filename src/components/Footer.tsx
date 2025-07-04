@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Send, Phone, Mail } from "lucide-react";
+import { sendCollabEmail } from '../utils/sendCollabEmail';
 
 const Footer = () => {
   const [feedbackForm, setFeedbackForm] = useState({
@@ -12,25 +13,18 @@ const Footer = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch(import.meta.env.VITE_EMAIL_API_URL, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(feedbackForm),
+      // Use sendCollabEmail utility with type 'feedback'
+      await sendCollabEmail({
+        to: feedbackForm.name,
+        subject: feedbackForm.email,
+        text: feedbackForm.message,
+        type: 'feedback'
       });
-
-      const result = await response.json();
-
-      if (response.ok) {
-        alert("Feedback sent successfully!");
-        setFeedbackForm({ name: "", email: "", message: "" });
-      } else {
-        alert(result.error || "Failed to send feedback. Try again later.");
-      }
-    } catch (error) {
+      alert("Feedback sent successfully!");
+      setFeedbackForm({ name: "", email: "", message: "" });
+    } catch (error: any) {
       console.error("Error sending feedback:", error);
-      alert("An unexpected error occurred. Please try again later.");
+      alert(error.message || "An unexpected error occurred. Please try again later.");
     }
   };
 

@@ -257,6 +257,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
         subject: `Collaboration Request for ${project.title}`,
         text: `${userData.fullName} (${userData.email}) wants to collaborate on your project "${project.title}".`,
         html: `<p>${userData.fullName} (${userData.email}) wants to collaborate on your project "${project.title}".</p>`
+        // type: 'collab' // default
       });
 
       // Email to collaborator
@@ -265,6 +266,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
         subject: `Collaboration Request Sent for ${project.title}`,
         text: `You have successfully requested to collaborate on "${project.title}". The project owner ${project.ownerName} has been notified and will contact you at ${userData.email}.`,
         html: `<p>You have successfully requested to collaborate on "${project.title}". The project owner ${project.ownerName} has been notified and will contact you at ${userData.email}.</p>`
+        // type: 'collab' // default
       });
 
       setIsCollaborateModalOpen(false);
@@ -517,7 +519,8 @@ const StudentProjects = () => {
         to: 'collabup4@gmail.com',
         subject: '[URGENT]! Project Review',
         text: `New project submitted: ${form.title} by ${form.ownerName} (${form.ownerEmail})`,
-        html
+        html,
+        // type: 'collab' // default
       });
       setShowThankYou(true);
       setProjects([
