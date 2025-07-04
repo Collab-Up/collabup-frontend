@@ -445,7 +445,9 @@ function StartupProj() {
               </button>
             </div>
           </div>
-          <EnrollmentModal isOpen={!!modalProject} onClose={() => setModalProject(null)} project={modalProject} />
+          {modalProject && (
+            <EnrollmentModal isOpen={true} onClose={() => setModalProject(null)} project={modalProject} />
+          )}
         </div>
       </div>
     );
