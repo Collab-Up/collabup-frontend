@@ -164,6 +164,8 @@ const projects: Project[] = [
   // ...existing code for more projects, update their imageUrl and add description as above...
 ];
 
+const fallbackImage = 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=256&q=80';
+
 const EnrollmentModal: React.FC<EnrollmentModalProps> = ({ isOpen, onClose, project }) => {
   const [idCard, setIdCard] = useState<File | null>(null);
   const [resume, setResume] = useState<File | null>(null);
@@ -388,10 +390,10 @@ function StartupProj() {
           <div className="bg-gray-800 rounded-xl shadow-lg overflow-hidden border border-gray-700">
             <div className="relative">
               <img
-                src={selectedProject.imageUrl}
+                src={selectedProject.imageUrl && selectedProject.imageUrl.startsWith('http') ? selectedProject.imageUrl : fallbackImage}
                 alt={selectedProject.title}
                 className="w-full h-48 object-cover"
-                onError={(e) => (e.currentTarget.src = 'https://via.placeholder.com/400x256/1f2937/6b7280?text=Project')}
+                onError={(e) => { if (e.currentTarget.src !== fallbackImage) e.currentTarget.src = fallbackImage; }}
               />
               <div className="absolute top-4 right-4 bg-gray-900 px-3 py-1 rounded-full shadow-md border border-gray-700">
                 <div className="flex items-center gap-1">
@@ -557,10 +559,10 @@ function StartupProj() {
           <div key={project.id} className="bg-gray-800 rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300 border border-gray-700">
             <div className="relative">
               <img
-                src={project.imageUrl || 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=256&q=80'}
+                src={project.imageUrl && project.imageUrl.startsWith('http') ? project.imageUrl : fallbackImage}
                 alt={project.title}
                 className="w-full h-48 object-cover"
-                onError={(e) => (e.currentTarget.src = 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=256&q=80')}
+                onError={(e) => { if (e.currentTarget.src !== fallbackImage) e.currentTarget.src = fallbackImage; }}
               />
               <div className="absolute top-4 right-4 bg-gray-900 px-3 py-1 rounded-full shadow-md border border-gray-700">
                 <div className="flex items-center gap-1">
