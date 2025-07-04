@@ -196,54 +196,67 @@ const BuddyFinder: React.FC = () => {
     return matchesSearch && matchesDomain && matchesLevel && matchesHackathon;
   });
 
-  const handleConnect = async (buddy: BuddyProfile) => {
-    if (!userData || !userData.email) {
-      setModalMessage('Please sign in to connect with a buddy.');
-      setShowModal(true);
-      return;
-    }
+  // Only the handleConnect method is changed, rest is same
+const handleConnect = async (buddy: BuddyProfile) => {
+  if (!userData || !userData.email || userData.email.trim() === '') {
+    setModalMessage('Please sign in to connect with a buddy.');
+    setShowModal(true);
+    return;
+  }
 
-    // Always use mapping for buddy email, fallback to profile email, then show error
-    // Normalize buddy name and mapping for robust lookup
-    const normalizedBuddyName = buddy.name.trim().toLowerCase();
-    const normalizedEmailMap: Record<string, string> = {};
-    Object.keys(buddyEmailMap).forEach(
-      key => (normalizedEmailMap[key.trim().toLowerCase()] = buddyEmailMap[key])
-    );
-    const buddyEmail =
-      normalizedEmailMap[normalizedBuddyName] ||
-      buddy.email ||
-      '';
-    console.log('DEBUG: userData.email:', userData.email, 'buddyEmail:', buddyEmail, 'buddy:', buddy);
-    if (!buddyEmail || buddyEmail.trim() === '') {
-      setModalMessage('Could not find a valid email for the selected buddy.');
-      setShowModal(true);
-      return;
-    }
+  // Normalize buddy name and map to get email
+  const normalizedBuddyName = buddy.name.trim().toLowerCase();
+  const normalizedEmailMap: Record<string, string> = {};
+  Object.keys(buddyEmailMap).forEach(
+    key => (normalizedEmailMap[key.trim().toLowerCase()] = buddyEmailMap[key])
+  );
+  const buddyEmail =
+    normalizedEmailMap[normalizedBuddyName] ||
+    (buddy.email && buddy.email.trim()) ||
+    '';
 
-    try {
-      // Email to logged-in user
-      await sendCollabEmail({
-        to: userData.email,
-        subject: `Buddy Connection Request: ${buddy.name}`,
-        text: `You have requested to connect with ${buddy.name} (${buddyEmail}).`,
-        html: `<p>You have requested to connect with <b>${buddy.name}</b> (${buddyEmail}).</p>`
-      });
-      // Email to buddy
-      await sendCollabEmail({
-        to: buddyEmail,
-        subject: `Buddy Connection Request from ${userData.name}`,
-        text: `${userData.name} (${userData.email}) wants to connect with you via CollabUp Buddy Finder!`,
-        html: `<p><b>${userData.name}</b> (${userData.email}) wants to connect with you via CollabUp Buddy Finder!</p>`
-      });
-      setModalMessage('You can reach out to the project owner with the credentials shared via mail.');
-      setShowModal(true);
-    } catch (err: any) {
-      console.error('Email sending error:', err);
-      setModalMessage('Failed to send connection emails. Please try again.');
-      setShowModal(true);
-    }
-  };
+  console.log('DEBUG: Logged-in user email:', userData.email);
+  console.log('DEBUG: Buddy email:', buddyEmail);
+
+  // Validate emails
+  if (!buddyEmail || buddyEmail.trim() === '') {
+    setModalMessage('Could not find a valid email for the selected buddy.');
+    setShowModal(true);
+    return;
+  }
+
+  if (!userData.email || userData.email.trim() === '') {
+    setModalMessage('Your email is missing. Please update your profile.');
+    setShowModal(true);
+    return;
+  }
+
+  try {
+    // Email to logged-in user
+    await sendCollabEmail({
+      to: userData.email,
+      subject: `Buddy Connection Request: ${buddy.name}`,
+      text: `You have requested to connect with ${buddy.name} (${buddyEmail}).`,
+      html: `<p>You have requested to connect with <b>${buddy.name}</b> (${buddyEmail}).</p>`,
+    });
+
+    // Email to buddy
+    await sendCollabEmail({
+      to: buddyEmail,
+      subject: `Buddy Connection Request from ${userData.name}`,
+      text: `${userData.name} (${userData.email}) wants to connect with you via CollabUp Buddy Finder!`,
+      html: `<p><b>${userData.name}</b> (${userData.email}) wants to connect with you via CollabUp Buddy Finder!</p>`,
+    });
+
+    setModalMessage('You can reach out to the project owner with the credentials shared via mail.');
+    setShowModal(true);
+  } catch (err: any) {
+    console.error('Email sending error:', err);
+    setModalMessage('Failed to send connection emails. Please try again.');
+    setShowModal(true);
+  }
+};
+
 
   const closeModal = () => {
     setShowModal(false);
