@@ -140,6 +140,18 @@ const mockProfiles: BuddyProfile[] = [
   },
 ];
 
+// Name to email mapping for buddies (for fallback)
+const buddyEmailMap: Record<string, string> = {
+  "Subhash Bishnoi": "me22b2044@iiitdm.ac.in",
+  "Vikas Yadav": "me22b1051@iiitdm.ac.in",
+  "Prashant Tyagi": "me22b1069@iiitdm.ac.in",
+  "Ashutosh Shandilya": "cs22b2050@iiitdm.ac.in",
+  "Nitin Thaber": "cs22b2047@iiitdm.ac.in",
+  "Anshu Saini": "cs22b2051@iiitdm.ac.in",
+  "Arpita Roy": "me22b1078@iiitdm.ac.in",
+  "Rishit Rastogi": "cs22b2052@iiitdm.ac.in"
+};
+
 const BuddyFinder: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedDomain, setSelectedDomain] = useState('all');
@@ -190,19 +202,27 @@ const BuddyFinder: React.FC = () => {
       return;
     }
 
+    // Ensure buddy email is always present
+    const buddyEmail = buddy.email || buddyEmailMap[buddy.name] || '';
+    if (!buddyEmail) {
+      setModalMessage('Could not find a valid email for the selected buddy.');
+      setShowModal(true);
+      return;
+    }
+
     try {
       // Email to logged-in user
       const userTemplateParams = {
         user_name: userData.name,
         user_email: userData.email,
         buddy_name: buddy.name,
-        buddy_email: buddy.email,
+        buddy_email: buddyEmail,
       };
       await emailjs.send(
-        'service_qv37c1r', // Replace with your EmailJS Service ID
-        'template_a9799k9', // Replace with your EmailJS template ID for user
+        'service_qv37c1r',
+        'template_a9799k9',
         userTemplateParams,
-        'wtGOHmGUOT5eVZGq4' // Replace with your EmailJS Public Key
+        'wtGOHmGUOT5eVZGq4'
       );
       console.log('Email sent to user:', userData.email);
 
@@ -211,15 +231,15 @@ const BuddyFinder: React.FC = () => {
         user_name: userData.name,
         user_email: userData.email,
         buddy_name: buddy.name,
-        buddy_email: buddy.email,
+        buddy_email: buddyEmail,
       };
       await emailjs.send(
-        'service_abc123', // Replace with your EmailJS Service ID
-        'template_buddy_connect', // Replace with your EmailJS template ID for buddy
+        'service_abc123',
+        'template_buddy_connect',
         buddyTemplateParams,
-        'user_123456789' // Replace with your EmailJS Public Key
+        'user_123456789'
       );
-      console.log('Email sent to buddy:', buddy.email);
+      console.log('Email sent to buddy:', buddyEmail);
 
       setModalMessage('You can reach out to the project owner with the credentials shared via mail.');
       setShowModal(true);

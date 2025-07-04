@@ -407,8 +407,8 @@ function StartupProj() {
                   <MapPin size={16} />
                   <span className="text-sm">{selectedProject.location}</span>
                 </div>
+                <p className="text-gray-400 mb-4 line-clamp-3">{selectedProject.description || 'No description available.'}</p>
               </div>
-              <p className="text-gray-400 mb-4 line-clamp-3">{selectedProject.description}</p>
               <div className="mb-4 space-y-2">
                 <div className="flex items-center gap-2">
                   <BookOpen size={16} className="text-indigo-400" />
@@ -555,9 +555,10 @@ function StartupProj() {
           <div key={project.id} className="bg-gray-800 rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300 border border-gray-700">
             <div className="relative">
               <img
-                src={project.imageUrl}
+                src={project.imageUrl || 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=256&q=80'}
                 alt={project.title}
                 className="w-full h-48 object-cover"
+                onError={(e) => (e.currentTarget.src = 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=256&q=80')}
               />
               <div className="absolute top-4 right-4 bg-gray-900 px-3 py-1 rounded-full shadow-md border border-gray-700">
                 <div className="flex items-center gap-1">
@@ -573,6 +574,7 @@ function StartupProj() {
                   <MapPin size={16} />
                   <span className="text-sm">{project.location}</span>
                 </div>
+                <p className="text-gray-400 mb-4 line-clamp-3">{project.description || 'No description available.'}</p>
               </div>
               
               <div className="mb-4 space-y-2">
