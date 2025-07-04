@@ -204,7 +204,16 @@ const BuddyFinder: React.FC = () => {
     }
 
     // Always use mapping for buddy email, fallback to profile email, then show error
-    const buddyEmail = buddyEmailMap[buddy.name] || buddy.email || '';
+    // Normalize buddy name and mapping for robust lookup
+    const normalizedBuddyName = buddy.name.trim().toLowerCase();
+    const normalizedEmailMap: Record<string, string> = {};
+    Object.keys(buddyEmailMap).forEach(
+      key => (normalizedEmailMap[key.trim().toLowerCase()] = buddyEmailMap[key])
+    );
+    const buddyEmail =
+      normalizedEmailMap[normalizedBuddyName] ||
+      buddy.email ||
+      '';
     console.log('DEBUG: userData.email:', userData.email, 'buddyEmail:', buddyEmail, 'buddy:', buddy);
     if (!buddyEmail || buddyEmail.trim() === '') {
       setModalMessage('Could not find a valid email for the selected buddy.');
