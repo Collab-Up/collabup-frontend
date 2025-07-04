@@ -205,6 +205,7 @@ const BuddyFinder: React.FC = () => {
 
     // Always use mapping for buddy email, fallback to profile email, then show error
     const buddyEmail = buddyEmailMap[buddy.name] || buddy.email || '';
+    console.log('DEBUG: userData.email:', userData.email, 'buddyEmail:', buddyEmail, 'buddy:', buddy);
     if (!buddyEmail || buddyEmail.trim() === '') {
       setModalMessage('Could not find a valid email for the selected buddy.');
       setShowModal(true);
