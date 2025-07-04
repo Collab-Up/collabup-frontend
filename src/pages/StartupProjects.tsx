@@ -331,7 +331,7 @@ function StartupProj() {
   const [selectedDuration, setSelectedDuration] = useState('');
   const [selectedLevel, setSelectedLevel] = useState('');
   const [selectedSkills, setSelectedSkills] = useState('');
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalProject, setModalProject] = useState<Project | null>(null); // NEW: track which project to show in modal
   const location = useLocation();
 
   useEffect(() => {
@@ -438,14 +438,14 @@ function StartupProj() {
                 ))}
               </div>
               <button
-                onClick={() => setIsModalOpen(true)}
+                onClick={() => setModalProject(selectedProject)} // FIX: open modal for this project
                 className="w-full bg-indigo-600 text-white py-2 rounded-lg hover:bg-indigo-700 transition-colors"
               >
                 Enroll
               </button>
             </div>
           </div>
-          <EnrollmentModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} project={selectedProject} />
+          <EnrollmentModal isOpen={!!modalProject} onClose={() => setModalProject(null)} project={modalProject} />
         </div>
       </div>
     );
@@ -617,7 +617,7 @@ function StartupProj() {
               )}
 
               <button 
-                onClick={() => setIsModalOpen(true)}
+                onClick={() => setModalProject(project)} // FIX: open modal for this project
                 className="w-full bg-indigo-600 text-white py-2 rounded-lg hover:bg-indigo-700 transition-colors"
               >
                 Enroll Now
@@ -627,11 +627,12 @@ function StartupProj() {
         ))}
       </div>
 
-      {selectedProject && (
+      {/* Render modal for selected project */}
+      {modalProject && (
         <EnrollmentModal
-          isOpen={isModalOpen}
-          onClose={() => setIsModalOpen(false)}
-          project={selectedProject}
+          isOpen={true}
+          onClose={() => setModalProject(null)}
+          project={modalProject}
         />
       )}
     </div>
